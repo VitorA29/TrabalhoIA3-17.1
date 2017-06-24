@@ -1,55 +1,66 @@
-from sklearn import decomposition
+from sklearn import decomposition, metrics
+from sklearn.decomposition import PCA
+from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.linear_model import RandomizedLasso
+import random
+
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.pipeline import Pipeline
+from sklearn.svm import LinearSVC
+from sklearn.svm import SVC
+from sklearn.tree import DecisionTreeClassifier
 
 from Util import *
 
 def prediction():
-    print("Reading files...")
+    data = pack2Data()
 
-    #Ele vai usar esse dataset pra aprender o que é negativo, positivo e neutro.
-    train = file2SentencesArray('twitter-sanders-apple3')
+    text_clf = decisionTree()
 
-    #Vai aplicar o conhecimento nesse.
-    test = file2SentencesArray('twitter-sanders-apple2')
-    print("Complete!")
+    text_clf = text_clf.fit(data.data, data.target)
 
-    print("Cleaning sentences...")
-    cleanTrainSentences = cleanSentences(train["text"])
-    cleanTestSentences = cleanSentences(test["text"])
-    print("Complete!...")
-    # O trabalho começa aqui
-    # Tem que usar as bibliotecas do enunciado(PCA e etc...) pra tratar a entrada e etc..
-    print("Fiting sentences...")
-    vectorizer = CountVectorizer(analyzer="word", tokenizer=None, preprocessor=None, stop_words=None, max_features=5000)
-    trainDataFeatures = vectorizer.fit_transform(cleanTrainSentences)
-    np.asarray(trainDataFeatures)
+    docs_test = data.data
+    predicted = text_clf.predict(docs_test)
+    print(np.mean(predicted == data.target))
 
-    #DANDO ERRO.
+    print(metrics.classification_report(data.target, predicted,
+                                        target_names=categories))
 
-    #randomized_lasso = RandomizedLasso()
-    #randomized_lasso.fit(trainDataFeatures, cleanTrainSentences)
-    #trainDataFeatures = randomized_lasso.transform(trainDataFeatures)
+    metrics.confusion_matrix(data.target, predicted)
 
-    #pca = decomposition.PCA(n_components=2)
-    #pca.fit_transform(trainDataFeatures)
-    #trainDataFeatures = pca.transform(trainDataFeatures)
+#0.93796864349
 
-    testDataFeatures = vectorizer.transform(cleanTestSentences)
-    np.asarray(testDataFeatures)
-    print("Complete!")
+def naiveBayes():
+    text_clf = Pipeline([('vect', CountVectorizer()),
+                         ('tfidf', TfidfTransformer()),
+                         ('clf', MultinomialNB()),
+                         ])
 
-    #E aqui usar diferentes classificadores, o RandomForest é um deles.
-    print("Predicting...")
-    forest = RandomForestClassifier(n_estimators=100)
-    forest = forest.fit(trainDataFeatures, train["class"])
-    result = forest.predict(testDataFeatures)
-    print("Complete...")
+    return text_clf
 
-    return result
+def randomForest():
+    text_clf = Pipeline([('vect', CountVectorizer()),
+                         ('tfidf', TfidfTransformer()),
+                         ('clf', RandomForestClassifier(n_estimators=10)),
+                         ])
 
-def writeResult(resultArray):
-    print(resultArray)
+    return text_clf
 
-#writeResult(prediction())
+def svc():
+    text_clf = Pipeline([('vect', CountVectorizer()),
+                         ('tfidf', TfidfTransformer()),
+                         ('clf', LinearSVC()),
+                         ])
+
+    return text_clf
+
+def decisionTree():
+    text_clf = Pipeline([('vect', CountVectorizer()),
+                         ('reduce_dim', PCA()),
+                         ('tfidf', TfidfTransformer()),
+                         ('clf', DecisionTreeClassifier()),
+                         ])
+
+    return text_clf
 
 prediction()

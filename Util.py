@@ -13,6 +13,25 @@ from nltk.classify import NaiveBayesClassifier
 from nltk.metrics import BigramAssocMeasures
 from nltk.probability import FreqDist, ConditionalFreqDist
 
+categories = ['Pos', 'Neg', 'Neutral']
+
+class Data(object):
+    '''
+        Essa classe encapsula as informações sobre os dados lidos.
+        Por exemplo, li 5 arquivos. data quarda todos os textos e target seu valor(numérico)
+        Os valores são positivo(0), negativo(1) e Neutro(2)
+        Classe usada no treinamento.
+    '''
+
+    def __init__(self, text, category):
+        self.data = text
+        self.target = category
+
+    def data(self):
+        return self.data
+
+    def target(self):
+        return self.target
 
 def text2Wordlist(text, removeStopwords = False):
     '''
@@ -48,10 +67,30 @@ def file2SentencesArray(fileName):
     #header = 0 significa que a primeira linha do arquivo contem informações sobre o padrão do arquivo.
     #delimiter = "," significa que os dados estão separados por uma vírgula.
     #quoting = 3 remove aspas
-    array = pd.read_csv(os.path.join(os.path.dirname(__file__), 'files', fileName + ".csv"), header=0,
+    array = pd.read_csv(os.path.join(os.path.dirname(__file__), 'files', fileName), header=0,
                         delimiter=",", quoting=3)
 
     return array
+
+def pack2Data():
+    dataArray = []
+    targetArray = []
+
+    for file in list_files("./files/"):
+        array = file2SentencesArray(file)
+
+        array1 = []
+        for i in array["class"]:
+            array1.append(categories.index(i))
+
+        dataArray.extend(cleanSentences(array["text"]))
+        targetArray.extend(array1)
+
+
+
+    data = Data(dataArray, targetArray)
+
+    return data
 
 def  cleanSentences(sentencesArray):
     '''
@@ -64,3 +103,12 @@ def  cleanSentences(sentencesArray):
         clean.append(" ".join(text2Wordlist(sentencesArray[i], True)))
 
     return clean
+
+
+
+def list_files(path):
+    files = []
+    for name in os.listdir(path):
+        if os.path.isfile(os.path.join(path, name)):
+            files.append(name)
+    return files
