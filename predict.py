@@ -23,8 +23,9 @@ def predict():
         text_clf = randomForest()
         text_clf = svm()
     '''
-    text_clf = decisionTree()
+    text_clf = svm()
 
+    #nltk.download()
 
     text_clf = text_clf.fit(data.data, data.target)
 
@@ -36,10 +37,25 @@ def predict():
     docs_test = testData.data
     predicted = text_clf.predict(docs_test)
     print("Accuracy: ", metrics.accuracy_score(testData.target, predicted))
-    print("Report:\n")
+    print("\nReport:\n")
     print(metrics.classification_report(testData.target, predicted, target_names = categories))
-    print("Confusion Matrix:\n")
+    print("\nConfusion Matrix:\n")
     print(metrics.confusion_matrix(testData.target, predicted))
+
+    print("\nTop 10 most informative words:\n")
+    print_top10(text_clf.get_params()['vect'], text_clf.get_params()['clf'], categories)
+
+    array = []
+    print("\nPredictions:")
+    for i in range(0, len(predicted)):
+        text = testData.data[i]
+        classy = categories[predicted[i]]
+        textClass = TextClassification(text, classy)
+        array.append(textClass)
+
+    random.shuffle(array)
+    for i in array:
+        print(i.text, " -> ", i.classific)
 
 def naiveBayes():
     text_clf = Pipeline([('vect', CountVectorizer()),

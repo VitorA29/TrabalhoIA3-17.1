@@ -36,6 +36,12 @@ class Data(object):
     def target(self):
         return self.target
 
+class TextClassification(object):
+
+    def __init__(self, text, classific):
+        self.text = text
+        self.classific = classific
+
 def text2Wordlist(text, removeStopwords = False):
     '''
     Dado um texto, transforma em um array de palavras.
@@ -131,3 +137,10 @@ def list_files(path):
         if os.path.isfile(os.path.join(path, name)):
             files.append(name)
     return files
+
+def print_top10(vectorizer, clf, class_labels):
+    feature_names = vectorizer.get_feature_names()
+    for i, class_label in enumerate(class_labels):
+        top10 = np.argsort(clf.coef_[i])[-10:]
+        print("%s: %s" % (class_label,
+              " ".join(feature_names[j] for j in top10)))
