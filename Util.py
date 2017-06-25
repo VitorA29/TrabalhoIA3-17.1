@@ -13,7 +13,10 @@ from nltk.classify import NaiveBayesClassifier
 from nltk.metrics import BigramAssocMeasures
 from nltk.probability import FreqDist, ConditionalFreqDist
 
-categories = ['Pos', 'Neg', 'Neutral']
+from nltk.classify import ClassifierI
+from statistics import mode
+
+categories = ['pos', 'neg', 'neu', 'irr']
 
 class Data(object):
     '''
@@ -57,7 +60,7 @@ def text2Wordlist(text, removeStopwords = False):
 
     return(words)
 
-def file2SentencesArray(fileName):
+def file2SentencesArray(fileName, folderName):
     '''
     Dado um arquivo .csv, joga todos elementos pra um array.
     :param fileName: Nome do arquivo sem a extenção.
@@ -67,21 +70,39 @@ def file2SentencesArray(fileName):
     #header = 0 significa que a primeira linha do arquivo contem informações sobre o padrão do arquivo.
     #delimiter = "," significa que os dados estão separados por uma vírgula.
     #quoting = 3 remove aspas
-    array = pd.read_csv(os.path.join(os.path.dirname(__file__), 'files', fileName), header=0,
-                        delimiter=",", quoting=3)
+    array = pd.read_csv(os.path.join(os.path.dirname(__file__), folderName, fileName), header=0,
+                        delimiter=",")
 
     return array
 
-def pack2Data():
+def getTestData():
     dataArray = []
     targetArray = []
 
-    for file in list_files("./files/"):
-        array = file2SentencesArray(file)
+    for file in list_files("./test/"):
+        array = file2SentencesArray(file, 'test')
 
         array1 = []
         for i in array["class"]:
-            array1.append(categories.index(i))
+            array1.append(categories.index(i[:3].lower()))
+
+        dataArray.extend(cleanSentences(array["text"]))
+        targetArray.extend(array1)
+
+    data = Data(dataArray, targetArray)
+
+    return data
+
+def getTrainData():
+    dataArray = []
+    targetArray = []
+
+    for file in list_files("./train/"):
+        array = file2SentencesArray(file, 'train')
+
+        array1 = []
+        for i in array["class"]:
+            array1.append(categories.index(i[:3].lower()))
 
         dataArray.extend(cleanSentences(array["text"]))
         targetArray.extend(array1)
@@ -103,8 +124,6 @@ def  cleanSentences(sentencesArray):
         clean.append(" ".join(text2Wordlist(sentencesArray[i], True)))
 
     return clean
-
-
 
 def list_files(path):
     files = []
