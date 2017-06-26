@@ -58,3 +58,20 @@ def file2SentencesArray(fileName, folderName)
 '''
 def text2Wordlist(text, removeStopwords = False)
 ```
+
+``` python
+    '''
+    Limpa uma frase de caracteres insedejados.
+    :param sentencesArray: Array contendo frases.
+    :return: retorna um array de frases sem certos caracteres.
+    '''
+def cleanSentences(sentencesArray)
+```
+
+``` python
+'''
+    Lista todos os arquivos de um caminho.
+'''
+def list_files(path)
+```
+
