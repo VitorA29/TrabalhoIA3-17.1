@@ -2,12 +2,16 @@
 
 ## Usar ferramentas de Machine Learning para Analise de Sentimento.
 
-
 ## Grupo
 - Max Fratane.
 - Erick Grilo.
 - Vitor Araújo.
 - Vitor Lourenço.
+
+## Dataset
+São usados Tweets para treinar e para testar o aprendizado.
+A pasta `train` contém todos os arquivos que serão usados para treinamento, e a pasta `test` contém todos que serão usados para teste.
+Juntando todos os arquivos em cada pasta, é um total de, aproximadamente, 27000 Tweets de treinamento e 900 de teste.
 
 ## QuickStart
 ### Util.py
