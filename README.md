@@ -14,6 +14,9 @@ A pasta `train` contém todos os arquivos que serão usados para treinamento, e 
 Juntando todos os arquivos em cada pasta, é um total de, aproximadamente, 27000 Tweets de treinamento e 900 de teste.
 
 ## QuickStart
+
+O pack de stopwords utilizado é baixado atravez do comando `nltk.download()`, caso não tenha, execute o comando antes das chamadas das funções do arquivo `predict.py`.
+
 ### Util.py
 Contem funções e classes utilitárias.
 
@@ -74,4 +77,16 @@ def cleanSentences(sentencesArray)
 '''
 def list_files(path)
 ```
+### Predict.py
 
+
+``` python
+'''
+    Realiza as predições.
+    Usando as funções utilitárias, lê todos os arquivos de teste e train, joga tudo para duas instancias de Data,
+    uma contendo os dados de teste e outra de treinamento.
+    
+    Printa alguns relatórios e estatísticas, predições dos arquivos de teste e a confusion matrix.
+'''
+def predict()
+```
