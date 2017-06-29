@@ -17,6 +17,22 @@ Juntando todos os arquivos em cada pasta, é um total de, aproximadamente, 27000
 
 O pack de stopwords utilizado é baixado atravez do comando `nltk.download()`, caso não tenha, execute o comando antes das chamadas das funções do arquivo `predict.py`.
 
+### Módulos usados
+`SciPy`
+`NumPy`
+`Sklearn`
+
+### Confusion Matrix
+|     | Pos | Neg | Neu | Irr |
+|-----|-----|-----|-----|-----|
+| Pos | 163 | 0   | 0   | 0   |
+| Neg | 0   | 316 | 0   | 0   |
+| Neu | 7   | 0   | 502 | 0   |
+| Irr | 19  | 9   | 51  | 6   |
+
+Nessa exemplo, vemos que a maior confusão ocorre na categoria Irregular. Ela é muito confundida com Neutro e Positivo.
+Mas no geral, o resultado é muito bom.
+
 ### Util.py
 Contem funções e classes utilitárias.
 
