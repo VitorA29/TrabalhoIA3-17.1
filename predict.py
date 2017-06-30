@@ -1,3 +1,5 @@
+import sys
+
 from sklearn import decomposition, metrics
 from sklearn.decomposition import PCA
 from sklearn.feature_extraction.text import TfidfTransformer
@@ -72,6 +74,9 @@ def predict(classifier):
     except:
         print(text_clf.get_params()['clf'].feature_importances_)
 
+    if (len(sys.argv)>2 and sys.argv[1]=="false"):
+         return
+
     array = []
     print("\nPredictions:")
     for i in range(0, len(predicted)):
@@ -83,7 +88,7 @@ def predict(classifier):
     random.shuffle(array)
     j = 0
     for i in array:
-        print(j,'-', i.text, " -> ", i.classific)
+        print(j+1,'-', i.text, " -> ", i.classific)
         j += 1
 
 def naiveBayes():
