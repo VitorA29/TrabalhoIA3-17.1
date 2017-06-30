@@ -1,3 +1,5 @@
+import sys
+
 from sklearn import decomposition, metrics
 from sklearn.decomposition import PCA
 from sklearn.feature_extraction.text import TfidfTransformer
@@ -44,6 +46,9 @@ def predict():
 
     print("\nTop 10 most informative words:\n")
     print_top10(text_clf.get_params()['vect'], text_clf.get_params()['clf'], categories)
+
+    if sys.argv[1]=="false":
+         return
 
     array = []
     print("\nPredictions:")
@@ -97,4 +102,5 @@ def svm():
                          ])
     return text_clf
 
-predict()
+if __name__ == "__main__":
+	predict()
