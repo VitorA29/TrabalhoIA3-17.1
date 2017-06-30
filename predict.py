@@ -1,11 +1,14 @@
 from sklearn import decomposition, metrics
 from sklearn.decomposition import PCA
 from sklearn.feature_extraction.text import TfidfTransformer
+from sklearn.feature_selection import RFE
+from sklearn.feature_selection import RFECV
 from sklearn.linear_model import RandomizedLasso
 import random
 from nltk.classify.scikitlearn import SklearnClassifier
 from sklearn.linear_model import SGDClassifier
 from sklearn.metrics import classification_report
+from sklearn.model_selection import StratifiedKFold
 
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.pipeline import Pipeline
@@ -67,7 +70,7 @@ def predict(classifier):
         print("\nTop 10 most informative words:\n")
         print_top10(text_clf.get_params()['vect'], text_clf.get_params()['clf'], categories4)
     except:
-        print('It was not possible to find most informative words.')
+        print(text_clf.get_params()['clf'].feature_importances_)
 
     array = []
     print("\nPredictions:")
@@ -123,4 +126,5 @@ def svm():
                          ])
     return text_clf
 
-print(predict(NAIVE_BAYES))
+print(predict(DECISION_TREE))
+#prediction()
