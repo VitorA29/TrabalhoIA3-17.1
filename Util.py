@@ -16,7 +16,18 @@ from nltk.probability import FreqDist, ConditionalFreqDist
 from nltk.classify import ClassifierI
 from statistics import mode
 
-categories = ['pos', 'neg', 'neu', 'irr']
+'''
+Classificador quaternário.
+'''
+categories4 = ['pos', 'neg', 'neu', 'irr']
+'''
+Classificador ternário.
+'''
+categories3 = ['pos', 'neg', 'neu']
+'''
+Classificador binário.
+'''
+categories2 = ['pos', 'neg']
 
 class Data(object):
     '''
@@ -90,9 +101,9 @@ def getTestData():
 
         array1 = []
         for i in array["class"]:
-            array1.append(categories.index(i[:3].lower()))
+            array1.append(categories4.index(i[:3].lower()))
 
-        dataArray.extend(cleanSentences(array["text"]))
+        dataArray.extend(cleanSentences(array["text"], False))
         targetArray.extend(array1)
 
     data = Data(dataArray, targetArray)
@@ -108,18 +119,16 @@ def getTrainData():
 
         array1 = []
         for i in array["class"]:
-            array1.append(categories.index(i[:3].lower()))
+            array1.append(categories4.index(i[:3].lower()))
 
-        dataArray.extend(cleanSentences(array["text"]))
+        dataArray.extend(cleanSentences(array["text"], True))
         targetArray.extend(array1)
-
-
 
     data = Data(dataArray, targetArray)
 
     return data
 
-def  cleanSentences(sentencesArray):
+def  cleanSentences(sentencesArray, removeStopwords):
     '''
     Limpa uma frase de caracteres insedejados.
     :param sentencesArray: Array contendo frases.
@@ -127,7 +136,7 @@ def  cleanSentences(sentencesArray):
     '''
     clean = []
     for i in range(0, len(sentencesArray)):
-        clean.append(" ".join(text2Wordlist(sentencesArray[i], True)))
+        clean.append(" ".join(text2Wordlist(sentencesArray[i], removeStopwords)))
 
     return clean
 
