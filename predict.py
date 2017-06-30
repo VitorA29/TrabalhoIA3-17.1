@@ -71,7 +71,7 @@ def predict(classifier):
     except:
         print('It was not possible to find most informative words.')
 
-    if sys.argv[1]=="false":
+    if (len(sys.argv)>2 and sys.argv[1]=="false"):
          return
 
     array = []
