@@ -15,7 +15,7 @@ Juntando todos os arquivos em cada pasta, é um total de, aproximadamente, 27000
 
 ## QuickStart
 
-O pack de stopwords utilizado é baixado atravez do comando `nltk.download()`, caso não tenha, execute o comando antes das chamadas das funções do arquivo `predict.py`.
+O pack de stopwords utilizado é baixado atraves do comando `nltk.download()`, caso não tenha, execute o comando antes das chamadas das funções do arquivo `predict.py`.
 
 ### Módulos usados
 `SciPy`
