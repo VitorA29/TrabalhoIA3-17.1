@@ -30,29 +30,24 @@ RANDOM_FOREST = 2
 SVM = 3
 SVC1 = 4
 
-def predict(classifier, type, gridSearch, showWrongPredict, showPredictions, cria_arq):
+def predict(classifier, type, gridSearch, showWrongPredict, showPredictions, fn):
     data = getTrainData(type)
 
-    if(classifier == DECISION_TREE):
-        text_clf = decisionTree()
-        opn = "a"
-        output="######################DECISION_TREE######################\n"
-    elif(classifier == NAIVE_BAYES):
+    if(classifier == NAIVE_BAYES):
         text_clf = naiveBayes()
-        opn = "w"
-        output="######################NAIVE_BAYES######################\n"
+        imprimir("######################NAIVE_BAYES######################", fn)
+    elif(classifier == DECISION_TREE):
+        text_clf = decisionTree()
+        imprimir("######################DECISION_TREE######################", fn)
     elif(classifier == RANDOM_FOREST):
         text_clf = randomForest()
-        opn = "a"
-        output="######################RANDOM_FOREST######################\n"
+        imprimir("######################RANDOM_FOREST######################", fn)
     elif(classifier == SVM):
         text_clf = svm()
-        opn = "a"
-        output="######################SVM######################\n"
+        imprimir("######################SVM######################", fn)
     else:
         text_clf = svc()
-        opn = "a"
-        output="######################SVC######################\n"
+        imprimir("######################SVC######################", fn)
 
     if(gridSearch and classifier != SVM):
         print("------> A T E N Ç Ã O <------ GridSearch so funciona com SVM por enquanto! Executando sem GridSearch...")
@@ -72,7 +67,7 @@ def predict(classifier, type, gridSearch, showWrongPredict, showPredictions, cri
         text_clf = GridSearchCV(text_clf, parameters, n_jobs=1, verbose=1)
         text_clf.fit(data.data, data.target)
         print("Best score: %0.3f" % text_clf.best_score_)
-
+ 
         '''
         best_parameters = text_clf.best_estimator_.get_params()
         for param_name in sorted(parameters.keys()):
@@ -85,28 +80,31 @@ def predict(classifier, type, gridSearch, showWrongPredict, showPredictions, cri
 
     testData = getTestData(type)
 
-    #output += "Modo: " + getModoStr(type)
     print("Modo: ", getModoStr(type))
-    output += "DataTrain length: " + str(len(data.data)) + "\n"
-    output += "DataTest length: " + str(len(testData.data)) + "\n"
+    imprimir("DataTrain length: " + str(len(data.data)), fn)
+    imprimir("DataTest length: " + str(len(testData.data)), fn)
 
     docs_test = testData.data
     predicted = text_clf.predict(docs_test)
-    output += "Accuracy: " + str(metrics.accuracy_score(testData.target, predicted)) + "\n"
-    output += "\nReport:\n\n"
-    output += str(metrics.classification_report(testData.target, predicted, target_names = getCategory(type))) + "\n"
-    output += "\nConfusion Matrix:\n\n"
-    output += str(metrics.confusion_matrix(testData.target, predicted))
+    imprimir("Accuracy: " + str(metrics.accuracy_score(testData.target, predicted)), fn)
+    imprimir("\nReport:\n", fn)
+    imprimir(str(metrics.classification_report(testData.target, predicted, target_names = getCategory(type))), fn)
+    imprimir("\nConfusion Matrix:\n", fn)
+    imprimir(str(metrics.confusion_matrix(testData.target, predicted)), fn)
 
-    outputAux = ""
+    try:
+        print_top10(text_clf.get_params()['vect'], text_clf.get_params()['clf'], getCategory(type), fn)
+    except:
+        None
+
     if(showWrongPredict):
-        outputAux += "\nWrong Predictions:\n"
+        imprimir("\nWrong Predictions:", fn)
         for i in getWrondPredictions(predicted, testData.target, docs_test):
-            outputAux += i + "\n"
+            imprimir(i, fn)
 
     if(showPredictions):
         array = []
-        outputAux += "\nPredictions:\n"
+        imprimir("\nPredictions:", fn)
         for i in range(0, len(predicted)):
             text = testData.data[i]
             classy = getCategory(type)[predicted[i]]
@@ -116,30 +114,8 @@ def predict(classifier, type, gridSearch, showWrongPredict, showPredictions, cri
         random.shuffle(array)
         j = 0
         for i in array:
-            outputAux = j+1 + '-' + i.text + " -> " + i.classific + "\n"
+            imprimir(j+1 + '-' + i.text + " -> " + i.classific, fn)
             j += 1
-
-    if (cria_arq == True):
-        if(type==BINARIO):
-            fo=open("BINARIO_RESULTADOS.txt",opn)
-        elif(type==TERNARIO):
-            fo=open("TERNARIO_RESULTADOS.txt",opn)
-        else:
-            fo=open("QUATERNARIO_RESULTADOS.txt",opn)
-        fo.write(output + "\n")
-        try:
-            print_top10_file(text_clf.get_params()['vect'], text_clf.get_params()['clf'], getCategory(type), fo)
-        except:
-            None
-        fo.write(outputAux)
-        fo.close()
-        return
-    print(output)
-    try:
-        print_top10(text_clf.get_params()['vect'], text_clf.get_params()['clf'], getCategory(type))
-    except:
-        None
-    print(outputAux)
 
 def getWrondPredictions(predictions, target, text):
     list = []
@@ -227,19 +203,27 @@ while (len(sys.argv)==6):
         break
 
     if (sys.argv[5]).upper() == "TRUE":
-        cria_arq = True
+        if(type==BINARIO):
+            fn="BINARIO_RESULTADOS.txt"
+        elif(type==TERNARIO):
+            fn="TERNARIO_RESULTADOS.txt"
+        else:
+            fn="QUATERNARIO_RESULTADOS.txt"
     elif (sys.argv[5]).upper() == "FALSE":
-        cria_arq = False
+        fn=""
     else:
         print("cria_arq invalido\n")
         break
 
-    print("NAIVE BAYES")
-    predict(NAIVE_BAYES, type, gridSearch, showWrongPredictions, showPredictions, cria_arq)
-    print("RANDOM FOREST")
-    predict(RANDOM_FOREST, type, gridSearch, showWrongPredictions, showPredictions, cria_arq)
-    print("DECISION TREE")
-    predict(DECISION_TREE, type, gridSearch, showWrongPredictions, showPredictions, cria_arq)
-    print("SVM")
-    predict(SVM, type, gridSearch, showWrongPredictions, showPredictions, cria_arq)
+    fo=open(fn, "w")
+    fo.close()
+
+    #print("NAIVE BAYES")
+    predict(NAIVE_BAYES, type, gridSearch, showWrongPredictions, showPredictions, fn)
+    #print("RANDOM FOREST")
+    predict(RANDOM_FOREST, type, gridSearch, showWrongPredictions, showPredictions, fn)
+    #print("DECISION TREE")
+    predict(DECISION_TREE, type, gridSearch, showWrongPredictions, showPredictions, fn)
+    #print("SVM")
+    predict(SVM, type, gridSearch, showWrongPredictions, showPredictions, fn)
     break

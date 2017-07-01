@@ -21,14 +21,14 @@ pos: shit battery update fix new phone siri ios iphone apple
 ######################RANDOM_FOREST######################
 DataTrain length: 479
 DataTest length: 479
-Accuracy: 0.989561586639
+Accuracy: 0.993736951983
 
 Report:
 
              precision    recall  f1-score   support
 
-        pos       0.99      0.98      0.98       163
-        neg       0.99      0.99      0.99       316
+        pos       1.00      0.98      0.99       163
+        neg       0.99      1.00      1.00       316
 
 avg / total       0.99      0.99      0.99       479
 
@@ -36,7 +36,7 @@ avg / total       0.99      0.99      0.99       479
 Confusion Matrix:
 
 [[160   3]
- [  2 314]]
+ [  0 316]]
 ######################DECISION_TREE######################
 DataTrain length: 479
 DataTest length: 479

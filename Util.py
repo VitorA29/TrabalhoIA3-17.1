@@ -183,13 +183,7 @@ def list_files(path):
             files.append(name)
     return files
 
-def print_top10(vectorizer, clf, class_labels):
-    feature_names = vectorizer.get_feature_names()
-    for i, class_label in enumerate(class_labels):
-        top10 = np.argsort(clf.coef_[i])[-10:]
-        print("%s: %s" % (class_label," ".join(feature_names[j] for j in top10)))
-
-def print_top10_file(vectorizer, clf, class_labels, fo):
+def print_top10(vectorizer, clf, class_labels, fn):
     feature_names = vectorizer.get_feature_names()
     for i, class_label in enumerate(class_labels):
         top10 = np.argsort(clf.coef_[i])[-10:]
@@ -197,9 +191,7 @@ def print_top10_file(vectorizer, clf, class_labels, fo):
         saida = class_label + ":"
         for j in top10:
             saida += " " + feature_names[j]
-        saida += "\n"
-        fo.write(saida)
-        fo.flush()
+        imprimir(saida, fn)
 
 def show_most_informative_features(vectorizer, clf, n=20):
     feature_names = vectorizer.get_feature_names()
@@ -207,3 +199,10 @@ def show_most_informative_features(vectorizer, clf, n=20):
     top = zip(coefs_with_fns[:n], coefs_with_fns[:-(n + 1):-1])
     for (coef_1, fn_1), (coef_2, fn_2) in top:
         print("\t%.4f\t%-15s\t\t%.4f\t%-15s" % (coef_1, fn_1, coef_2, fn_2))
+
+def imprimir(string, fn):
+    print(string)
+    if not (fn == ""):
+        fo = open(fn, "a")
+        fo.write(string + "\n")
+        fo.close()
