@@ -181,6 +181,18 @@ def print_top10(vectorizer, clf, class_labels):
         top10 = np.argsort(clf.coef_[i])[-10:]
         print("%s: %s" % (class_label," ".join(feature_names[j] for j in top10)))
 
+def print_top10_file(vectorizer, clf, class_labels, fo):
+    feature_names = vectorizer.get_feature_names()
+    for i, class_label in enumerate(class_labels):
+        top10 = np.argsort(clf.coef_[i])[-10:]
+        #print("%s: %s" % (class_label," ".join(feature_names[j] for j in top10)))
+        saida = class_label + ":"
+        for j in top10:
+            saida += " " + feature_names[j]
+        saida += "\n"
+        fo.write(saida)
+        fo.flush()
+
 def show_most_informative_features(vectorizer, clf, n=20):
     feature_names = vectorizer.get_feature_names()
     coefs_with_fns = sorted(zip(clf.coef_[0], feature_names))
