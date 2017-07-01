@@ -1,5 +1,8 @@
+%binario -----------
+%binaria naïve bayes
 \begin{table}[h!]
 \centering
+\begin{minipage}[b]{0.45\linewidth}
 \caption{Matriz de Confusão Binária: \textit{Naïve Bayes}}
 \label{tab:mcb-nb}
 \begin{tabular}{|l|l|l|}
@@ -8,10 +11,29 @@ $\textrm{Atual}\diagdown\textrm{Previsto}$ & \textbf{positivo} & \textbf{negativ
 \textbf{positivo}     & 142                 & 21   \\ \hline
 \textbf{negativo}     & 0                   & 316 \\ \hline
 \end{tabular}
-\end{table}
+\end{minipage}
+\hspace{0.5cm}
+\begin{minipage}[b]{0.45\linewidth}
 
+\centering
+\caption{Medidas da Matriz de Confusão}
+\label{tab:mmcb-nb}
+\begin{tabular}{|l|l|l|l|}
+\hline
+         & \textbf{precisão} & \textbf{recall} & \textbf{f1-score} \\ \hline
+\textbf{positivo} & 1.00     & 0.87   & 0.93     \\ \hline
+\textbf{negativo} & 0.94     & 1.00   & 0.97     \\ \hline
+\textbf{média}    & 0.96     & 0.96   & 0.96 \\ \hline
+\textbf{acurácia} & \multicolumn{3}{|c|}{0.956158663883} \\ \hline
+\end{tabular}
+\end{minipage}
+\end{table}
+%--
+
+%binária svm
 \begin{table}[h!]
 \centering
+\begin{minipage}[b]{0.45\linewidth}
 \caption{Matriz de Confusão Binária: \textit{SVM}}
 \label{tab:mcb-svm}
 \begin{tabular}{|l|l|l|}
@@ -20,10 +42,29 @@ $\textrm{Atual}\diagdown\textrm{Previsto}$ & \textbf{positivo} & \textbf{negativ
 \textbf{positivo}     & 163                 & 0   \\ \hline
 \textbf{negativo}     & 0                   & 316 \\ \hline
 \end{tabular}
-\end{table}
+\end{minipage}
+\hspace{0.5 cm}
+\begin{minipage}[b]{0.45\linewidth}
 
+\centering
+\caption{Medidas da Matriz de Confusão}
+\label{tab:mmcb-svm}
+\begin{tabular}{|l|l|l|l|}
+\hline
+         & \textbf{precisão} & \textbf{recall} & \textbf{f1-score} \\ \hline
+\textbf{positivo} & 1.00     & 1.00   & 1.00     \\ \hline
+\textbf{negativo} & 1.00     & 1.00   & 1.00     \\ \hline
+\textbf{média}    & 1.00     & 1.00   & 1.00 \\ \hline
+\textbf{acurácia} & \multicolumn{3}{|c|}{1.0} \\ \hline
+\end{tabular}
+\end{minipage}
+\end{table}
+%--
+
+%binária decision tree
 \begin{table}[h!]
 \centering
+\begin{minipage}[b]{0.45\linewidth}
 \caption{Matriz de Confusão Binária: \textit{Decision Tree}}
 \label{tab:mcb-dt}
 \begin{tabular}{|l|l|l|}
@@ -32,10 +73,29 @@ $\textrm{Atual}\diagdown\textrm{Previsto}$ & \textbf{positivo} & \textbf{negativ
 \textbf{positivo}     & 163                 & 0   \\ \hline
 \textbf{negativo}     & 0                   & 316 \\ \hline
 \end{tabular}
-\end{table}
+\end{minipage}
+\hspace{0.5 cm}
+\begin{minipage}[b]{0.45\linewidth}
 
+\centering
+\caption{Medidas da Matriz de Confusão}
+\label{tab:mmcb-dt}
+\begin{tabular}{|l|l|l|l|}
+\hline
+         & \textbf{precisão} & \textbf{recall} & \textbf{f1-score} \\ \hline
+\textbf{positivo} & 1.00     & 1.00   & 1.00     \\ \hline
+\textbf{negativo} & 1.00     & 1.00   & 1.00     \\ \hline
+\textbf{média}    & 1.00     & 1.00   & 1.00 \\ \hline
+\textbf{acurácia} & \multicolumn{3}{|c|}{1.0} \\ \hline
+\end{tabular}
+\end{minipage}
+\end{table}
+%--
+
+%binária random forest
 \begin{table}[h!]
 \centering
+\begin{minipage}[b]{0.45\linewidth}
 \caption{Matriz de Confusão Binária: \textit{Random Forest}}
 \label{tab:mcb-rf}
 \begin{tabular}{|l|l|l|}
@@ -44,10 +104,33 @@ $\textrm{Atual}\diagdown\textrm{Previsto}$ & \textbf{positivo} & \textbf{negativ
 \textbf{positivo}     & 162                 & 1   \\ \hline
 \textbf{negativo}     & 3                   & 313 \\ \hline
 \end{tabular}
-\end{table}
+\end{minipage}
+\hspace{0.5 cm}
+\begin{minipage}[b]{0.45\linewidth}
 
+\centering
+\caption{Medidas da Matriz de Confusão}
+\label{tab:mmcb-rf}
+\begin{tabular}{|l|l|l|l|}
+\hline
+         & \textbf{precisão} & \textbf{recall} & \textbf{f1-score} \\ \hline
+\textbf{positivo} & 0.98     & 0.99   & 0.99     \\ \hline
+\textbf{negativo} & 1.00     & 0.99   & 0.99     \\ \hline
+\textbf{média}    & 0.99     & 0.99   & 0.99 \\ \hline
+\textbf{acurácia} & \multicolumn{3}{|c|}{0.991649269311} \\ \hline
+\end{tabular}
+\end{minipage}
+\end{table}
+%--
+
+%----------------------
+
+%TERNARIO -------------------
+%ternária naive bayes
 \begin{table}[h!]
 \centering
+\resizebox{\textwidth}{!}{%
+\begin{minipage}[b]{0.45\linewidth}
 \caption{Matriz de Confusão Ternária: \textit{Naïve Bayes}}
 \label{tab:mct-nb}
 \begin{tabular}{|l|l|l|l|}
@@ -57,10 +140,32 @@ $\textrm{Atual}\diagdown\textrm{Previsto}$ & \textbf{positivo} & \textbf{negativ
 \textbf{negativo} & 0 & 99 & 217\\ \hline
 \textbf{neutro} & 0 & 0 & 509 \\ \hline
 \end{tabular}
-\end{table}
+\end{minipage}
+\hspace{2.0 cm}
+\begin{minipage}[b]{0.45\linewidth}
 
+\centering
+\caption{Medidas da Matriz de Confusão}
+\label{tab:mmct-nb}
+\begin{tabular}{|l|l|l|l|}
+\hline
+         & \textbf{precisão} & \textbf{recall} & \textbf{f1-score} \\ \hline
+\textbf{positivo} & 1.00     & 0.10   & 0.18     \\ \hline
+\textbf{negativo} & 0.99     & 0.31   & 0.48     \\ \hline
+\textbf{neutro} & 0.58     & 1.00   & 0.74     \\ \hline
+\textbf{média}    & 0.78     & 0.63   & 0.56 \\ \hline
+\textbf{acurácia} & \multicolumn{3}{|c|}{0.631578947368} \\ \hline
+\end{tabular}
+\end{minipage}
+}
+\end{table}
+%--
+
+%ternária svm
 \begin{table}[h!]
 \centering
+\resizebox{\textwidth}{!}{%
+\begin{minipage}[b]{0.45\linewidth}
 \caption{Matriz de Confusão Ternária: \textit{SVM}}
 \label{tab:mct-svm}
 \begin{tabular}{|l|l|l|l|}
@@ -70,10 +175,67 @@ $\textrm{Atual}\diagdown\textrm{Previsto}$ & \textbf{positivo} & \textbf{negativ
 \textbf{negativo} & 0 & 118 & 198\\ \hline
 \textbf{neutro} & 0 & 2 & 507 \\ \hline
 \end{tabular}
-\end{table}
+\end{minipage}
+\hspace{2.0 cm}
+\begin{minipage}[b]{0.45\linewidth}
 
+\centering
+\caption{Medidas da Matriz de Confusão}
+\label{tab:mmct-svm}
+\begin{tabular}{|l|l|l|l|}
+\hline
+         & \textbf{precisão} & \textbf{recall} & \textbf{f1-score} \\ \hline
+\textbf{positivo} & 1.00     & 0.25   & 0.39     \\ \hline
+\textbf{negativo} & 0.96     & 0.37   & 0.54     \\ \hline
+\textbf{neutro} & 0.61     & 1.00   & 0.76     \\ \hline
+\textbf{média}    & 0.79     & 0.67   & 0.63 \\ \hline
+\textbf{acurácia} & \multicolumn{3}{|c|}{0.673076923077} \\ \hline
+\end{tabular}
+\end{minipage}
+}
+\end{table}
+%--
+
+%ternária svm c/ grid_search
 \begin{table}[h!]
 \centering
+\resizebox{\textwidth}{!}{%
+\begin{minipage}[b]{0.45\linewidth}
+\caption{Matriz de Confusão Ternária: \textit{SVM com Grid Search}}
+\label{tab:mct-svmgs}
+\begin{tabular}{|l|l|l|l|}
+\hline
+$\textrm{Atual}\diagdown\textrm{Previsto}$ & \textbf{positivo} & \textbf{negativo} & \textbf{neutro}\\ \hline
+\textbf{positivo} & 161 & 0 & 2\\ \hline
+\textbf{negativo} & 0 & 314 & 2\\ \hline
+\textbf{neutro} & 3 & 0 & 506 \\ \hline
+\end{tabular}
+\end{minipage}
+\hspace{2.0 cm}
+\begin{minipage}[b]{0.45\linewidth}
+
+\centering
+\caption{Medidas da Matriz de Confusão}
+\label{tab:mmct-svmgs}
+\begin{tabular}{|l|l|l|l|}
+\hline
+         & \textbf{precisão} & \textbf{recall} & \textbf{f1-score} \\ \hline
+\textbf{positivo} & 0.98     & 0.99   & 0.98     \\ \hline
+\textbf{negativo} & 1.00     & 0.99   & 1.00     \\ \hline
+\textbf{neutro} & 0.99    & 0.99   & 0.99     \\ \hline
+\textbf{média}    & 0.99     & 0.99   & 0.99 \\ \hline
+\textbf{acurácia} & \multicolumn{3}{|c|}{0.992914979757} \\ \hline
+\end{tabular}
+\end{minipage}
+}
+\end{table}
+%--
+
+%ternária Decision Tree
+\begin{table}[h!]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{minipage}[b]{0.45\linewidth}
 \caption{Matriz de Confusão Ternária: \textit{Decision Tree}}
 \label{tab:mct-dt}
 \begin{tabular}{|l|l|l|l|}
@@ -83,10 +245,32 @@ $\textrm{Atual}\diagdown\textrm{Previsto}$ & \textbf{positivo} & \textbf{negativ
 \textbf{negativo} & 1 & 314 & 1\\ \hline
 \textbf{neutro} & 3 & 2 & 504 \\ \hline
 \end{tabular}
-\end{table}
+\end{minipage}
+\hspace{2.0 cm}
+\begin{minipage}[b]{0.45\linewidth}
 
+\centering
+\caption{Medidas da Matriz de Confusão}
+\label{tab:mmct-dt}
+\begin{tabular}{|l|l|l|l|}
+\hline
+         & \textbf{precisão} & \textbf{recall} & \textbf{f1-score} \\ \hline
+\textbf{positivo} & 0.98     & 0.99   & 0.98     \\ \hline
+\textbf{negativo} & 0.99     & 0.99   & 0.99     \\ \hline
+\textbf{neutro} & 1.00     & 0.99   & 0.99     \\ \hline
+\textbf{média}    & 0.99     & 0.99   & 0.99 \\ \hline
+\textbf{acurácia} & \multicolumn{3}{|c|}{0.991902834008} \\ \hline
+\end{tabular}
+\end{minipage}
+}
+\end{table}
+%--
+
+%ternária Random Forest
 \begin{table}[h!]
 \centering
+\resizebox{\textwidth}{!}{%
+\begin{minipage}[b]{0.45\linewidth}
 \caption{Matriz de Confusão Ternária: \textit{Random Forest}}
 \label{tab:mct-rf}
 \begin{tabular}{|l|l|l|l|}
@@ -96,10 +280,34 @@ $\textrm{Atual}\diagdown\textrm{Previsto}$ & \textbf{positivo} & \textbf{negativ
 \textbf{negativo} & 0 & 316 & 7\\ \hline
 \textbf{neutro} & 3 & 1 & 505 \\ \hline
 \end{tabular}
-\end{table}
+\end{minipage}
+\hspace{2.0 cm}
+\begin{minipage}[b]{0.45\linewidth}
 
+\centering
+\caption{Medidas da Matriz de Confusão}
+\label{tab:mmct-rf}
+\begin{tabular}{|l|l|l|l|}
+\hline
+         & \textbf{precisão} & \textbf{recall} & \textbf{f1-score} \\ \hline
+\textbf{positivo} & 0.96     & 0.97   & 0.96     \\ \hline
+\textbf{negativo} & 1.00     & 0.97   & 0.98     \\ \hline
+\textbf{neutro} & 0.98     & 0.99   & 0.98     \\ \hline
+\textbf{média}    & 0.98     & 0.98   & 0.98 \\ \hline
+\textbf{acurácia} & \multicolumn{3}{|c|}{0.97975708502} \\ \hline
+\end{tabular}
+\end{minipage}
+}
+\end{table}
+%--
+%-----------------------
+
+%QUATERNARIO
+%quaternaria Naïve Bayes
 \begin{table}[h!]
 \centering
+\resizebox{\textwidth}{!}{%
+\begin{minipage}[b]{0.45\linewidth}
 \caption{Matriz de Confusão Quartenário: \textit{Naïve Bayes}}
 \label{tab:mcq-nb}
 \begin{tabular}{|l|l|l|l|l|}
@@ -110,7 +318,27 @@ $\textrm{Atual}\diagdown\textrm{Previsto}$ & \textbf{positivo} & \textbf{negativ
 \textbf{neutro} & 25 & 132 & 350 & 2 \\ \hline
 \textbf{irrelevante} & 14 & 22 & 23 & 26 \\ \hline
 \end{tabular}
+\end{minipage}
+\hspace{4.0 cm}
+\begin{minipage}[b]{0.45\linewidth}
+
+\centering
+\caption{Medidas da Matriz de Confusão}
+\label{tab:mmcq-nb}
+\begin{tabular}{|l|l|l|l|}
+\hline
+         & \textbf{precisão} & \textbf{recall} & \textbf{f1-score} \\ \hline
+\textbf{positivo} & 0.76     & 0.78   & 0.77     \\ \hline
+\textbf{negativo} & 0.64     & 0.98   & 0.77     \\ \hline
+\textbf{neutro} & 0.89    & 0.69   & 0.78     \\ \hline
+\textbf{irrelevante} & 0.93    & 0.31   & 0.46     \\ \hline
+\textbf{média}    & 0.80     & 0.76   & 0.75 \\ \hline
+\textbf{acurácia} & \multicolumn{3}{|c|}{0.992914979757} \\ \hline
+\end{tabular}
+\end{minipage}
+}
 \end{table}
+%--
 
 \begin{table}[h!]
 \centering
