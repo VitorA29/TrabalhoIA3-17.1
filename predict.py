@@ -30,15 +30,8 @@ RANDOM_FOREST = 2
 SVM = 3
 SVC1 = 4
 
-def predict(classifier, type):
+def predict(classifier, type, gridSearch, showWrongPredict, showPredictions, cria_arq):
     data = getTrainData(type)
-
-    '''
-        So chamar a função de cada classificador aqui.
-        text_clf = naiveBayes()
-        text_clf = randomForest()
-        text_clf = svm()
-    '''
 
     if(classifier == DECISION_TREE):
         text_clf = decisionTree()
@@ -61,20 +54,39 @@ def predict(classifier, type):
         opn = "a"
         output="######################SVC######################\n"
 
-    '''
-    parameters = {'vect__ngram_range': [(1, 1), (1, 2)],
-                  'tfidf__use_idf': (True, False),
-                  'clf__alpha': (1e-2, 1e-3),
-                  }
-    gs_clf = GridSearchCV(text_clf, parameters, n_jobs=-1)
-    gs_clf = gs_clf.fit(data.data, data.target)
-    #nltk.download()
-    '''
+    if(gridSearch and classifier != SVM):
+        print("------> A T E N Ç Ã O <------ GridSearch so funciona com SVM por enquanto! Executando sem GridSearch...")
 
-    text_clf = text_clf.fit(data.data, data.target)
+    if(gridSearch and classifier == SVM):
+        parameters = {
+            'vect__max_df': (0.5, 0.75, 1.0),
+            # 'vect__max_features': (None, 5000, 10000, 50000),
+            'vect__ngram_range': ((1, 1), (1, 2)),  # unigrams or bigrams
+            # 'tfidf__use_idf': (True, False),
+            # 'tfidf__norm': ('l1', 'l2'),
+            'clf__alpha': (0.00001, 0.000001),
+            'clf__penalty': ('l2', 'elasticnet'),
+            # 'clf__n_iter': (10, 50, 80),
+        }
+
+        text_clf = GridSearchCV(text_clf, parameters, n_jobs=1, verbose=1)
+        text_clf.fit(data.data, data.target)
+        print("Best score: %0.3f" % text_clf.best_score_)
+
+        '''
+        best_parameters = text_clf.best_estimator_.get_params()
+        for param_name in sorted(parameters.keys()):
+            print("\t%s: %r" % (param_name, best_parameters[param_name]))
+        '''
+    else:
+        text_clf = text_clf.fit(data.data, data.target)
+
+    #nltk.download()
 
     testData = getTestData(type)
 
+    #output += "Modo: " + getModoStr(type)
+    print("Modo: ", getModoStr(type))
     output += "DataTrain length: " + str(len(data.data)) + "\n"
     output += "DataTest length: " + str(len(testData.data)) + "\n"
 
@@ -87,7 +99,12 @@ def predict(classifier, type):
     output += str(metrics.confusion_matrix(testData.target, predicted))
 
     outputAux = ""
-    if not (len(sys.argv)>2 and (sys.argv[2]=="false" or sys.argv[2]=="FALSE")):
+    if(showWrongPredict):
+        outputAux += "\nWrong Predictions:\n"
+        for i in getWrondPredictions(predicted, testData.target, docs_test):
+            outputAux += i + "\n"
+
+    if(showPredictions):
         array = []
         outputAux += "\nPredictions:\n"
         for i in range(0, len(predicted)):
@@ -99,10 +116,10 @@ def predict(classifier, type):
         random.shuffle(array)
         j = 0
         for i in array:
-            outputAux += j+1 + '-' + i.text + " -> " + i.classific + "\n"
+            outputAux = j+1 + '-' + i.text + " -> " + i.classific + "\n"
             j += 1
 
-    if (len(sys.argv)>3 and (sys.argv[3]=="true" or sys.argv[3]=="TRUE")):
+    if (cria_arq == True):
         if(type==BINARIO):
             fo=open("BINARIO_RESULTADOS.txt",opn)
         elif(type==TERNARIO):
@@ -123,6 +140,15 @@ def predict(classifier, type):
     except:
         None
     print(outputAux)
+
+def getWrondPredictions(predictions, target, text):
+    list = []
+
+    for i in range(0, len(predictions)):
+        if(predictions[i] != target[i]):
+            list.append(text[i] + " | Correto: " + getCategory(type)[target[i]] + " Predição: " + getCategory(type)[predictions[i]])
+
+    return list
 
 def naiveBayes():
     text_clf = Pipeline([('vect', CountVectorizer()),
@@ -165,18 +191,55 @@ def svm():
                          ])
     return text_clf
 
-if sys.argv[1] == "TERNARIO":
-    type = TERNARIO
-elif sys.argv[1] == "BINARIO":
-    type = BINARIO
-else:
-    type = QUATERNARIO
+while (len(sys.argv)==6):
+    if (sys.argv[1]).upper() == "TERNARIO":
+        type = TERNARIO
+    elif (sys.argv[1]).upper() == "BINARIO":
+        type = BINARIO
+    elif (sys.argv[1]).upper() == "QUATERNARIO":
+        type = QUATERNARIO
+    else:
+        print("type invalido\n")
+        break
 
-print("NAIVE BAYES")
-predict(NAIVE_BAYES, type)
-print("RANDOM FOREST")
-predict(RANDOM_FOREST, type)
-print("DECISION TREE")
-predict(DECISION_TREE, type)
-print("SVM")
-predict(SVM, type)
+    if (sys.argv[2]).upper() == "TRUE":
+        gridSearch = True
+    elif (sys.argv[2]).upper() == "FALSE":
+        gridSearch = False
+    else:
+        print("gridSearch invalido\n")
+        break
+
+    if (sys.argv[3]).upper() == "TRUE":
+        showWrongPredictions = True
+    elif (sys.argv[3]).upper() == "FALSE":
+        showWrongPredictions = False
+    else:
+        print("showWrongPredictions invalido\n")
+        break
+
+    if (sys.argv[4]).upper() == "TRUE":
+        showPredictions = True
+    elif (sys.argv[4]).upper() == "FALSE":
+        showPredictions = False
+    else:
+        print("showPredictions invalido\n")
+        break
+
+    if (sys.argv[5]).upper() == "TRUE":
+        cria_arq = True
+    elif (sys.argv[5]).upper() == "FALSE":
+        cria_arq = False
+    else:
+        print("cria_arq invalido\n")
+        break
+
+    print("NAIVE BAYES")
+    predict(NAIVE_BAYES, type, gridSearch, showWrongPredictions, showPredictions, cria_arq)
+    print("RANDOM FOREST")
+    predict(RANDOM_FOREST, type, gridSearch, showWrongPredictions, showPredictions, cria_arq)
+    print("DECISION TREE")
+    predict(DECISION_TREE, type, gridSearch, showWrongPredictions, showPredictions, cria_arq)
+    print("SVM")
+    predict(SVM, type, gridSearch, showWrongPredictions, showPredictions, cria_arq)
+    break
