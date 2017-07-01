@@ -30,7 +30,7 @@ RANDOM_FOREST = 2
 SVM = 3
 SVC1 = 4
 
-def predict(classifier, type, gridSearch):
+def predict(classifier, type, gridSearch, showWrongPredict, showPredictions):
     data = getTrainData(type)
 
     if(classifier == DECISION_TREE):
@@ -63,9 +63,11 @@ def predict(classifier, type, gridSearch):
         text_clf.fit(data.data, data.target)
         print("Best score: %0.3f" % text_clf.best_score_)
 
+        '''
         best_parameters = text_clf.best_estimator_.get_params()
         for param_name in sorted(parameters.keys()):
             print("\t%s: %r" % (param_name, best_parameters[param_name]))
+        '''
     else:
         text_clf = text_clf.fit(data.data, data.target)
 
@@ -90,22 +92,38 @@ def predict(classifier, type, gridSearch):
     except:
         None
 
+    if(showWrongPredict):
+        print("\nWrong Predictions:")
+        for i in getWrondPredictions(predicted, testData.target, docs_test):
+            print(i)
+
     if (len(sys.argv)>2 and sys.argv[1]=="false"):
          return
 
-    array = []
-    print("\nPredictions:")
-    for i in range(0, len(predicted)):
-        text = testData.data[i]
-        classy = getCategory(type)[predicted[i]]
-        textClass = TextClassification(text, classy)
-        array.append(textClass)
+    if(showPredictions):
+        array = []
+        print("\nPredictions:")
+        for i in range(0, len(predicted)):
+            text = testData.data[i]
+            classy = getCategory(type)[predicted[i]]
+            textClass = TextClassification(text, classy)
+            array.append(textClass)
 
-    random.shuffle(array)
-    j = 0
-    for i in array:
-        print(j+1,'-', i.text, " -> ", i.classific)
-        j += 1
+        random.shuffle(array)
+        j = 0
+        for i in array:
+            print(j+1,'-', i.text, " -> ", i.classific)
+            j += 1
+
+def getWrondPredictions(predictions, target, text):
+    list = []
+
+    for i in range(0, len(predictions)):
+        if(predictions[i] != target[i]):
+            list.append(text[i] + " | Correto: " + getCategory(type)[target[i]] + " Predição: " + getCategory(type)[predictions[i]])
+
+    return list
+
 
 def naiveBayes():
     text_clf = Pipeline([('vect', CountVectorizer()),
@@ -151,5 +169,7 @@ def svm():
 
 type = BINARIO
 gridSearch = False
+showWrongPredictions = True
+showPredictions = True
+print(predict(NAIVE_BAYES, type, gridSearch, showWrongPredictions, showPredictions))
 
-print(predict(SVM, type, gridSearch))
