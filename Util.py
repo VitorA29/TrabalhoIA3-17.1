@@ -152,6 +152,14 @@ def  cleanSentences(sentencesArray, removeStopwords):
 
     return clean
 
+def getModoStr(type):
+    if(type == BINARIO):
+        return "Binário"
+    elif(type == TERNARIO):
+        return "Ternário"
+    else:
+        return "Quaternário"
+
 def getPath(type):
     if(type == BINARIO):
         return BINARIO_PATH

@@ -30,15 +30,8 @@ RANDOM_FOREST = 2
 SVM = 3
 SVC1 = 4
 
-def predict(classifier, type):
+def predict(classifier, type, gridSearch):
     data = getTrainData(type)
-
-    '''
-        So chamar a função de cada classificador aqui.
-        text_clf = naiveBayes()
-        text_clf = randomForest()
-        text_clf = svm()
-    '''
 
     if(classifier == DECISION_TREE):
         text_clf = decisionTree()
@@ -51,20 +44,37 @@ def predict(classifier, type):
     else:
         text_clf = svc()
 
-    '''
-    parameters = {'vect__ngram_range': [(1, 1), (1, 2)],
-                  'tfidf__use_idf': (True, False),
-                  'clf__alpha': (1e-2, 1e-3),
-                  }
-    gs_clf = GridSearchCV(text_clf, parameters, n_jobs=-1)
-    gs_clf = gs_clf.fit(data.data, data.target)
-    #nltk.download()
-    '''
 
-    text_clf = text_clf.fit(data.data, data.target)
+    if(gridSearch and classifier != SVM):
+        print("------> A T E N Ç Ã O <------ GridSearch so funciona com SVM por enquanto! Executando sem GridSearch...")
+
+    if(gridSearch and classifier == SVM):
+        parameters = {
+            'vect__max_df': (0.5, 0.75, 1.0),
+            # 'vect__max_features': (None, 5000, 10000, 50000),
+            'vect__ngram_range': ((1, 1), (1, 2)),  # unigrams or bigrams
+            # 'tfidf__use_idf': (True, False),
+            # 'tfidf__norm': ('l1', 'l2'),
+            'clf__alpha': (0.00001, 0.000001),
+            'clf__penalty': ('l2', 'elasticnet'),
+            # 'clf__n_iter': (10, 50, 80),
+        }
+
+        text_clf = GridSearchCV(text_clf, parameters, n_jobs=1, verbose=1)
+        text_clf.fit(data.data, data.target)
+        print("Best score: %0.3f" % text_clf.best_score_)
+
+        best_parameters = text_clf.best_estimator_.get_params()
+        for param_name in sorted(parameters.keys()):
+            print("\t%s: %r" % (param_name, best_parameters[param_name]))
+    else:
+        text_clf = text_clf.fit(data.data, data.target)
+
+    #nltk.download()
 
     testData = getTestData(type)
 
+    print("Modo: ", getModoStr(type))
     print("DataTrain length: ", len(data.data))
     print("DataTest length: ", len(testData.data))
 
@@ -139,13 +149,8 @@ def svm():
                          ])
     return text_clf
 
-type = TERNARIO
 
-print("RANDOM FOREST")
-print(predict(RANDOM_FOREST, type))
-print("NAIVE BAYES")
-print(predict(NAIVE_BAYES, type))
-print("DECISION TREE")
-print(predict(DECISION_TREE, type))
-print("SVM")
-print(predict(SVM, type))
+type = TERNARIO
+gridSearch = True
+
+print(predict(NAIVE_BAYES, type, gridSearch))
