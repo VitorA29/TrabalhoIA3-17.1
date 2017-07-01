@@ -51,7 +51,17 @@ def predict(classifier):
     else:
         text_clf = svc()
 
+    '''
+    parameters = {'vect__ngram_range': [(1, 1), (1, 2)],
+                  'tfidf__use_idf': (True, False),
+                  'clf__alpha': (1e-2, 1e-3),
+                  }
+
+    gs_clf = GridSearchCV(text_clf, parameters, n_jobs=-1)
+    gs_clf = gs_clf.fit(data.data, data.target)
+
     #nltk.download()
+    '''
 
     text_clf = text_clf.fit(data.data, data.target)
 
@@ -110,7 +120,8 @@ def randomForest():
 def svc():
     text_clf = Pipeline([('vect', CountVectorizer()),
                          ('tfidf', TfidfTransformer()),
-                         ('clf', LinearSVC()),
+                         ('clf', SGDClassifier(loss='hinge', penalty='l2',
+                                               alpha=1e-3, n_iter=5, random_state=42))
                          ])
 
     return text_clf
@@ -131,5 +142,5 @@ def svm():
                          ])
     return text_clf
 
-print(predict(DECISION_TREE))
+print(predict(SVC1))
 #prediction()

@@ -1,0 +1,109 @@
+
+#########################NAIVE BAYES#########################
+DataTrain length:  27066
+DataTest length:  1073
+Accuracy:  0.756756756757
+
+Report:
+
+             precision    recall  f1-score   support
+
+        pos       0.76      0.78      0.77       163
+        neg       0.64      0.98      0.77       316
+        neu       0.89      0.69      0.78       509
+        irr       0.93      0.31      0.46        85
+
+avg / total       0.80      0.76      0.75      1073
+
+
+Confusion Matrix:
+
+[[127  20  16   0]
+ [  2 309   5   0]
+ [ 25 132 350   2]
+ [ 14  22  23  26]]
+
+Top 10 most informative words:
+
+pos: thanks new well time like love one movie good film
+neg: time get really bad one work film apple like movie
+neu: iphone nexus rt android apple microsoft google twitter http co
+irr: rt android que en microsoft http co de google twitter
+
+#########################DECISION TREE#########################
+DataTrain length:  27066
+DataTest length:  1073
+Accuracy:  0.922646784716
+
+Report:
+
+             precision    recall  f1-score   support
+
+        pos       0.88      1.00      0.93       163
+        neg       0.97      1.00      0.98       316
+        neu       0.91      0.99      0.95       509
+        irr       1.00      0.09      0.17        85
+
+avg / total       0.93      0.92      0.89      1073
+
+
+Confusion Matrix:
+
+[[163   0   0   0]
+ [  0 316   0   0]
+ [  4   2 503   0]
+ [ 19   8  50   8]]
+
+#########################RANDOM FOREST#########################
+DataTrain length:  27066
+DataTest length:  1073
+Accuracy:  0.935694315005
+Report:
+
+             precision    recall  f1-score   support
+
+        pos       0.96      1.00      0.98       163
+        neg       0.99      1.00      0.99       316
+        neu       0.90      1.00      0.95       509
+        irr       1.00      0.20      0.33        85
+
+avg / total       0.94      0.94      0.92      1073
+
+
+Confusion Matrix:
+
+[[163   0   0   0]
+ [  0 316   0   0]
+ [  0   1 508   0]
+ [  7   3  58  17]]
+
+#########################SVM#########################
+DataTrain length:  27066
+DataTest length:  1073
+Accuracy:  0.71761416589
+
+Report:
+
+             precision    recall  f1-score   support
+
+        pos       0.64      0.48      0.55       163
+        neg       0.72      0.77      0.75       316
+        neu       0.72      0.82      0.77       509
+        irr       0.94      0.38      0.54        85
+
+avg / total       0.73      0.72      0.71      1073
+
+
+Confusion Matrix:
+
+[[ 78  18  67   0]
+ [ 17 243  56   0]
+ [ 23  67 417   2]
+ [  4   8  41  32]]
+
+Top 10 most informative words:
+
+pos: awesome com performances happy great best film thanks love good
+neg: sleep really sorry sick miss movie hate sad work bad
+neu: app via android apple rt google microsoft twitter http co
+irr: por la es se nexusprime un el que en de
