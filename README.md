@@ -22,9 +22,13 @@ Dentro do `predict.py`, executar a função `def predict(classifier, type, gridS
 por exemplo:
 
 `type = QUATERNARIO
+
 gridSearch = False
+
 showWrongPredictions = True
+
 showPredictions = False
+
 print(predict(RANDOM_FOREST, type, gridSearch, showWrongPredictions, showPredictions))`
 
 Onde,
