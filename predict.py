@@ -44,7 +44,6 @@ def predict(classifier, type, gridSearch):
     else:
         text_clf = svc()
 
-
     if(gridSearch and classifier != SVM):
         print("------> A T E N Ç Ã O <------ GridSearch so funciona com SVM por enquanto! Executando sem GridSearch...")
 
@@ -150,7 +149,7 @@ def svm():
     return text_clf
 
 
-type = TERNARIO
+type = QUATERNARIO
 gridSearch = True
 
-print(predict(NAIVE_BAYES, type, gridSearch))
+print(predict(SVM, type, gridSearch))
