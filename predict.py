@@ -24,25 +24,10 @@ from sklearn.model_selection import GridSearchCV
 
 from Util import *
 
-DECISION_TREE = 0
-NAIVE_BAYES = 1
-RANDOM_FOREST = 2
-SVM = 3
-SVC1 = 4
-
 def predict(classifier, type, gridSearch, showWrongPredict, showPredictions):
     data = getTrainData(type)
 
-    if(classifier == DECISION_TREE):
-        text_clf = decisionTree()
-    elif(classifier == NAIVE_BAYES):
-        text_clf = naiveBayes()
-    elif(classifier == RANDOM_FOREST):
-        text_clf = randomForest()
-    elif(classifier == SVM):
-        text_clf = svm()
-    else:
-        text_clf = svc()
+    text_clf = getClassifier(classifier)
 
     if(gridSearch and classifier != SVM):
         print("------> A T E N Ç Ã O <------ GridSearch so funciona com SVM por enquanto! Executando sem GridSearch...")
@@ -61,70 +46,27 @@ def predict(classifier, type, gridSearch, showWrongPredict, showPredictions):
 
         text_clf = GridSearchCV(text_clf, parameters, n_jobs=1, verbose=1)
         text_clf.fit(data.data, data.target)
-        print("Best score: %0.3f" % text_clf.best_score_)
-
-        '''
-        best_parameters = text_clf.best_estimator_.get_params()
-        for param_name in sorted(parameters.keys()):
-            print("\t%s: %r" % (param_name, best_parameters[param_name]))
-        '''
     else:
         text_clf = text_clf.fit(data.data, data.target)
 
     #nltk.download()
 
     testData = getTestData(type)
-
-    print("Classificador: ", )
-    print("Modo: ", getModoStr(type))
-    print("DataTrain length: ", len(data.data))
-    print("DataTest length: ", len(testData.data))
-
     docs_test = testData.data
     predicted = text_clf.predict(docs_test)
-    print("Accuracy: ", metrics.accuracy_score(testData.target, predicted))
-    print("\nReport:\n")
-    print(metrics.classification_report(testData.target, predicted, target_names = getCategory(type)))
-    print("\nConfusion Matrix:\n")
-    print(metrics.confusion_matrix(testData.target, predicted))
 
-    try:
-        print_top10(text_clf.get_params()['vect'], text_clf.get_params()['clf'], getCategory(type))
-    except:
-        None
+    #Escreve no arquivo txt.
+    wirte2TxtFile(predicted, testData, data, type, classifier, 'teste', showWrongPredict, showPredictions)
 
-    if(showWrongPredict):
-        print("\nWrong Predictions:")
-        for i in getWrongPredictions(predicted, testData.target, docs_test):
-            print(i)
-
-    if (len(sys.argv)>2 and sys.argv[1]=="false"):
-         return
-
-    if(showPredictions):
-        array = []
-        print("\nPredictions:")
-        for i in range(0, len(predicted)):
-            text = testData.data[i]
-            classy = getCategory(type)[predicted[i]]
-            textClass = TextClassification(text, classy)
-            array.append(textClass)
-
-        random.shuffle(array)
-        j = 0
-        for i in array:
-            print(j+1,'-', i.text, " -> ", i.classific)
-            j += 1
-
-def getWrongPredictions(predictions, target, text):
-    list = []
-
-    for i in range(0, len(predictions)):
-        if(predictions[i] != target[i]):
-            list.append(text[i] + " | Correto: " + getCategory(type)[target[i]] + " Predição: " + getCategory(type)[predictions[i]])
-
-    return list
-
+def getClassifier(classifier):
+    if (classifier == DECISION_TREE):
+        return decisionTree()
+    elif (classifier == NAIVE_BAYES):
+        return naiveBayes()
+    elif (classifier == RANDOM_FOREST):
+        return randomForest()
+    else:
+        return svm()
 
 def naiveBayes():
     text_clf = Pipeline([('vect', CountVectorizer()),
@@ -169,6 +111,5 @@ def svm():
 type = QUATERNARIO
 gridSearch = False
 showWrongPredictions = True
-showPredictions = False
-predict(RANDOM_FOREST, type, gridSearch, showWrongPredictions, showPredictions)
-
+showPredictions = True
+predict(NAIVE_BAYES, type, gridSearch, showWrongPredictions, showPredictions)

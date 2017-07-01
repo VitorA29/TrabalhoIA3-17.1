@@ -1,3 +1,4 @@
+import random
 import re, math, collections, itertools
 import os
 
@@ -8,7 +9,7 @@ import pandas as pd
 import numpy as np
 from nltk.corpus import stopwords
 import re, math, collections, itertools
-import nltk, nltk.classify.util, nltk.metrics
+from sklearn import decomposition, metrics
 from nltk.classify import NaiveBayesClassifier
 from nltk.metrics import BigramAssocMeasures
 from nltk.probability import FreqDist, ConditionalFreqDist
@@ -36,6 +37,11 @@ BINARIO_PATH = "./binario/"
 QUATERNARIO = 0
 TERNARIO = 1
 BINARIO = 2
+
+DECISION_TREE = 0
+NAIVE_BAYES = 1
+RANDOM_FOREST = 2
+SVM = 3
 
 class Data(object):
     '''
@@ -160,6 +166,16 @@ def getModoStr(type):
     else:
         return "Quaternário"
 
+def getClassifierName(classifier):
+    if(classifier == DECISION_TREE):
+        return 'Decision Tree'
+    elif(classifier == NAIVE_BAYES):
+        return 'Naive Bayes'
+    elif(classifier == RANDOM_FOREST):
+        return 'Random Forest'
+    else:
+        return 'SVM'
+
 def getPath(type):
     if(type == BINARIO):
         return BINARIO_PATH
@@ -183,15 +199,50 @@ def list_files(path):
             files.append(name)
     return files
 
-def print_top10(vectorizer, clf, class_labels):
-    feature_names = vectorizer.get_feature_names()
-    for i, class_label in enumerate(class_labels):
-        top10 = np.argsort(clf.coef_[i])[-10:]
-        print("%s: %s" % (class_label," ".join(feature_names[j] for j in top10)))
+def getWrongPredictions(predictions, target, text):
+    list = []
 
-def show_most_informative_features(vectorizer, clf, n=20):
-    feature_names = vectorizer.get_feature_names()
-    coefs_with_fns = sorted(zip(clf.coef_[0], feature_names))
-    top = zip(coefs_with_fns[:n], coefs_with_fns[:-(n + 1):-1])
-    for (coef_1, fn_1), (coef_2, fn_2) in top:
-        print("\t%.4f\t%-15s\t\t%.4f\t%-15s" % (coef_1, fn_1, coef_2, fn_2))
+    for i in range(0, len(predictions)):
+        if(predictions[i] != target[i]):
+            list.append(text[i] + " | Correct: " + getCategory(type)[target[i]] + " Predicted: " + getCategory(type)[predictions[i]])
+
+    return list
+
+def wirte2TxtFile(predicted, testData, trainData, type, classifier, fileName, showWrongPredict, showPredictions):
+    text_file = open(fileName + ".txt", "w")
+
+    text_file.write("Classifier: %s\n" % getClassifierName(classifier))
+    text_file.write("Mode: %s\n" % getModoStr(type))
+    text_file.write("DataTrain length: %s\n" % len(trainData.data))
+    text_file.write("DataTest length: %s\n" % len(testData.data))
+
+    text_file.write("\n-----PREDCTION INFO-----\n")
+
+    text_file.write("Accuracy: %s\n" % metrics.accuracy_score(testData.target, predicted))
+    text_file.write("\nReport:\n")
+    text_file.write(metrics.classification_report(testData.target, predicted, target_names=getCategory(type)))
+    text_file.write("\nConfusion Matrix:\n")
+    text_file.write(str(metrics.confusion_matrix(testData.target, predicted)))
+
+    if (showWrongPredict):
+        list = getWrongPredictions(predicted, testData.target, testData.data)
+        text_file.write("\n\n"+ str(len(list)) + " Wrong Predictions:\n")
+        for i in list:
+            text_file.write(i + '\n')
+
+    if (showPredictions):
+        array = []
+        text_file.write("\nPredictions:")
+        for i in range(0, len(predicted)):
+            text = testData.data[i]
+            classy = getCategory(type)[predicted[i]]
+            textClass = TextClassification(text, classy)
+            array.append(textClass)
+
+        random.shuffle(array)
+        j = 0
+        for i in array:
+            text_file.write("%s - %s -> %s\n" %((j + 1), i.text, i.classific))
+            j += 1
+
+    text_file.close()

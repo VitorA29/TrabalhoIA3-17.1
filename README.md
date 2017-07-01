@@ -17,6 +17,26 @@ Juntando todos os arquivos em cada pasta, é um total de, aproximadamente, 27000
 
 O pack de stopwords utilizado é baixado atraves do comando `nltk.download()`, caso não tenha, execute o comando antes das chamadas das funções do arquivo `predict.py`.
 
+Dentro do `predict.py`, executar a função `def predict(classifier, type, gridSearch, showWrongPredict, showPredictions):`
+
+por exemplo:
+
+``` python
+type = QUATERNARIO
+gridSearch = False
+showWrongPredictions = True
+showPredictions = False
+predict(RANDOM_FOREST, type, gridSearch, showWrongPredictions, showPredictions)
+```
+
+Onde,
+`type` é a quantidade de tipos de tweets. O Quaternário tem, pro exemplo, Positivo, Negativo, Neutro e Irrelevante.
+`gridSearch` é se vai utilizar o gridSearch ou não.
+`showWrongPredictions` Mostrar ou não as previsões erradas do classificador.
+`showPredictions` Mostrar ou não todas as predições.
+
+`DECISION_TREE`, `NAIVE_BAYES`, `RANDOM_FOREST`, `SVM` são as constantes que representam os classificadores.
+
 ### Módulos usados
 `SciPy`
 `NumPy`
