@@ -149,7 +149,7 @@ def svm():
     return text_clf
 
 
-type = QUATERNARIO
-gridSearch = True
+type = BINARIO
+gridSearch = False
 
 print(predict(SVM, type, gridSearch))
