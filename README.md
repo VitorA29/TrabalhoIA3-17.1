@@ -21,15 +21,13 @@ Dentro do `predict.py`, executar a função `def predict(classifier, type, gridS
 
 por exemplo:
 
-`type = QUATERNARIO
-
+``` python
+type = QUATERNARIO
 gridSearch = False
-
 showWrongPredictions = True
-
 showPredictions = False
-
-print(predict(RANDOM_FOREST, type, gridSearch, showWrongPredictions, showPredictions))`
+print(predict(RANDOM_FOREST, type, gridSearch, showWrongPredictions, showPredictions))
+```
 
 Onde,
 `type` é a quantidade de tipos de tweets. O Quaternário tem, pro exemplo, Positivo, Negativo, Neutro e Irrelevante.
