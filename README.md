@@ -26,7 +26,7 @@ type = QUATERNARIO
 gridSearch = False
 showWrongPredictions = True
 showPredictions = False
-print(predict(RANDOM_FOREST, type, gridSearch, showWrongPredictions, showPredictions))
+predict(RANDOM_FOREST, type, gridSearch, showWrongPredictions, showPredictions)
 ```
 
 Onde,
