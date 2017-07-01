@@ -42,14 +42,24 @@ def predict(classifier, type):
 
     if(classifier == DECISION_TREE):
         text_clf = decisionTree()
+        opn = "a"
+        output="######################DECISION_TREE######################\n"
     elif(classifier == NAIVE_BAYES):
         text_clf = naiveBayes()
+        opn = "w"
+        output="######################NAIVE_BAYES######################\n"
     elif(classifier == RANDOM_FOREST):
         text_clf = randomForest()
+        opn = "a"
+        output="######################RANDOM_FOREST######################\n"
     elif(classifier == SVM):
         text_clf = svm()
+        opn = "a"
+        output="######################SVM######################\n"
     else:
         text_clf = svc()
+        opn = "a"
+        output="######################SVC######################\n"
 
     '''
     parameters = {'vect__ngram_range': [(1, 1), (1, 2)],
@@ -65,38 +75,54 @@ def predict(classifier, type):
 
     testData = getTestData(type)
 
-    print("DataTrain length: ", len(data.data))
-    print("DataTest length: ", len(testData.data))
+    output += "DataTrain length: " + str(len(data.data)) + "\n"
+    output += "DataTest length: " + str(len(testData.data)) + "\n"
 
     docs_test = testData.data
     predicted = text_clf.predict(docs_test)
-    print("Accuracy: ", metrics.accuracy_score(testData.target, predicted))
-    print("\nReport:\n")
-    print(metrics.classification_report(testData.target, predicted, target_names = getCategory(type)))
-    print("\nConfusion Matrix:\n")
-    print(metrics.confusion_matrix(testData.target, predicted))
+    output += "Accuracy: " + str(metrics.accuracy_score(testData.target, predicted)) + "\n"
+    output += "\nReport:\n\n"
+    output += str(metrics.classification_report(testData.target, predicted, target_names = getCategory(type))) + "\n"
+    output += "\nConfusion Matrix:\n\n"
+    output += str(metrics.confusion_matrix(testData.target, predicted))
 
+    outputAux = ""
+    if not (len(sys.argv)>2 and (sys.argv[2]=="false" or sys.argv[2]=="FALSE")):
+        array = []
+        outputAux += "\nPredictions:\n"
+        for i in range(0, len(predicted)):
+            text = testData.data[i]
+            classy = getCategory(type)[predicted[i]]
+            textClass = TextClassification(text, classy)
+            array.append(textClass)
+
+        random.shuffle(array)
+        j = 0
+        for i in array:
+            outputAux += j+1 + '-' + i.text + " -> " + i.classific + "\n"
+            j += 1
+
+    if (len(sys.argv)>3 and (sys.argv[3]=="true" or sys.argv[3]=="TRUE")):
+        if(type==BINARIO):
+            fo=open("BINARIO_RESULTADOS.txt",opn)
+        elif(type==TERNARIO):
+            fo=open("TERNARIO_RESULTADOS.txt",opn)
+        else:
+            fo=open("QUATERNARIO_RESULTADOS.txt",opn)
+        fo.write(output + "\n")
+        try:
+            print_top10_file(text_clf.get_params()['vect'], text_clf.get_params()['clf'], getCategory(type), fo)
+        except:
+            None
+        fo.write(outputAux)
+        fo.close()
+        return
+    print(output)
     try:
         print_top10(text_clf.get_params()['vect'], text_clf.get_params()['clf'], getCategory(type))
     except:
         None
-
-    if (len(sys.argv)>2 and sys.argv[1]=="false"):
-         return
-
-    array = []
-    print("\nPredictions:")
-    for i in range(0, len(predicted)):
-        text = testData.data[i]
-        classy = getCategory(type)[predicted[i]]
-        textClass = TextClassification(text, classy)
-        array.append(textClass)
-
-    random.shuffle(array)
-    j = 0
-    for i in array:
-        print(j+1,'-', i.text, " -> ", i.classific)
-        j += 1
+    print(outputAux)
 
 def naiveBayes():
     text_clf = Pipeline([('vect', CountVectorizer()),
@@ -139,13 +165,18 @@ def svm():
                          ])
     return text_clf
 
-type = TERNARIO
+if sys.argv[1] == "TERNARIO":
+    type = TERNARIO
+elif sys.argv[1] == "BINARIO":
+    type = BINARIO
+else:
+    type = QUATERNARIO
 
-print("RANDOM FOREST")
-print(predict(RANDOM_FOREST, type))
 print("NAIVE BAYES")
-print(predict(NAIVE_BAYES, type))
+predict(NAIVE_BAYES, type)
+print("RANDOM FOREST")
+predict(RANDOM_FOREST, type)
 print("DECISION TREE")
-print(predict(DECISION_TREE, type))
+predict(DECISION_TREE, type)
 print("SVM")
-print(predict(SVM, type))
+predict(SVM, type)
