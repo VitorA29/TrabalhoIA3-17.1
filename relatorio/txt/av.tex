@@ -1,0 +1,155 @@
+\begin{table}[h!]
+\centering
+\caption{Matriz de Confusão Binária: \textit{Naïve Bayes}}
+\label{tab:mcb-nb}
+\begin{tabular}{|l|l|l|}
+\hline
+$\textrm{Atual}\diagdown\textrm{Previsto}$ & \textbf{positivo} & \textbf{negativo} \\ \hline
+\textbf{positivo}     & 142                 & 21   \\ \hline
+\textbf{negativo}     & 0                   & 316 \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\caption{Matriz de Confusão Binária: \textit{SVM}}
+\label{tab:mcb-svm}
+\begin{tabular}{|l|l|l|}
+\hline
+$\textrm{Atual}\diagdown\textrm{Previsto}$ & \textbf{positivo} & \textbf{negativo} \\ \hline
+\textbf{positivo}     & 163                 & 0   \\ \hline
+\textbf{negativo}     & 0                   & 316 \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\caption{Matriz de Confusão Binária: \textit{Decision Tree}}
+\label{tab:mcb-dt}
+\begin{tabular}{|l|l|l|}
+\hline
+$\textrm{Atual}\diagdown\textrm{Previsto}$ & \textbf{positivo} & \textbf{negativo} \\ \hline
+\textbf{positivo}     & 163                 & 0   \\ \hline
+\textbf{negativo}     & 0                   & 316 \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\caption{Matriz de Confusão Binária: \textit{Random Forest}}
+\label{tab:mcb-rf}
+\begin{tabular}{|l|l|l|}
+\hline
+$\textrm{Atual}\diagdown\textrm{Previsto}$ & \textbf{positivo} & \textbf{negativo} \\ \hline
+\textbf{positivo}     & 162                 & 1   \\ \hline
+\textbf{negativo}     & 3                   & 313 \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\caption{Matriz de Confusão Ternária: \textit{Naïve Bayes}}
+\label{tab:mct-nb}
+\begin{tabular}{|l|l|l|l|}
+\hline
+$\textrm{Atual}\diagdown\textrm{Previsto}$ & \textbf{positivo} & \textbf{negativo} & \textbf{neutro}\\ \hline
+\textbf{positivo} & 16 & 1 & 146\\ \hline
+\textbf{negativo} & 0 & 99 & 217\\ \hline
+\textbf{neutro} & 0 & 0 & 509 \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\caption{Matriz de Confusão Ternária: \textit{SVM}}
+\label{tab:mct-svm}
+\begin{tabular}{|l|l|l|l|}
+\hline
+$\textrm{Atual}\diagdown\textrm{Previsto}$ & \textbf{positivo} & \textbf{negativo} & \textbf{neutro}\\ \hline
+\textbf{positivo} & 40 & 3 & 120\\ \hline
+\textbf{negativo} & 0 & 118 & 198\\ \hline
+\textbf{neutro} & 0 & 2 & 507 \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\caption{Matriz de Confusão Ternária: \textit{Decision Tree}}
+\label{tab:mct-dt}
+\begin{tabular}{|l|l|l|l|}
+\hline
+$\textrm{Atual}\diagdown\textrm{Previsto}$ & \textbf{positivo} & \textbf{negativo} & \textbf{neutro}\\ \hline
+\textbf{positivo} & 162 & 0 & 1\\ \hline
+\textbf{negativo} & 1 & 314 & 1\\ \hline
+\textbf{neutro} & 3 & 2 & 504 \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\caption{Matriz de Confusão Ternária: \textit{Random Forest}}
+\label{tab:mct-rf}
+\begin{tabular}{|l|l|l|l|}
+\hline
+$\textrm{Atual}\diagdown\textrm{Previsto}$ & \textbf{positivo} & \textbf{negativo} & \textbf{neutro}\\ \hline
+\textbf{positivo} & 163 & 0 & 5\\ \hline
+\textbf{negativo} & 0 & 316 & 7\\ \hline
+\textbf{neutro} & 3 & 1 & 505 \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\caption{Matriz de Confusão Quartenário: \textit{Naïve Bayes}}
+\label{tab:mcq-nb}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+$\textrm{Atual}\diagdown\textrm{Previsto}$ & \textbf{positivo} & \textbf{negativo} & \textbf{neutro} & \textbf{irrelevante}\\ \hline
+\textbf{positivo} & 127 & 20 & 16 & 0\\ \hline
+\textbf{negativo} & 2 & 309 & 5 & 0\\ \hline
+\textbf{neutro} & 25 & 132 & 350 & 2 \\ \hline
+\textbf{irrelevante} & 14 & 22 & 23 & 26 \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\caption{Matriz de Confusão Quartenário: \textit{SVM}}
+\label{tab:mcq-smv}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+$\textrm{Atual}\diagdown\textrm{Previsto}$ & \textbf{positivo} & \textbf{negativo} & \textbf{neutro} & \textbf{irrelevante}\\ \hline
+\textbf{positivo} & 78 & 18 & 67 & 0\\ \hline
+\textbf{negativo} & 17 & 243 & 56 & 0\\ \hline
+\textbf{neutro} & 23 & 67 & 417 & 2 \\ \hline
+\textbf{irrelevante} & 4 & 8 & 41 & 32 \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\caption{Matriz de Confusão Quartenário: \textit{Decision Tree}}
+\label{tab:mcq-nb}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+$\textrm{Atual}\diagdown\textrm{Previsto}$ & \textbf{positivo} & \textbf{negativo} & \textbf{neutro} & \textbf{irrelevante}\\ \hline
+\textbf{positivo} & 163 & 0 & 0 & 0\\ \hline
+\textbf{negativo} & 0 & 316 & 0 & 0\\ \hline
+\textbf{neutro} & 4 & 2 & 503 & 0 \\ \hline
+\textbf{irrelevante} & 19 & 8 & 50 & 8 \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\caption{Matriz de Confusão Quartenário: \textit{Random Forest}}
+\label{tab:mcq-rf}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+$\textrm{Atual}\diagdown\textrm{Previsto}$ & \textbf{positivo} & \textbf{negativo} & \textbf{neutro} & \textbf{irrelevante}\\ \hline
+\textbf{positivo} & 163 & 0 & 0 & 0\\ \hline
+\textbf{negativo} & 0 & 316 & 0 & 0\\ \hline
+\textbf{neutro} & 0 & 1 & 508 & 0 \\ \hline
+\textbf{irrelevante} & 7 & 3 & 58 & 17 \\ \hline
+\end{tabular}
+\end{table}
