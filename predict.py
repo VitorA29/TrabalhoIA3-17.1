@@ -75,6 +75,7 @@ def predict(classifier, type, gridSearch, showWrongPredict, showPredictions):
 
     testData = getTestData(type)
 
+    print("Classificador: ", )
     print("Modo: ", getModoStr(type))
     print("DataTrain length: ", len(data.data))
     print("DataTest length: ", len(testData.data))
@@ -94,7 +95,7 @@ def predict(classifier, type, gridSearch, showWrongPredict, showPredictions):
 
     if(showWrongPredict):
         print("\nWrong Predictions:")
-        for i in getWrondPredictions(predicted, testData.target, docs_test):
+        for i in getWrongPredictions(predicted, testData.target, docs_test):
             print(i)
 
     if (len(sys.argv)>2 and sys.argv[1]=="false"):
@@ -115,7 +116,7 @@ def predict(classifier, type, gridSearch, showWrongPredict, showPredictions):
             print(j+1,'-', i.text, " -> ", i.classific)
             j += 1
 
-def getWrondPredictions(predictions, target, text):
+def getWrongPredictions(predictions, target, text):
     list = []
 
     for i in range(0, len(predictions)):
@@ -155,7 +156,6 @@ def decisionTree():
                          ('tfidf', TfidfTransformer()),
                          ('clf', DecisionTreeClassifier()),
                          ])
-
     return text_clf
 
 def svm():
@@ -166,10 +166,9 @@ def svm():
                          ])
     return text_clf
 
-
-type = BINARIO
+type = QUATERNARIO
 gridSearch = False
 showWrongPredictions = True
-showPredictions = True
-print(predict(NAIVE_BAYES, type, gridSearch, showWrongPredictions, showPredictions))
+showPredictions = False
+predict(RANDOM_FOREST, type, gridSearch, showWrongPredictions, showPredictions)
 
