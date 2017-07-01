@@ -29,6 +29,14 @@ Classificador binário.
 '''
 categories2 = ['pos', 'neg']
 
+QUATERNARIO_PATH = "./quaternario/"
+TERNARIO_PATH = "./ternario/"
+BINARIO_PATH = "./binario/"
+
+QUATERNARIO = 0
+TERNARIO = 1
+BINARIO = 2
+
 class Data(object):
     '''
         Essa classe encapsula as informações sobre os dados lidos.
@@ -87,21 +95,23 @@ def file2SentencesArray(fileName, folderName):
     #header = 0 significa que a primeira linha do arquivo contem informações sobre o padrão do arquivo.
     #delimiter = "," significa que os dados estão separados por uma vírgula.
     #quoting = 3 remove aspas
-    array = pd.read_csv(os.path.join(os.path.dirname(__file__), folderName, fileName), header=0,
+    array = pd.read_csv(folderName + fileName, header=0,
                         delimiter=",")
 
     return array
 
-def getTestData():
+def getTestData(type):
     dataArray = []
     targetArray = []
 
-    for file in list_files("./test/"):
-        array = file2SentencesArray(file, 'test')
+    path = getPath(type)
+
+    for file in list_files(path + "test/"):
+        array = file2SentencesArray(file, path + "test/")
 
         array1 = []
         for i in array["class"]:
-            array1.append(categories4.index(i[:3].lower()))
+            array1.append(getCategory(type).index(i[:3].lower()))
 
         dataArray.extend(cleanSentences(array["text"], False))
         targetArray.extend(array1)
@@ -110,16 +120,18 @@ def getTestData():
 
     return data
 
-def getTrainData():
+def getTrainData(type):
     dataArray = []
     targetArray = []
 
-    for file in list_files("./train/"):
-        array = file2SentencesArray(file, 'train')
+    path = getPath(type)
+
+    for file in list_files(path + "train/"):
+        array = file2SentencesArray(file, path + "train/")
 
         array1 = []
         for i in array["class"]:
-            array1.append(categories4.index(i[:3].lower()))
+            array1.append(getCategory(type).index(i[:3].lower()))
 
         dataArray.extend(cleanSentences(array["text"], True))
         targetArray.extend(array1)
@@ -140,6 +152,22 @@ def  cleanSentences(sentencesArray, removeStopwords):
 
     return clean
 
+def getPath(type):
+    if(type == BINARIO):
+        return BINARIO_PATH
+    elif(type == TERNARIO):
+        return TERNARIO_PATH
+    else:
+        return QUATERNARIO_PATH
+
+def getCategory(type):
+    if(type == BINARIO):
+        return categories2
+    elif(type == TERNARIO):
+        return categories3
+    else:
+        return categories4
+
 def list_files(path):
     files = []
     for name in os.listdir(path):
@@ -151,5 +179,11 @@ def print_top10(vectorizer, clf, class_labels):
     feature_names = vectorizer.get_feature_names()
     for i, class_label in enumerate(class_labels):
         top10 = np.argsort(clf.coef_[i])[-10:]
-        print("%s: %s" % (class_label,
-              " ".join(feature_names[j] for j in top10)))
+        print("%s: %s" % (class_label," ".join(feature_names[j] for j in top10)))
+
+def show_most_informative_features(vectorizer, clf, n=20):
+    feature_names = vectorizer.get_feature_names()
+    coefs_with_fns = sorted(zip(clf.coef_[0], feature_names))
+    top = zip(coefs_with_fns[:n], coefs_with_fns[:-(n + 1):-1])
+    for (coef_1, fn_1), (coef_2, fn_2) in top:
+        print("\t%.4f\t%-15s\t\t%.4f\t%-15s" % (coef_1, fn_1, coef_2, fn_2))

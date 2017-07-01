@@ -30,8 +30,8 @@ RANDOM_FOREST = 2
 SVM = 3
 SVC1 = 4
 
-def predict(classifier):
-    data = getTrainData()
+def predict(classifier, type):
+    data = getTrainData(type)
 
     '''
         So chamar a função de cada classificador aqui.
@@ -56,16 +56,14 @@ def predict(classifier):
                   'tfidf__use_idf': (True, False),
                   'clf__alpha': (1e-2, 1e-3),
                   }
-
     gs_clf = GridSearchCV(text_clf, parameters, n_jobs=-1)
     gs_clf = gs_clf.fit(data.data, data.target)
-
     #nltk.download()
     '''
 
     text_clf = text_clf.fit(data.data, data.target)
 
-    testData = getTestData()
+    testData = getTestData(type)
 
     print("DataTrain length: ", len(data.data))
     print("DataTest length: ", len(testData.data))
@@ -74,15 +72,14 @@ def predict(classifier):
     predicted = text_clf.predict(docs_test)
     print("Accuracy: ", metrics.accuracy_score(testData.target, predicted))
     print("\nReport:\n")
-    print(metrics.classification_report(testData.target, predicted, target_names = categories4))
+    print(metrics.classification_report(testData.target, predicted, target_names = getCategory(type)))
     print("\nConfusion Matrix:\n")
     print(metrics.confusion_matrix(testData.target, predicted))
 
     try:
-        print("\nTop 10 most informative words:\n")
-        print_top10(text_clf.get_params()['vect'], text_clf.get_params()['clf'], categories4)
+        print_top10(text_clf.get_params()['vect'], text_clf.get_params()['clf'], getCategory(type))
     except:
-        print(text_clf.get_params()['clf'].feature_importances_)
+        None
 
     if (len(sys.argv)>2 and sys.argv[1]=="false"):
          return
@@ -91,7 +88,7 @@ def predict(classifier):
     print("\nPredictions:")
     for i in range(0, len(predicted)):
         text = testData.data[i]
-        classy = categories4[predicted[i]]
+        classy = getCategory(type)[predicted[i]]
         textClass = TextClassification(text, classy)
         array.append(textClass)
 
@@ -142,5 +139,13 @@ def svm():
                          ])
     return text_clf
 
-print(predict(SVC1))
-#prediction()
+type = TERNARIO
+
+print("RANDOM FOREST")
+print(predict(RANDOM_FOREST, type))
+print("NAIVE BAYES")
+print(predict(NAIVE_BAYES, type))
+print("DECISION TREE")
+print(predict(DECISION_TREE, type))
+print("SVM")
+print(predict(SVM, type))
