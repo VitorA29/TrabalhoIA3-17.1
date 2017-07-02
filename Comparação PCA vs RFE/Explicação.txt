@@ -1,0 +1,19 @@
+Tanto o PCA quanto o RFE reduzem o espaço de features(palavras no nosso caso) agrupando(PCA) ou eliminando(RFE). Por exemplo, suponha um universo onde as pessoas usam 'bom' e 'bacana' com exatamente a mesma semântica e expressividade. Essas duas palavras, dada essa situação, podem ser consideradas uma só, pois refletem o mesmo sentimento, ou seja, elas podem ser "agrupadas". Isso significa que o espaço vai diminuir, agora vou ter n-1 palavras pra me importar com o significado.
+
+Por que, no binário, o PCA não deu diferença com 1000?
+Porque o número de features é 479, não tem como "reduzir" pra 1000, então continua a mesma coisa.
+
+O preço a se pagar pela redução do espaço é a diminuição da precisão.
+
+Feature Selection(RFE) vs PCA(TruncatedSVD)
+A diferença dos dois é que um AGRUPA e o outro EXCLUI.
+o PCA agrupa, como descrito a cima, e o RFE elimina palavras inúteis.
+
+RFE é lento.
+
+---> LER OS LINKS <---
+http://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.RFE.html
+
+https://stats.stackexchange.com/questions/182711/principal-component-analysis-vs-feature-selection
+
+https://www.quora.com/What-is-an-intuitive-explanation-for-PCA

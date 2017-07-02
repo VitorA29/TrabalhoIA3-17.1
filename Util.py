@@ -231,7 +231,7 @@ def getWrongPredictions(predictions, target, text):
 
     return list
 
-def write2TxtFile(predicted, testData, trainData, type, classifier, showWrongPredict, showPredictions, gridSearch):
+def write2TxtFile(predicted, testData, trainData, type, classifier, showWrongPredict, showPredictions, gridSearch, rfeEnabled, pcaEnabled, mostInformative):
 
     if not os.path.exists("execucao/" + getModoStrDir(type)):
         os.makedirs("execucao/" + getModoStrDir(type))
@@ -241,6 +241,8 @@ def write2TxtFile(predicted, testData, trainData, type, classifier, showWrongPre
     text_file.write("Classifier: %s\n" % getClassifierName(classifier))
     text_file.write("Mode: %s\n" % getModoStr(type))
     text_file.write("GridSearch: %s\n" % (str(gridSearch)))
+    text_file.write("RFE: %s\n" % (str(rfeEnabled)))
+    text_file.write("PCA: %s\n" % (str(pcaEnabled)))
     text_file.write("Used files for training: ")
     for i in trainData.usedFiles:
         text_file.write("%s;" % i)
@@ -263,6 +265,13 @@ def write2TxtFile(predicted, testData, trainData, type, classifier, showWrongPre
     text_file.write(metrics.classification_report(testData.target, predicted, target_names=getCategory(type)))
     text_file.write("\nConfusion Matrix:\n")
     text_file.write(str(metrics.confusion_matrix(testData.target, predicted)))
+
+    if(rfeEnabled):
+        j = 0
+        text_file.write("\n\nMost Informative Words(RFE)\n")
+        for i in mostInformative:
+            text_file.write("%s - %s\n" % ((j + 1), i))
+            j += 1
 
     if (showWrongPredict):
         list = getWrongPredictions(predicted, testData.target, testData.data)

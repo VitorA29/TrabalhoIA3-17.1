@@ -24,10 +24,10 @@ from sklearn.model_selection import GridSearchCV
 
 from Util import *
 
-def predict(classifier, type, gridSearch, showWrongPredict, showPredictions):
+def predict(classifier, type, gridSearch, showWrongPredict, showPredictions, rfeEnabled, pcaEnabled):
     data = getTrainData(type)
 
-    text_clf = getClassifier(classifier)
+    text_clf = getClassifier(classifier, rfeEnabled, pcaEnabled)
 
     if(gridSearch):
         parameters = {'clf__max_depth': range(1, 100)}
@@ -42,23 +42,17 @@ def predict(classifier, type, gridSearch, showWrongPredict, showPredictions):
     testData = getTestData(type)
     docs_test = testData.data
     predicted = text_clf.predict(docs_test)
-
-    '''
-    print(text_clf.get_params()['clf'].support_)
-    print(text_clf.get_params()['clf'].ranking_)
-
-    feature_names = text_clf.get_params()['vect'].get_feature_names()
-
-    array = [x for (y, x) in sorted(zip(text_clf.get_params()['clf'].ranking_, feature_names))]
-
-    for i in array:
-        print(i)
-    '''
+    mostInformative = []
+    try:
+        mostInformative = getMostInformative(10, text_clf)
+    except:
+        None
 
     #Escreve no arquivo txt.
-    write2TxtFile(predicted, testData, data, type, classifier, showWrongPredict, showPredictions, gridSearch)
+    write2TxtFile(predicted, testData, data, type, classifier, showWrongPredict, showPredictions, gridSearch, rfeEnabled,
+                  pcaEnabled, mostInformative)
 
-def getClassifier(classifier):
+def getClassifier(classifier, rfeEnabled, pcaEnabled):
     if (classifier == DECISION_TREE):
         return decisionTree()
     elif (classifier == NAIVE_BAYES):
@@ -66,9 +60,16 @@ def getClassifier(classifier):
     elif (classifier == RANDOM_FOREST):
         return randomForest()
     elif(classifier == SVM):
-        return svm()
+        return svm(rfeEnabled, pcaEnabled)
     else:
         return ada()
+
+def getMostInformative(nWords, text_clf):
+    feature_names = text_clf.get_params()['vect'].get_feature_names()
+
+    array = [x for (y, x) in sorted(zip(text_clf.get_params()['clf'].ranking_, feature_names))]
+
+    return array[:nWords]
 
 def naiveBayes():
     text_clf = Pipeline([('vect', CountVectorizer()),
@@ -78,7 +79,6 @@ def naiveBayes():
 
     return text_clf
 
-'''('slct', TruncatedSVD(n_components=2)),'''
 def randomForest():
     text_clf = Pipeline([('vect', CountVectorizer()),
                          ('tfidf', TfidfTransformer()),
@@ -94,12 +94,31 @@ def decisionTree():
                          ])
     return text_clf
 
-''' RFE(estimator=SVC(kernel="linear", C=1), n_features_to_select=3) '''
-def svm():
-    text_clf = Pipeline([('vect', CountVectorizer()),
-                         ('tfidf', TfidfTransformer()),
-                         ('clf', RFE(estimator=SVC(kernel="linear", C=1), n_features_to_select=3)),
-                         ])
+def svm(rfeEnabled, pcaEnabled):
+    if(rfeEnabled):
+        if(pcaEnabled):
+            text_clf = Pipeline([('vect', CountVectorizer()),
+                                 ('tfidf', TfidfTransformer()),
+                                 ('slct', TruncatedSVD(n_components=10)),
+                                 ('clf', RFE(estimator=SVC(kernel="linear", C=1), n_features_to_select=3)),
+                                 ])
+        else:
+            text_clf = Pipeline([('vect', CountVectorizer()),
+                                 ('tfidf', TfidfTransformer()),
+                                 ('clf', RFE(estimator=SVC(kernel="linear", C=1), n_features_to_select=100)),
+                                 ])
+    else:
+        if(pcaEnabled):
+            text_clf = Pipeline([('vect', CountVectorizer()),
+                                 ('tfidf', TfidfTransformer()),
+                                 ('slct', TruncatedSVD(n_components=1000)),
+                                 ('clf', SVC(kernel="linear", C=1)),
+                                 ])
+        else:
+            text_clf = Pipeline([('vect', CountVectorizer()),
+                                 ('tfidf', TfidfTransformer()),
+                                 ('clf', SVC(kernel="linear", C=1)),
+                                 ])
     return text_clf
 
 def ada():
@@ -109,8 +128,10 @@ def ada():
                          ])
     return text_clf
 
-type = QUATERNARIO
+type = BINARIO
 gridSearch = False
 showWrongPredictions = True
 showPredictions = False
-predict(NAIVE_BAYES, type, gridSearch, showWrongPredictions, showPredictions)
+rfeEnabled = False
+pcaEnabled = True
+predict(SVM, type, gridSearch, showWrongPredictions, showPredictions, rfeEnabled, pcaEnabled)

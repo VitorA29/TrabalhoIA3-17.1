@@ -2,7 +2,7 @@ Classifier: SVM
 Mode: Binário
 GridSearch: False
 RFE: False
-PCA: True
+PCA: False
 Used files for training: twitter-sanders-apple3.csv;
 Used files for testing: twitter-sanders-apple2.csv;
 DataTrain length: 479

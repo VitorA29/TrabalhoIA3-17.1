@@ -1,0 +1,187 @@
+Classifier: SVM
+Mode: Binário
+GridSearch: False
+RFE: True (n_features = 100)
+PCA: False
+Used files for training: twitter-sanders-apple3.csv;
+Used files for testing: twitter-sanders-apple2.csv;
+DataTrain length: 479
+DataTest length: 479
+
+-----PREDCTION INFO-----
+Accuracy: 0.688935281837
+
+Report:
+             precision    recall  f1-score   support
+
+        pos       0.89      0.10      0.18       163
+        neg       0.68      0.99      0.81       316
+
+avg / total       0.75      0.69      0.59       479
+
+Confusion Matrix:
+[[ 16 147]
+ [  2 314]]
+Most Informative Words(RFE)
+1 - amazing
+2 - loving
+3 - thanks
+4 - got
+5 - thank
+6 - love
+7 - best
+8 - blackberry
+9 - free
+10 - days
+
+
+149 Wrong Predictions:
+0 - [Correct: pos ; Predicted: neg] now all apple has to do is get swype on the iphone and it will be crack iphone that is
+1 - [Correct: pos ; Predicted: neg] apple will be adding more carrier support to the iphone s just announced
+2 - [Correct: pos ; Predicted: neg] hilarious youtube video guy does a duet with apple s siri pretty much sums up the love affair http t co exbnqjy
+3 - [Correct: pos ; Predicted: neg] rim you made it too easy for me to switch to apple iphone see ya
+4 - [Correct: pos ; Predicted: neg] i just realized that the reason i got into twitter was ios thanks apple
+5 - [Correct: pos ; Predicted: neg] i m a current blackberry user little bit disappointed with it should i move to android or apple iphone
+6 - [Correct: pos ; Predicted: neg] the strangest things siri has said so far i am sooo glad that apple gave siri a sense of humor http t co twaeudbp via happyplace
+7 - [Correct: pos ; Predicted: neg] great up close personal event apple tonight in regent st store
+8 - [Correct: pos ; Predicted: neg] from which companies do you experience the best customer service aside from zappos and apple
+9 - [Correct: pos ; Predicted: neg] just apply for a job at apple hope they call me lol
+10 - [Correct: pos ; Predicted: neg] rt jamaicanidler lmao i think apple is onto something magical i am dying haha siri suggested where to find whores and where to h
+11 - [Correct: pos ; Predicted: neg] lmao i think apple is onto something magical i am dying haha siri suggested where to find whores and where to hide a body lolol
+12 - [Correct: pos ; Predicted: neg] rt philliprowntree just registered as an apple developer here s hoping i can actually do it any help greatly appreciated
+13 - [Correct: pos ; Predicted: neg] wow great deals on refurbed ipad first gen models rt apple offers great deals on refurbished st gen ipads http t co ukwokbgd apple
+14 - [Correct: pos ; Predicted: neg] just registered as an apple developer here s hoping i can actually do it any help greatly appreciated
+15 - [Correct: pos ; Predicted: neg] currently learning mandarin for my upcoming trip to hong kong i gotta hand it to apple iphones their uber useful flashcard apps
+16 - [Correct: pos ; Predicted: neg] come to the dark side gretcheneclark hey apple if you send me a free iphone i will publicly and ceremoniously burn my blackberry
+17 - [Correct: pos ; Predicted: neg] hey apple if you send me a free iphone any version will do i will publicly and ceremoniously burn my blackberry
+18 - [Correct: pos ; Predicted: neg] thank you apple for find my mac just located and wiped my stolen air smallvictory thievingbastards
+19 - [Correct: pos ; Predicted: neg] thanks to apple covent garden geniusbar for replacing my macbook keyboard cracked wristpad during my lunch break today out of warranty
+20 - [Correct: pos ; Predicted: neg] ipads replace bound playbooks on some n f l teams http t co uxawkwf apple nytimes
+21 - [Correct: pos ; Predicted: neg] apple good ipad
+22 - [Correct: pos ; Predicted: neg] rt triplingo we re one of a few featured education apps on the apple website today sweet http t co ywvbe z
+23 - [Correct: pos ; Predicted: neg] we re one of a few featured education apps on the apple website today sweet http t co ywvbe z
+24 - [Correct: pos ; Predicted: neg] when you want something done right you do it yourself or go to apple at t you re useless these days yourdaysarenumbered
+25 - [Correct: pos ; Predicted: neg] we did an unexpected workshop for the iphone s at apple yesterday and we got an awesome amount of info notjustaboutthephone gamerchik
+26 - [Correct: pos ; Predicted: neg] ios apple
+27 - [Correct: pos ; Predicted: neg] rt apple no question bro rt ainteeentrippin should i get dis iphone or a evo d
+28 - [Correct: pos ; Predicted: neg] rt imightbewrong i m over people bitching about the iphone s i think it s the smartest phone i ve ever had and i m very happy
+29 - [Correct: pos ; Predicted: neg] i m over people bitching about the iphone s i think it s the smartest phone i ve ever had and i m very happy way to go apple
+30 - [Correct: pos ; Predicted: neg] twitter ceo points to apple as corporate mentor as ios signups triple http t co gcy iphn
+31 - [Correct: pos ; Predicted: neg] at the bus with my iphone thxx apple
+32 - [Correct: pos ; Predicted: neg] azee v apple umber appstore is well done so is itunes on the mobile devices i was talking about desktop app
+33 - [Correct: pos ; Predicted: neg] nytimes coach wants to see you and bring your ipad http t co j ftieng ipad apple set red red hut hut nfl wish i had an ipad
+34 - [Correct: pos ; Predicted: neg] apple jilive danielpink apple sells million iphone s units in first weekend steve jobs brilliance lives on for ever iphone rva
+35 - [Correct: pos ; Predicted: neg] bkad than apologize to apple
+36 - [Correct: pos ; Predicted: neg] apple downloads of ios are proving popular with users http t co nshlfiux
+37 - [Correct: pos ; Predicted: neg] lmfao look at the argument i had with siri ijustine apple http t co d vjl si
+38 - [Correct: pos ; Predicted: neg] incredible million iphone ss in days better than the iphone http t co fmjxtmm apple iphone s
+39 - [Correct: pos ; Predicted: neg] save me from hp s unwanted os help me buy an iphone i have seen the light lol http t co gup acz backchannel apple
+40 - [Correct: pos ; Predicted: neg] well apple fixed my ios battery drain problem with a replacement iphone it s working like a champ now
+41 - [Correct: pos ; Predicted: neg] currently ordering a brand new macbook pro bahhh my macbook is years old i ll miss it but it s time cc apple
+42 - [Correct: pos ; Predicted: neg] you are so blessed apple
+43 - [Correct: pos ; Predicted: neg] siri now knows who my dad mom brother and girlfriend is thanks apple
+44 - [Correct: pos ; Predicted: neg] sweet apple replaced my glass probono thank you apple
+45 - [Correct: pos ; Predicted: neg] not bad apple sells over million iphones in debut weekend bloomberg http t co avsl ygu smartphone sm rt vinodrad
+46 - [Correct: pos ; Predicted: neg] loving new technology from apple iphone s mac air and icloud are unreal technology
+47 - [Correct: pos ; Predicted: neg] another mention for apple store http t co fiioapkt rt floridamike once again getting great customer service from the apple store
+48 - [Correct: pos ; Predicted: neg] time to go get my iphone s looking forward to sticking it to the man by no longer paying for most texts thanks apple
+49 - [Correct: pos ; Predicted: neg] hey apple i hate my computer i need a mack wanna send me a free one
+50 - [Correct: pos ; Predicted: neg] thank you apple my new gf iphone s is great she does everything
+51 - [Correct: pos ; Predicted: neg] icloud set up was flawless and works like a champ to the cloud apple
+52 - [Correct: pos ; Predicted: neg] wisconsin mommy apple i d totally email the company i always get great service at our apple store
+53 - [Correct: pos ; Predicted: neg] the nice apple tech support guy fixed my itouch d
+54 - [Correct: pos ; Predicted: neg] once again getting great customer service from the apple store at millenia mall
+55 - [Correct: pos ; Predicted: neg] is it just me or is ios faster for the ipad apple
+56 - [Correct: pos ; Predicted: neg] i love our apple imac even though i haven t seen my hubby in days now geek
+57 - [Correct: pos ; Predicted: neg] making the switch from android to apple iphone iphone s smartphone stevejobs apple store http t co kj pjvkh
+58 - [Correct: pos ; Predicted: neg] so thankful for the incredible people apple for going above and beyond and offering to and replacing my water damaged macbook pro wow
+59 - [Correct: pos ; Predicted: neg] play on ma man loving the camera in the iphone s well done apple fb http t co tmdfqre
+60 - [Correct: pos ; Predicted: neg] so yeah apple ios readinglists have changed my life nowicanspendevenmoretimeonmyphone
+61 - [Correct: pos ; Predicted: neg] apple safari reader owns the worldwide web
+62 - [Correct: pos ; Predicted: neg] i love apple service my case has cracked x and i go in and they hand me a case and i walk out
+63 - [Correct: pos ; Predicted: neg] twitterpeopleiwouldliketomeet coollike thegadgetshow thelittleappkid jon lakers benrubery apple twitter fxhomehitfilm
+64 - [Correct: pos ; Predicted: neg] said to have laid out the next years apple jobs last iphone is not the iphone s iphone g is magical http t co dxxklubp
+65 - [Correct: pos ; Predicted: neg] kind of excited on my way to my last class right now and then going to the apple store so buy macosc snow leopard and lion
+66 - [Correct: pos ; Predicted: neg] i used to be with blackberry over yrs after all the disruptions and lost gigs thx to their service im moving to apple iphone
+67 - [Correct: pos ; Predicted: neg] apple sells million iphones in days apple keep doing what you are doing because you are doing it well http t co zzc be w
+68 - [Correct: pos ; Predicted: neg] yessss i m lovin the iphone update especially the slide down bar at top of screen good job apple
+69 - [Correct: pos ; Predicted: neg] millions in a weekend iphone s per second this is madness no this is apple
+70 - [Correct: pos ; Predicted: neg] apple you got me i m now invested macbook pro next year time to get on selling more of my android gear
+71 - [Correct: pos ; Predicted: neg] iancollinsuk apple i like what you did there
+72 - [Correct: pos ; Predicted: neg] i just sent my grandma a post card using my cardsapp thanks apple
+73 - [Correct: pos ; Predicted: neg] sorry blackberry i m moving to apple
+74 - [Correct: pos ; Predicted: neg] kostatsetsekas apple putting it in the wash is kind of the equivalent to will it blend glad to hear it s still alive
+75 - [Correct: pos ; Predicted: neg] laundering ari s iphone not my finest moment but after drying in bag of organic rice for days it booted up apple
+76 - [Correct: pos ; Predicted: neg] bravo apple http t co bgotzj k
+77 - [Correct: pos ; Predicted: neg] god bless youtube apple for appletv our bad ass system loving princessofchina gb to coldplay rihanna too
+78 - [Correct: pos ; Predicted: neg] been off twitter for a few days as i smashed my iphone but apple were very nice and gave me a new one
+79 - [Correct: pos ; Predicted: neg] thank you apple ios for email pop up on the lock screen and opening it when unlocking
+80 - [Correct: pos ; Predicted: neg] one word wow rt jldavid iphone s first weekend sales top four million http t co zx pw gt via apple
+81 - [Correct: pos ; Predicted: neg] rt mn nova love ios easter eggs pull down from middle top to bottom and see what pulls down awesome little feature ios apple
+82 - [Correct: pos ; Predicted: neg] love ios easter eggs pull down from middle top to bottom and see what pulls down awesome little feature ios apple
+83 - [Correct: pos ; Predicted: neg] love ios easter eggs pull down from middle top to bottom and see what pulls down awesome little feature apple lovemyiphone
+84 - [Correct: pos ; Predicted: neg] updated my ios and started using cloud services pretty bad ass apple my iphone gs still the champ
+85 - [Correct: pos ; Predicted: neg] gone for a run beautiful morning man do i love ios apple iphone
+86 - [Correct: pos ; Predicted: neg] apple your simply the best
+87 - [Correct: pos ; Predicted: neg] i must admit apple has made me a very happy camper i have text tones now lol ring tone makemeproud drakes vers text tone nicki s
+88 - [Correct: pos ; Predicted: neg] day i m thankful for the great customer service received today from apple via phone cs new phone on the way daysofgratefulness
+89 - [Correct: pos ; Predicted: neg] s o to apple for replacing my phone for free
+90 - [Correct: pos ; Predicted: neg] alexlindsay my wife upgraded her iphone i think siri alone is worth the upgrade looking forward to apple continuing to enhance siri
+91 - [Correct: pos ; Predicted: neg] rt tomkeene thx instagram thx apple hypo d tri x http t co bppjwncp
+92 - [Correct: pos ; Predicted: neg] stevejobs being honored tonite apple a truly great loss to the world he will so be missed
+93 - [Correct: pos ; Predicted: neg] thx instagram thx apple hypo d tri x http t co d eejhbt
+94 - [Correct: pos ; Predicted: neg] i love this so much thank you apple http t co ui loezx
+95 - [Correct: pos ; Predicted: neg] apple the iphone s is great genius
+96 - [Correct: pos ; Predicted: neg] apple cards app notifies me the card i sent has arrived at local post office and should be delivered today sunday truly is magic
+97 - [Correct: pos ; Predicted: neg] love my new i s apple updates just when i think it can t get any better somehow it simplifies my life more that s right it s an apple
+98 - [Correct: pos ; Predicted: neg] rygurl you need an apple iphone s with siri
+99 - [Correct: pos ; Predicted: neg] meet siri your new iphone butler click the link and be amazed by all it can do http t co lvffdcel apple
+100 - [Correct: pos ; Predicted: neg] so i am using my work pc never ever to get a feel for it it has the worst speakers ever apple you have spoiled me imamac
+101 - [Correct: pos ; Predicted: neg] i apple http t co a on iaa
+102 - [Correct: pos ; Predicted: neg] apple just got the new ios upgrade with imessage good luck surviving now blackberry
+103 - [Correct: pos ; Predicted: neg] rt mattyriesz kathrynyee you were right an iphone is a must have addicted welcome to the apple club
+104 - [Correct: pos ; Predicted: neg] thank you apple for your innovations exhibit a guy playing with facetime instead of watching game at sports bar http t co ou k ge
+105 - [Correct: pos ; Predicted: neg] blackberry boo hiss apple wuhu when will my berry powered technology actually work
+106 - [Correct: pos ; Predicted: neg] apple by far the best ipod and first time iphone ever good job guys
+107 - [Correct: pos ; Predicted: neg] thank you steve apple store th av http t co nsaisrip
+108 - [Correct: pos ; Predicted: neg] apple s siri is witchcraft what s next googleresearch yr lead lost
+109 - [Correct: pos ; Predicted: neg] apple ios is sweet notifications phone search covers mail now wifi sync icloud backup and integrated twitter are all well done
+110 - [Correct: pos ; Predicted: neg] rt katebetts another great james stewart story in today s ny times about importance of architecture in apple retail success http t
+111 - [Correct: pos ; Predicted: neg] another great james stewart story in today s ny times about importance of architecture in apple retail success http t co kniz s
+112 - [Correct: pos ; Predicted: neg] i apple http t co ondxwper
+113 - [Correct: pos ; Predicted: neg] welcome to the twitter world markstuver this is due to ios and apple thanks guys
+114 - [Correct: pos ; Predicted: neg] impressive service apple genius bar metro centre power cable replaced free n booked in for screen replacement for free d
+115 - [Correct: pos ; Predicted: neg] rt deb lavoy the nice guy at the apple store replaced my phone gratis when i showed him the hairline crack on the screen thanks apple
+116 - [Correct: pos ; Predicted: neg] the nice guy at the apple store replaced my phone gratis when i showed him the hairline crack on the screen thanks apple
+117 - [Correct: pos ; Predicted: neg] my iphone s battery lasted longer than a day that hasn t happened since my edge iphone nice job apple
+118 - [Correct: pos ; Predicted: neg] it would have taken me mins to write this with my blackberry thank u apple s for converting me and showing me the grass is greener
+119 - [Correct: pos ; Predicted: neg] rt herahussain rickysinghpt got a new backside for my eye phone v impressed with apple
+120 - [Correct: pos ; Predicted: neg] rickysinghpt got a new backside for my eye phone v impressed with apple
+121 - [Correct: pos ; Predicted: neg] iphone s in space http t co jinnhvwz this is amazing creative apple your products inspire people to do unbelievable things
+122 - [Correct: pos ; Predicted: neg] thank you apple for making my ipad feel like new again with your new ios
+123 - [Correct: pos ; Predicted: neg] ibertaddigital tv ipad a briliant stevejobs produck http t co ohfly apple present http t co dbbwsdpx
+124 - [Correct: pos ; Predicted: neg] using my awsome ipad i love it i love my macbook too and my ipod it s all amazing i love apple
+125 - [Correct: pos ; Predicted: neg] apple ios upgrade done much better feature few more feature required
+126 - [Correct: pos ; Predicted: neg] new ios update is the best iloveyou apple
+127 - [Correct: pos ; Predicted: neg] finally got my iphone s thanks apple stupid att learned my lesson
+128 - [Correct: pos ; Predicted: neg] i absolutely love my iphone s thank you steve and apple
+129 - [Correct: pos ; Predicted: neg] apple you have invented a product that actually gets my brother to call my parents when he gets where he s going amazing siri ipod s
+130 - [Correct: pos ; Predicted: neg] dammit listening to siri is making me want to upgrade well played apple
+131 - [Correct: pos ; Predicted: neg] create new folders from within your photo album in ios finally thanks apple that s been a thorn in my side for a while newfeature
+132 - [Correct: pos ; Predicted: neg] video card on kimaris workstation died after just six months so long hp hello apple
+133 - [Correct: pos ; Predicted: neg] blackberry facebook u r really about to make me throw this blackberry in the trash an get an apple iphone facebook upload issues
+134 - [Correct: pos ; Predicted: neg] awesome service from the apple store in pc thanks chris
+135 - [Correct: pos ; Predicted: neg] rt to ne apple thanks for fixing this http t co wtj ogdo
+136 - [Correct: pos ; Predicted: neg] i am crazy about ios the photo cropping is the best apple
+137 - [Correct: pos ; Predicted: neg] hell yes got my contacts back thanks apple
+138 - [Correct: pos ; Predicted: neg] rt sawyerhartman i fu king love you apple this phone is the best thing ever siri best thing ever made
+139 - [Correct: pos ; Predicted: neg] apple has changed life
+140 - [Correct: pos ; Predicted: neg] mad props to the apple employee that didn t charge me to replace the back plate on my iphone made my day
+141 - [Correct: pos ; Predicted: neg] jonsibley actually the apple mouse is pretty sweet man
+142 - [Correct: pos ; Predicted: neg] the iphone s is amazing siri s voice recognition is absolutely a step above previous attempts bravo apple
+143 - [Correct: pos ; Predicted: neg] finally got the apple iphone thanks to sprint getting with the times
+144 - [Correct: pos ; Predicted: neg] good support fm kevin apple bellevue store biz customers ty
+145 - [Correct: pos ; Predicted: neg] just downloaded ios it s better than i expected thankyou apple
+146 - [Correct: pos ; Predicted: neg] love love love ios apple
+147 - [Correct: neg ; Predicted: pos] apple thanks for ios loving having my music breaking up like i m talking on a mobile cell phone bring back functional iosdonwgrade
+148 - [Correct: neg ; Predicted: pos] apple thanks apple for ios and losing all my contacts
