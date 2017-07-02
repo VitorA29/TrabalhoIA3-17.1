@@ -6,16 +6,36 @@ Gil~de Z{\'u}{\~n}iga, H., Puig-i Abril, E., and Rojas, H. (2009).
   assessment of how the internet is changing the political environment.
 \newblock {\em New media \& society}, 11(4):553--574.
 
+\bibitem[Guyon and Elisseeff 2003]{Guyon2003}
+Guyon, I. and Elisseeff, A. (2003).
+\newblock {An introduction to variable and feature selection}.
+\newblock {\em The Journal of Machine Learning Research}, 3:1157--1182.
+
 \bibitem[Hoffman 2008]{hoffman2008online}
 Hoffman, T. (2008).
 \newblock Online reputation management is hot—but is it ethical.
 \newblock {\em Computerworld, February}, pages 1--4.
+
+\bibitem[Jolliffe 2002]{Jolliffe:2002}
+Jolliffe, I.~T. (2002).
+\newblock {\em Principal Component Analysis}.
+\newblock Springer.
+
+\bibitem[Michalski et~al. 2013]{MachineLearning:Michalski:2013}
+Michalski, R.~S., Carbonell, J.~G., and Mitchell, T.~M. (2013).
+\newblock {\em Machine Learning: An Artificial Intelligence Approach}.
+\newblock Springer Publishing Company, Incorporated.
 
 \bibitem[Pang et~al. 2008]{pang2008opinion}
 Pang, B., Lee, L., et~al. (2008).
 \newblock Opinion mining and sentiment analysis.
 \newblock {\em Foundations and Trends{\textregistered} in Information
   Retrieval}, 2(1--2):1--135.
+
+\bibitem[Snoek et~al. 2012]{SnoekLA12}
+Snoek, J., Larochelle, H., and Adams, R.~P. (2012).
+\newblock Practical bayesian optimization of machine learning algorithms.
+\newblock pages 2960--2968.
 
 \bibitem[Zhu and Zhang 2010]{zhu2010impact}
 Zhu, F. and Zhang, X. (2010).

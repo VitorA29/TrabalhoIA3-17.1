@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.22)  2 JUL 2017 09:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.22)  2 JUL 2017 17:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1708,10 +1708,12 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <13> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 33.
  (./txt/intro.tex)
-(./txt/met.tex) (./txt/av.tex
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 6.
+(./txt/met.tex [1
 
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
+(./txt/av.tex
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 6.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
@@ -1730,9 +1732,7 @@ Overfull \hbox (11.24762pt too wide) in paragraph at lines 21--29
  [][] 
  []
 
-[1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 Overfull \hbox (3.17027pt too wide) in paragraph at lines 39--45
 [][] 
  []
@@ -1753,6 +1753,9 @@ Overfull \hbox (11.24762pt too wide) in paragraph at lines 83--91
  []
 
 
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
 Overfull \hbox (3.17027pt too wide) in paragraph at lines 101--107
 [][] 
  []
@@ -1761,6 +1764,9 @@ Overfull \hbox (3.17027pt too wide) in paragraph at lines 101--107
 Overfull \hbox (11.24762pt too wide) in paragraph at lines 114--122
  [][] 
  []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 Overfull \hbox (48.95001pt too wide) in paragraph at lines 160--160
@@ -1897,37 +1903,36 @@ Overfull \hbox (22.71951pt too wide) in paragraph at lines 487--487
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) (./txt/conc.tex) (./main.bbl
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 17.
+) (./txt/conc.tex) (./main.bbl [2] [3] [4]
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 32.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/it' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 17.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 32.
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 17.
- [2] [3] [4])
-[5] (./main.aux) ) 
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 32.
+) [5] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 12553 strings out of 493029
- 215660 string characters out of 6136234
- 325916 words of memory out of 5000000
- 15927 multiletter control sequences out of 15000+600000
- 28422 words of font info for 60 fonts, out of 8000000 for 9000
+ 12570 strings out of 493029
+ 215860 string characters out of 6136234
+ 328003 words of memory out of 5000000
+ 15940 multiletter control sequences out of 15000+600000
+ 32784 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,14n,42p,10404b,319s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/urw/helvetic/uhvbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/
-utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (5 pages, 113949 bytes).
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/urw/helvetic/uhvbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/time
+s/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (5 pages, 119358 bytes).
 PDF statistics:
  61 PDF objects out of 1000 (max. 8388607)
  43 compressed objects within 1 object stream
