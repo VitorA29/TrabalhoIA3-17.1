@@ -43,6 +43,7 @@ DECISION_TREE = 0
 NAIVE_BAYES = 1
 RANDOM_FOREST = 2
 SVM = 3
+ADA = 4
 
 def getClassificadoresQTD():
     return 4
@@ -55,15 +56,19 @@ class Data(object):
         Classe usada no treinamento.
     '''
 
-    def __init__(self, text, category):
+    def __init__(self, text, category, usedFiles):
         self.data = text
         self.target = category
+        self.usedFiles = usedFiles
 
     def data(self):
         return self.data
 
     def target(self):
         return self.target
+
+    def usedFiles(self):
+        return self.usedFiles
 
 class TextClassification(object):
 
@@ -79,6 +84,8 @@ def text2Wordlist(text, removeStopwords = False):
     :return: array de palavras.
     '''
 
+    text = re.sub(r'^https?:\/\/.*[\r\n]*', '', text, flags=re.MULTILINE)
+
     #Remove qualquer token da sintaxe HTML.
     review_text = BeautifulSoup(text, "html.parser").get_text()
 
@@ -91,6 +98,8 @@ def text2Wordlist(text, removeStopwords = False):
     #Remove as stopwords. Falso por padrão.
     if removeStopwords:
         stops = set(stopwords.words("english"))
+        stops.add("http")
+        stops.add("co")
         words = [w for w in words if not w in stops]
 
     return(words)
@@ -126,7 +135,7 @@ def getTestData(type):
         dataArray.extend(cleanSentences(array["text"], False))
         targetArray.extend(array1)
 
-    data = Data(dataArray, targetArray)
+    data = Data(dataArray, targetArray, list_files(path + "test/"))
 
     return data
 
@@ -146,11 +155,11 @@ def getTrainData(type):
         dataArray.extend(cleanSentences(array["text"], True))
         targetArray.extend(array1)
 
-    data = Data(dataArray, targetArray)
+    data = Data(dataArray, targetArray, list_files(path + "train/"))
 
     return data
 
-def  cleanSentences(sentencesArray, removeStopwords):
+def cleanSentences(sentencesArray, removeStopwords):
     '''
     Limpa uma frase de caracteres insedejados.
     :param sentencesArray: Array contendo frases.
@@ -185,8 +194,10 @@ def getClassifierName(classifier):
         return 'Naive Bayes'
     elif(classifier == RANDOM_FOREST):
         return 'Random Forest'
-    else:
+    elif(classifier == SVM):
         return 'SVM'
+    else:
+        return 'ADA Boost'
 
 def getPath(type):
     if(type == BINARIO):
@@ -230,6 +241,18 @@ def write2TxtFile(predicted, testData, trainData, type, classifier, showWrongPre
     text_file.write("Classifier: %s\n" % getClassifierName(classifier))
     text_file.write("Mode: %s\n" % getModoStr(type))
     text_file.write("GridSearch: %s\n" % (str(gridSearch)))
+    text_file.write("Used files for training: ")
+    for i in trainData.usedFiles:
+        text_file.write("%s;" % i)
+
+    text_file.write("\n")
+
+    text_file.write("Used files for testing: ")
+    for i in testData.usedFiles:
+        text_file.write("%s;" % i)
+
+    text_file.write("\n")
+
     text_file.write("DataTrain length: %s\n" % len(trainData.data))
     text_file.write("DataTest length: %s\n" % len(testData.data))
 

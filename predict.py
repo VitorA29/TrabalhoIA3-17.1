@@ -1,6 +1,7 @@
 from sklearn import decomposition, metrics
 from sklearn.decomposition import PCA
 from sklearn.decomposition import TruncatedSVD
+from sklearn.ensemble import AdaBoostClassifier
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.feature_selection import RFE
 from sklearn.feature_selection import RFECV
@@ -29,7 +30,7 @@ def predict(classifier, type, gridSearch, showWrongPredict, showPredictions):
     text_clf = getClassifier(classifier)
 
     if(gridSearch):
-        parameters = {'clf__min_samples_split': range(10, 500, 20), 'clf__max_depth': range(1, 20, 2)}
+        parameters = {'clf__max_depth': range(1, 100)}
 
         text_clf = GridSearchCV(text_clf, parameters, n_jobs=1, verbose=1)
         text_clf.fit(data.data, data.target)
@@ -42,6 +43,18 @@ def predict(classifier, type, gridSearch, showWrongPredict, showPredictions):
     docs_test = testData.data
     predicted = text_clf.predict(docs_test)
 
+    '''
+    print(text_clf.get_params()['clf'].support_)
+    print(text_clf.get_params()['clf'].ranking_)
+
+    feature_names = text_clf.get_params()['vect'].get_feature_names()
+
+    array = [x for (y, x) in sorted(zip(text_clf.get_params()['clf'].ranking_, feature_names))]
+
+    for i in array:
+        print(i)
+    '''
+
     #Escreve no arquivo txt.
     write2TxtFile(predicted, testData, data, type, classifier, showWrongPredict, showPredictions, gridSearch)
 
@@ -52,8 +65,10 @@ def getClassifier(classifier):
         return naiveBayes()
     elif (classifier == RANDOM_FOREST):
         return randomForest()
-    else:
+    elif(classifier == SVM):
         return svm()
+    else:
+        return ada()
 
 def naiveBayes():
     text_clf = Pipeline([('vect', CountVectorizer()),
@@ -64,11 +79,10 @@ def naiveBayes():
     return text_clf
 
 '''('slct', TruncatedSVD(n_components=2)),'''
-
 def randomForest():
     text_clf = Pipeline([('vect', CountVectorizer()),
                          ('tfidf', TfidfTransformer()),
-                         ('clf', RandomForestClassifier(n_estimators=10)),
+                         ('clf', RandomForestClassifier(n_estimators=100)),
                          ])
 
     return text_clf
@@ -80,15 +94,23 @@ def decisionTree():
                          ])
     return text_clf
 
+''' RFE(estimator=SVC(kernel="linear", C=1), n_features_to_select=3) '''
 def svm():
     text_clf = Pipeline([('vect', CountVectorizer()),
                          ('tfidf', TfidfTransformer()),
-                         ('clf', RFE(estimator=SVC(kernel="linear", C=1), n_features_to_select=3, step=1) ),
+                         ('clf', RFE(estimator=SVC(kernel="linear", C=1), n_features_to_select=3)),
+                         ])
+    return text_clf
+
+def ada():
+    text_clf = Pipeline([('vect', CountVectorizer()),
+                         ('tfidf', TfidfTransformer()),
+                         ('clf', AdaBoostClassifier(n_estimators=100)),
                          ])
     return text_clf
 
 type = QUATERNARIO
-gridSearch = True
+gridSearch = False
 showWrongPredictions = True
 showPredictions = False
-predict(DECISION_TREE, type, gridSearch, showWrongPredictions, showPredictions)
+predict(NAIVE_BAYES, type, gridSearch, showWrongPredictions, showPredictions)
