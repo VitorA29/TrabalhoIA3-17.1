@@ -1,0 +1,96 @@
+Classifier: Random Forest
+Mode: Quaternário
+GridSearch: False
+DataTrain length: 27066
+DataTest length: 1073
+
+-----PREDCTION INFO-----
+Accuracy: 0.934762348555
+
+Report:
+             precision    recall  f1-score   support
+
+        pos       0.95      1.00      0.97       163
+        neg       0.97      1.00      0.98       316
+        neu       0.91      0.99      0.95       509
+        irr       1.00      0.21      0.35        85
+
+avg / total       0.94      0.93      0.92      1073
+
+Confusion Matrix:
+[[163   0   0   0]
+ [  0 316   0   0]
+ [  1   2 506   0]
+ [  8   8  51  18]]
+
+70 Wrong Predictions:
+0 - [Correct: irr ; Predicted: neu] waze it macneo bellissimo video sono sempre pi convinto di prendere un apple iphone e gettare via il nokia n che mi ritrovo
+1 - [Correct: irr ; Predicted: neg] ipad mi aparato favorito de la vida frase celebre de azay carrasco apple ipad
+2 - [Correct: irr ; Predicted: pos] cenaze nedeniyle kapal y z apple http t co j l kk
+3 - [Correct: irr ; Predicted: neu] dancing bear apple store lincoln center http t co xbmjupmq
+4 - [Correct: irr ; Predicted: neg] iphone apple ne jp
+5 - [Correct: irr ; Predicted: neg] sail phoenix next stop after quimera rock apple house
+6 - [Correct: irr ; Predicted: pos] che palle sto cacchio di wp di merda con un whatsapp che funziona di cacca per colpa del sistema di notifica apple send me an iphone
+7 - [Correct: irr ; Predicted: neu] chill lol rt apple rt styl standin what is imessage
+8 - [Correct: irr ; Predicted: neu] lennydubz you do know that apple is not the company and why u blasting me on twitter
+9 - [Correct: irr ; Predicted: neu] kan samsung och apple sluta sl ss om kunderna i r ttssalen och med v rldens b sta produkter ist llet s blir det mycket b ttre
+10 - [Correct: irr ; Predicted: neu] y apple blackberryvzla rim anuncia m s de millones de dispositivos vendidos bill n de apps descargadas ym s http t co ifkxvg
+11 - [Correct: irr ; Predicted: neu] wat een belachelijke prijzen kpn prijzen iphone s duiken op http t co ep kzupb via iphoneclub kpn iphone apple
+12 - [Correct: irr ; Predicted: neu] fullscreen berall nur der appstore hat keine option daf r warum apple
+13 - [Correct: irr ; Predicted: pos] love how rogersbiz tell u they re not allowed to sell the s for more than apple but yet want more for the g
+14 - [Correct: irr ; Predicted: neu] apple bees w deejay tinyt
+15 - [Correct: irr ; Predicted: neu] complimenti sinceri ad apple per ios va benissimo su iphone e ipad
+16 - [Correct: irr ; Predicted: neu] rt supaluga rt modalnho new mov apple store starring ichiro repeat pattern moda http t co u a ivk
+17 - [Correct: irr ; Predicted: neu] mooi verhaal over dropbox en hoe zij een geweldig aanbod van apple steve jobs hebben geweigerd in het verleden http t co earobine
+18 - [Correct: irr ; Predicted: neu] imightbewrong apple inthequeencity teamapple
+19 - [Correct: irr ; Predicted: neu] rt modalnho new mov apple store starring ichiro repeat pattern moda http t co u a ivk
+20 - [Correct: irr ; Predicted: pos] cc apple http t co tnodvs
+21 - [Correct: irr ; Predicted: neu] moda modalnho apple store starring ichiro repeat pattern coffee shops moda http t co zbi rz s
+22 - [Correct: irr ; Predicted: neu] en apple mucho dise o pero llevo media hora esperando a mi clase que poca formalidad
+23 - [Correct: irr ; Predicted: neg] so ya my itunes is in japanese
+24 - [Correct: irr ; Predicted: neg] que amable es la gente de apple
+25 - [Correct: irr ; Predicted: neu] rt leahjanell this moment w shyah dianigroves is brought to you by nba apple riesling oh and http t co dp xids
+26 - [Correct: irr ; Predicted: neu] this moment w shyah dianigroves is brought to you by nba apple riesling oh and http t co tmq jru
+27 - [Correct: irr ; Predicted: neu] partner with apple i d pay for anibulb washingtonpost would you pay for this lightbulb http t co zgfsehao
+28 - [Correct: irr ; Predicted: neg] chefreggie rolandsmartin apple get ready tampa bay the martin s are coming to town bring it on buccaneers
+29 - [Correct: irr ; Predicted: neu] heidiknyc apple badog cute dinner when ur back from shanghai xx
+30 - [Correct: irr ; Predicted: pos] apple dette blir for dumt http t co zqkmkq
+31 - [Correct: irr ; Predicted: neu] teach different iteach therefore iam http t co yozd hcx apple teachforus teachforamerica ipad stevejobs
+32 - [Correct: irr ; Predicted: neu] quiero migrar apple
+33 - [Correct: irr ; Predicted: neu] apple pratet om en versjon av ipod touch til barn de ombestemte seg da tittelen n rmet seg itouch kids
+34 - [Correct: irr ; Predicted: neg] interesante por decirlo menos sabes que la c mara del iphone s le pertenece a sony mmm ojal ande bien y no sea mala jugada de apple
+35 - [Correct: irr ; Predicted: neu] oja ik ben gelijk al mijn apps kwijt bedankt apple
+36 - [Correct: irr ; Predicted: neu] deal schn ppchen update ipad ipad generation general berholt ab apple http t co xdtdzurd
+37 - [Correct: irr ; Predicted: neu] charence ramos apple jane heimacho tintin julielmo new followers na follow back ko na po kayo
+38 - [Correct: irr ; Predicted: neu] ipad ipad generation general berholt ab apple der tablet von apple bleibt weiterhin recht preisstab http t co h anhavu
+39 - [Correct: irr ; Predicted: neu] kan apple de tekstaanvulling op iphone en ipad niet omdraaien eigenteksteerst weetapplehetaltijdbeter
+40 - [Correct: irr ; Predicted: neu] ipad ipad generation general berholt ab apple http t co tov xkq
+41 - [Correct: irr ; Predicted: neu] gostaria de deixar aqui registrado meu agradecimento a apple por preservar meu sono as notifica es do ios n o apitam na madrugada
+42 - [Correct: irr ; Predicted: neg] hazi apple com
+43 - [Correct: irr ; Predicted: neu] o piratasdainformatica s n o disse se o bill gates tbm dono da apple
+44 - [Correct: irr ; Predicted: pos] n apple vai trabalhar no iphone
+45 - [Correct: irr ; Predicted: pos] i guess i should go hublot apple and zegnaofficial shopping next week birthdays only come once a year lol
+46 - [Correct: irr ; Predicted: neu] assistindo o filme chapa piratas da inform tica esse filme e foda viva apple
+47 - [Correct: irr ; Predicted: neu] iphone apple store g
+48 - [Correct: irr ; Predicted: neu] new arrivals and percent off clearance of matching g http t co qqcwyl b lds scriptures apple e book
+49 - [Correct: irr ; Predicted: neu] today very cheap for patio furniture san anton http t co sd i bjm plastic apple bags
+50 - [Correct: irr ; Predicted: neu] causando na loja da apple
+51 - [Correct: irr ; Predicted: neu] fico manso os pre os desses iphones absurdos r assim n o d f a apple s se eu fizesse programa na beira mar
+52 - [Correct: irr ; Predicted: neu] find more the best angel christmas tree o http t co d g ry d starfrit apple peeler
+53 - [Correct: irr ; Predicted: neu] find more the best maytag washer control board deal check pric http t co sndkag e best apple peeler
+54 - [Correct: irr ; Predicted: neu] find more the best cyst on knee deal check price of best cyst on knee and offers now http t co qzynnuvi automatic apple
+55 - [Correct: irr ; Predicted: neu] do not check other site for uhmw conveyor now you go best site of uhmw conveyor http t co rmv d q pin cable apple
+56 - [Correct: irr ; Predicted: neu] do not check other site for ed hardy black long sl http t co hengqgqp unlocked apple touch phones
+57 - [Correct: irr ; Predicted: neu] rt thbenkoe hey apple dass man selektiv keine einzelnen fotos peinliche berfl ssige etc aus dem fotostream l schen kann ist do
+58 - [Correct: irr ; Predicted: pos] esperaba mas de ios apple
+59 - [Correct: irr ; Predicted: neu] hello you are find mesh jacket motorcycle our site have more mesh http t co tyg ualc ace hardware apple pee
+60 - [Correct: irr ; Predicted: neu] to reiniciando meu computador as id ia apple
+61 - [Correct: irr ; Predicted: neu] chriswglowe apple gadgetlab you can tell me tonight cracking open the vodka tonight if you fancy
+62 - [Correct: irr ; Predicted: neu] buy more products of hemp jewelry instructions now free ship http t co bps t lehmans apple peeler
+63 - [Correct: irr ; Predicted: neu] rogriffo vc viu ontem a apple estava dando iphone no site dos estados unidos
+64 - [Correct: irr ; Predicted: neu] today very cheap for hemp for fuel and free shipping for hemp for fuel too http t co gyjlbmw farberware apple peeler
+65 - [Correct: irr ; Predicted: neu] discount hemp knots today cheap price too save money for best hemp knots http t co h joplq avanti apple peeler
+66 - [Correct: irr ; Predicted: neu] today very cheap for icemaker and free shipping for icemaker too http t co clkwaio french apple peeler
+67 - [Correct: neu ; Predicted: pos] leg nd apple the new iphone
+68 - [Correct: neu ; Predicted: neg] just made the switch from blackberry to apple and never looking back bbwho
+69 - [Correct: neu ; Predicted: neg] apple iphone s arrival on tuesday iphone s

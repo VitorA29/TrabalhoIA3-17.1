@@ -3,6 +3,7 @@ import re, math, collections, itertools
 import os
 
 from bs4 import BeautifulSoup
+from sklearn.decomposition import PCA
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.ensemble import RandomForestClassifier
 import pandas as pd
@@ -204,15 +205,16 @@ def getWrongPredictions(predictions, target, text):
 
     for i in range(0, len(predictions)):
         if(predictions[i] != target[i]):
-            list.append(text[i] + " | Correct: " + getCategory(type)[target[i]] + " Predicted: " + getCategory(type)[predictions[i]])
+            list.append("[Correct: " + getCategory(type)[target[i]] + " ; Predicted: " + getCategory(type)[predictions[i]] + "] " + text[i])
 
     return list
 
-def wirte2TxtFile(predicted, testData, trainData, type, classifier, fileName, showWrongPredict, showPredictions):
+def wirte2TxtFile(predicted, testData, trainData, type, classifier, fileName, showWrongPredict, showPredictions, gridSearch):
     text_file = open(fileName + ".txt", "w")
 
     text_file.write("Classifier: %s\n" % getClassifierName(classifier))
     text_file.write("Mode: %s\n" % getModoStr(type))
+    text_file.write("GridSearch: %s\n" % (str(gridSearch)))
     text_file.write("DataTrain length: %s\n" % len(trainData.data))
     text_file.write("DataTest length: %s\n" % len(testData.data))
 
@@ -227,12 +229,14 @@ def wirte2TxtFile(predicted, testData, trainData, type, classifier, fileName, sh
     if (showWrongPredict):
         list = getWrongPredictions(predicted, testData.target, testData.data)
         text_file.write("\n\n"+ str(len(list)) + " Wrong Predictions:\n")
+        j = 0
         for i in list:
-            text_file.write(i + '\n')
+            text_file.write(str(j) + " - " + i + '\n')
+            j += 1
 
     if (showPredictions):
         array = []
-        text_file.write("\nPredictions:")
+        text_file.write("\nPredictions:\n")
         for i in range(0, len(predicted)):
             text = testData.data[i]
             classy = getCategory(type)[predicted[i]]
@@ -242,7 +246,7 @@ def wirte2TxtFile(predicted, testData, trainData, type, classifier, fileName, sh
         random.shuffle(array)
         j = 0
         for i in array:
-            text_file.write("%s - %s -> %s\n" %((j + 1), i.text, i.classific))
+            text_file.write("%s - [%s]  %s\n" %((j + 1), i.classific, i.text))
             j += 1
 
     text_file.close()

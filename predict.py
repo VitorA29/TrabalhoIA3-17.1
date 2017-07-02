@@ -2,6 +2,7 @@ import sys
 
 from sklearn import decomposition, metrics
 from sklearn.decomposition import PCA
+from sklearn.decomposition import TruncatedSVD
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.feature_selection import RFE
 from sklearn.feature_selection import RFECV
@@ -29,20 +30,18 @@ def predict(classifier, type, gridSearch, showWrongPredict, showPredictions):
 
     text_clf = getClassifier(classifier)
 
-    if(gridSearch and classifier != SVM):
-        print("------> A T E N Ç Ã O <------ GridSearch so funciona com SVM por enquanto! Executando sem GridSearch...")
-
-    if(gridSearch and classifier == SVM):
+    if(gridSearch):
         parameters = {
             'vect__max_df': (0.5, 0.75, 1.0),
             # 'vect__max_features': (None, 5000, 10000, 50000),
             'vect__ngram_range': ((1, 1), (1, 2)),  # unigrams or bigrams
             # 'tfidf__use_idf': (True, False),
             # 'tfidf__norm': ('l1', 'l2'),
-            'clf__alpha': (0.00001, 0.000001),
             'clf__penalty': ('l2', 'elasticnet'),
             # 'clf__n_iter': (10, 50, 80),
         }
+
+        parameters = {'clf__min_samples_split': range(10, 500, 20), 'clf__max_depth': range(1, 20, 2)}
 
         text_clf = GridSearchCV(text_clf, parameters, n_jobs=1, verbose=1)
         text_clf.fit(data.data, data.target)
@@ -56,7 +55,7 @@ def predict(classifier, type, gridSearch, showWrongPredict, showPredictions):
     predicted = text_clf.predict(docs_test)
 
     #Escreve no arquivo txt.
-    wirte2TxtFile(predicted, testData, data, type, classifier, 'teste', showWrongPredict, showPredictions)
+    wirte2TxtFile(predicted, testData, data, type, classifier, 'teste', showWrongPredict, showPredictions, gridSearch)
 
 def getClassifier(classifier):
     if (classifier == DECISION_TREE):
@@ -76,19 +75,12 @@ def naiveBayes():
 
     return text_clf
 
+'''('slct', TruncatedSVD(n_components=2)),'''
+
 def randomForest():
     text_clf = Pipeline([('vect', CountVectorizer()),
                          ('tfidf', TfidfTransformer()),
                          ('clf', RandomForestClassifier(n_estimators=10)),
-                         ])
-
-    return text_clf
-
-def svc():
-    text_clf = Pipeline([('vect', CountVectorizer()),
-                         ('tfidf', TfidfTransformer()),
-                         ('clf', SGDClassifier(loss='hinge', penalty='l2',
-                                               alpha=1e-3, n_iter=5, random_state=42))
                          ])
 
     return text_clf
@@ -103,13 +95,12 @@ def decisionTree():
 def svm():
     text_clf = Pipeline([('vect', CountVectorizer()),
                          ('tfidf', TfidfTransformer()),
-                         ('clf', SGDClassifier(loss='hinge', penalty='l2',
-                                               alpha=1e-3, n_iter=5, random_state=42)),
+                         ('clf', RFE(estimator=SVC(kernel="linear", C=1), n_features_to_select=3, step=1) ),
                          ])
     return text_clf
 
 type = QUATERNARIO
-gridSearch = False
+gridSearch = True
 showWrongPredictions = True
-showPredictions = True
-predict(NAIVE_BAYES, type, gridSearch, showWrongPredictions, showPredictions)
+showPredictions = False
+predict(DECISION_TREE, type, gridSearch, showWrongPredictions, showPredictions)
