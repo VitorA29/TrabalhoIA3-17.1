@@ -1,5 +1,3 @@
-import sys
-
 from sklearn import decomposition, metrics
 from sklearn.decomposition import PCA
 from sklearn.feature_extraction.text import TfidfTransformer
@@ -56,7 +54,7 @@ def predict(classifier, type, gridSearch, showWrongPredict, showPredictions):
     predicted = text_clf.predict(docs_test)
 
     #Escreve no arquivo txt.
-    wirte2TxtFile(predicted, testData, data, type, classifier, 'teste', showWrongPredict, showPredictions)
+    write2TxtFile(predicted, testData, data, type, classifier, showWrongPredict, showPredictions)
 
 def getClassifier(classifier):
     if (classifier == DECISION_TREE):
@@ -108,8 +106,4 @@ def svm():
                          ])
     return text_clf
 
-type = QUATERNARIO
-gridSearch = False
-showWrongPredictions = True
-showPredictions = True
-predict(NAIVE_BAYES, type, gridSearch, showWrongPredictions, showPredictions)
+predict(NAIVE_BAYES, BINARIO, False, True, True)
