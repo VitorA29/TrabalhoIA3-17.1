@@ -340,10 +340,13 @@ $\textrm{Atual}\diagdown\textrm{Previsto}$ & \textbf{positivo} & \textbf{negativ
 \end{table}
 %--
 
+%quaternaria SVM
 \begin{table}[h!]
 \centering
+\resizebox{\textwidth}{!}{%
+\begin{minipage}[b]{0.45\linewidth}
 \caption{Matriz de Confusão Quartenário: \textit{SVM}}
-\label{tab:mcq-smv}
+\label{tab:mcq-svm}
 \begin{tabular}{|l|l|l|l|l|}
 \hline
 $\textrm{Atual}\diagdown\textrm{Previsto}$ & \textbf{positivo} & \textbf{negativo} & \textbf{neutro} & \textbf{irrelevante}\\ \hline
@@ -352,12 +355,72 @@ $\textrm{Atual}\diagdown\textrm{Previsto}$ & \textbf{positivo} & \textbf{negativ
 \textbf{neutro} & 23 & 67 & 417 & 2 \\ \hline
 \textbf{irrelevante} & 4 & 8 & 41 & 32 \\ \hline
 \end{tabular}
-\end{table}
+\end{minipage}
+\hspace{4.0 cm}
+\begin{minipage}[b]{0.45\linewidth}
 
+\centering
+\caption{Medidas da Matriz de Confusão}
+\label{tab:mmcq-svm}
+\begin{tabular}{|l|l|l|l|}
+\hline
+         & \textbf{precisão} & \textbf{recall} & \textbf{f1-score} \\ \hline
+\textbf{positivo} & 0.64     & 0.48   & 0.55     \\ \hline
+\textbf{negativo} & 0.72     & 0.77   & 0.75     \\ \hline
+\textbf{neutro} & 0.72    & 0.82   & 0.77     \\ \hline
+\textbf{irrelevante} & 0.94    & 0.38   & 0.54     \\ \hline
+\textbf{média}    & 0.73     & 0.72   & 0.71 \\ \hline
+\textbf{acurácia} & \multicolumn{3}{|c|}{0.71761416589} \\ \hline
+\end{tabular}
+\end{minipage}
+}
+\end{table}
+%--
+
+%quaternaria SVM c/ Grid Search
 \begin{table}[h!]
 \centering
+\resizebox{\textwidth}{!}{%
+\begin{minipage}[b]{0.45\linewidth}
+\caption{Matriz de Confusão Quartenário: \textit{SVM com Grid Search}}
+\label{tab:mcq-svmgs}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+$\textrm{Atual}\diagdown\textrm{Previsto}$ & \textbf{positivo} & \textbf{negativo} & \textbf{neutro} & \textbf{irrelevante}\\ \hline
+\textbf{positivo} & 159 & 0 & 4 & 0\\ \hline
+\textbf{negativo} & 0 & 312 & 4 & 0\\ \hline
+\textbf{neutro} & 1 & 1 & 507 & 0 \\ \hline
+\textbf{irrelevante} & 5 & 2 & 43 & 35 \\ \hline
+\end{tabular}
+\end{minipage}
+\hspace{4.0 cm}
+\begin{minipage}[b]{0.45\linewidth}
+
+\centering
+\caption{Medidas da Matriz de Confusão}
+\label{tab:mmcq-svmgs}
+\begin{tabular}{|l|l|l|l|}
+\hline
+         & \textbf{precisão} & \textbf{recall} & \textbf{f1-score} \\ \hline
+\textbf{positivo} & 0.96     & 0.98   & 0.97     \\ \hline
+\textbf{negativo} & 0.99     & 0.99   & 0.99     \\ \hline
+\textbf{neutro} & 0.91    & 1.00   & 0.95     \\ \hline
+\textbf{irrelevante} & 1.00    & 0.41   & 0.58     \\ \hline
+\textbf{média}    & 0.95     & 0.94   & 0.94 \\ \hline
+\textbf{acurácia} & \multicolumn{3}{|c|}{0.944082013048} \\ \hline
+\end{tabular}
+\end{minipage}
+}
+\end{table}
+%--
+
+%quaternaria Decision Tree
+\begin{table}[h!]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{minipage}[b]{0.45\linewidth}
 \caption{Matriz de Confusão Quartenário: \textit{Decision Tree}}
-\label{tab:mcq-nb}
+\label{tab:mcq-dt}
 \begin{tabular}{|l|l|l|l|l|}
 \hline
 $\textrm{Atual}\diagdown\textrm{Previsto}$ & \textbf{positivo} & \textbf{negativo} & \textbf{neutro} & \textbf{irrelevante}\\ \hline
@@ -366,10 +429,33 @@ $\textrm{Atual}\diagdown\textrm{Previsto}$ & \textbf{positivo} & \textbf{negativ
 \textbf{neutro} & 4 & 2 & 503 & 0 \\ \hline
 \textbf{irrelevante} & 19 & 8 & 50 & 8 \\ \hline
 \end{tabular}
-\end{table}
+\end{minipage}
+\hspace{4.0 cm}
+\begin{minipage}[b]{0.45\linewidth}
 
+\centering
+\caption{Medidas da Matriz de Confusão}
+\label{tab:mmcq-dt}
+\begin{tabular}{|l|l|l|l|}
+\hline
+         & \textbf{precisão} & \textbf{recall} & \textbf{f1-score} \\ \hline
+\textbf{positivo} & 0.88     & 1.00   & 0.93     \\ \hline
+\textbf{negativo} & 0.97     & 1.00   & 0.98     \\ \hline
+\textbf{neutro} & 0.91    & 0.99   & 0.95     \\ \hline
+\textbf{irrelevante} & 1.00    & 0.09   & 0.17     \\ \hline
+\textbf{média}    & 0.93     & 0.92   & 0.89 \\ \hline
+\textbf{acurácia} & \multicolumn{3}{|c|}{0.922646784716} \\ \hline
+\end{tabular}
+\end{minipage}
+}
+\end{table}
+%--
+
+%quaternaria Random Forest
 \begin{table}[h!]
 \centering
+\resizebox{\textwidth}{!}{%
+\begin{minipage}[b]{0.45\linewidth}
 \caption{Matriz de Confusão Quartenário: \textit{Random Forest}}
 \label{tab:mcq-rf}
 \begin{tabular}{|l|l|l|l|l|}
@@ -380,4 +466,24 @@ $\textrm{Atual}\diagdown\textrm{Previsto}$ & \textbf{positivo} & \textbf{negativ
 \textbf{neutro} & 0 & 1 & 508 & 0 \\ \hline
 \textbf{irrelevante} & 7 & 3 & 58 & 17 \\ \hline
 \end{tabular}
+\end{minipage}
+\hspace{4.0 cm}
+\begin{minipage}[b]{0.45\linewidth}
+
+\centering
+\caption{Medidas da Matriz de Confusão}
+\label{tab:mmcq-rf}
+\begin{tabular}{|l|l|l|l|}
+\hline
+         & \textbf{precisão} & \textbf{recall} & \textbf{f1-score} \\ \hline
+\textbf{positivo} & 0.96     & 1.00   & 0.98     \\ \hline
+\textbf{negativo} & 0.99     & 1.00   & 0.99     \\ \hline
+\textbf{neutro} & 0.90    & 1.00   & 0.95     \\ \hline
+\textbf{irrelevante} & 1.00    & 0.20   & 0.33     \\ \hline
+\textbf{média}    & 0.94     & 0.94   & 0.92 \\ \hline
+\textbf{acurácia} & \multicolumn{3}{|c|}{0.922646784716} \\ \hline
+\end{tabular}
+\end{minipage}
+}
 \end{table}
+%--

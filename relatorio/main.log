@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.22)  1 JUL 2017 20:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.22)  2 JUL 2017 09:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1565,11 +1565,7 @@ subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
 \c@algocf=\count136
 \algocf@algoframe=\box50
 \algocf@algobox=\box51
-) (./main.aux
-
-LaTeX Warning: Label `tab:mcq-nb' multiply defined.
-
-)
+) (./main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
@@ -1846,10 +1842,58 @@ Overfull \hbox (22.71951pt too wide) in paragraph at lines 339--339
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+Overfull \hbox (116.4135pt too wide) in paragraph at lines 376--376
+[][] 
+ []
+
+
+Overfull \hbox (22.71951pt too wide) in paragraph at lines 376--376
+ [][] 
+ []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 1048) in paragraph at lines 413--413
+ \OT1/phv/b/n/10 Quar-ten[]ario: \OT1/phv/b/sl/10 SVM com Grid 
+ []
+
+
+Overfull \hbox (116.4135pt too wide) in paragraph at lines 413--413
+[][] 
+ []
+
+
+Overfull \hbox (22.71951pt too wide) in paragraph at lines 413--413
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (116.4135pt too wide) in paragraph at lines 450--450
+[][] 
+ []
+
+
+Overfull \hbox (22.71951pt too wide) in paragraph at lines 450--450
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (116.4135pt too wide) in paragraph at lines 487--487
+[][] 
+ []
+
+
+Overfull \hbox (22.71951pt too wide) in paragraph at lines 487--487
+ [][] 
+ []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1860,16 +1904,17 @@ LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] (./main.aux)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4]
+(./main.aux)
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 12508 strings out of 493029
- 214997 string characters out of 6136234
- 310812 words of memory out of 5000000
- 15887 multiletter control sequences out of 15000+600000
+ 12514 strings out of 493029
+ 215080 string characters out of 6136234
+ 326809 words of memory out of 5000000
+ 15893 multiletter control sequences out of 15000+600000
  26208 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,14n,42p,10404b,319s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1882,10 +1927,10 @@ nts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 vbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on main.pdf (3 pages, 90046 bytes).
+Output written on main.pdf (4 pages, 92505 bytes).
 PDF statistics:
- 51 PDF objects out of 1000 (max. 8388607)
- 36 compressed objects within 1 object stream
+ 54 PDF objects out of 1000 (max. 8388607)
+ 38 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
