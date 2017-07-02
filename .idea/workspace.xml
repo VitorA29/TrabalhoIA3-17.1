@@ -2,10 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2007863b-a2ed-4166-a77b-8b0be7eb27a9" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/execucao/BINARIO/DECISION TREE.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/execucao/BINARIO/NAIVE BAYES.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/execucao/BINARIO/RANDOM FOREST.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/execucao/BINARIO/SVM.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/execucao/QUATERNARIO/DECISION TREE.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/execucao/QUATERNARIO/NAIVE BAYES.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/execucao/QUATERNARIO/RANDOM FOREST.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/execucao/QUATERNARIO/SVM.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/execucao/TERNARIO/DECISION TREE.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/execucao/TERNARIO/NAIVE BAYES.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/execucao/TERNARIO/RANDOM FOREST.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/execucao/TERNARIO/SVM.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/BINARIO_RESULTADOS.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/QUATERNARIO_RESULTADOS.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Trab-ML-Activity-Recognition.pdf" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Util.py" afterPath="$PROJECT_DIR$/Util.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/predict.py" afterPath="$PROJECT_DIR$/predict.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/teste.txt" afterPath="$PROJECT_DIR$/teste.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/binario/test/twitter-sanders-apple2.csv" afterPath="$PROJECT_DIR$/bases/binario/test/twitter-sanders-apple2.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/binario/train/twitter-sanders-apple3.csv" afterPath="$PROJECT_DIR$/bases/binario/train/twitter-sanders-apple3.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/binario_results.txt" afterPath="$PROJECT_DIR$/res/binario_results.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/intro.tex" afterPath="$PROJECT_DIR$/res/intro.tex" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/quaternario/test/irrelevantTest.csv" afterPath="$PROJECT_DIR$/bases/quaternario/test/irrelevantTest.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/quaternario/test/twitter-sanders-apple3.csv" afterPath="$PROJECT_DIR$/bases/quaternario/test/twitter-sanders-apple3.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/quaternario/train/full-corpus.csv" afterPath="$PROJECT_DIR$/bases/quaternario/train/full-corpus.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/quaternario/train/full_training_dataset.csv" afterPath="$PROJECT_DIR$/bases/quaternario/train/full_training_dataset.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/quaternario/train/twitter-sanders-apple2.csv" afterPath="$PROJECT_DIR$/bases/quaternario/train/twitter-sanders-apple2.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/quaternario_results.txt" afterPath="$PROJECT_DIR$/res/quaternario_results.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ref.bib" afterPath="$PROJECT_DIR$/res/ref.bib" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ternario/test/twitter-sanders-apple3.csv" afterPath="$PROJECT_DIR$/bases/ternario/test/twitter-sanders-apple3.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ternario/train/full-corpus.csv" afterPath="$PROJECT_DIR$/bases/ternario/train/full-corpus.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/ternario_results.txt" afterPath="$PROJECT_DIR$/res/ternario_results.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/irrelevantTest.csv" afterPath="$PROJECT_DIR$/res/test/irrelevantTest.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/test/twitter-sanders-apple3.csv" afterPath="$PROJECT_DIR$/res/test/twitter-sanders-apple3.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/train/full-corpus.csv" afterPath="$PROJECT_DIR$/res/train/full-corpus.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/train/full_training_dataset.csv" afterPath="$PROJECT_DIR$/res/train/full_training_dataset.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/train/twitter-sanders-apple2.csv" afterPath="$PROJECT_DIR$/res/train/twitter-sanders-apple2.csv" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,33 +56,23 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="predict.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="predict.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/predict.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="43" column="102" lean-forward="true" selection-start-line="43" selection-start-column="102" selection-end-line="43" selection-end-column="102" />
+            <state relative-caret-position="1057">
+              <caret line="90" column="17" lean-forward="true" selection-start-line="90" selection-start-column="17" selection-end-line="90" selection-end-column="17" />
               <folding>
-                <element signature="e#0#10#0" expanded="true" />
+                <element signature="e#0#42#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="testeSemTruncated.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/testeSemTruncated.txt">
+      <file leaf-file-name="Util.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Util.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="teste.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/teste.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+            <state relative-caret-position="-2139">
+              <caret line="90" column="43" lean-forward="true" selection-start-line="90" selection-start-column="43" selection-end-line="90" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -128,8 +153,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -139,42 +164,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="TrabalhoIA3-17.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TrabalhoIA3-17.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TrabalhoIA3-17.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="binario" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="train" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TrabalhoIA3-17.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TrabalhoIA3-17.1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="binario" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -491,8 +480,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/aclImdb/imdb.vocab" />
-    <entry file="file://$PROJECT_DIR$/aclImdb/train/unsupBow.feat" />
     <entry file="file://$PROJECT_DIR$/aclImdb/imdbEr.txt" />
     <entry file="file://$PROJECT_DIR$/aclImdb/README" />
     <entry file="file://$PROJECT_DIR$/files/twitter-sanders-apple3.csv" />
@@ -565,20 +552,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/train/twitter-sanders-apple2.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/irrelevantTest.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="66" column="111" lean-forward="true" selection-start-line="66" selection-start-column="111" selection-end-line="66" selection-end-column="111" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/train/twitter-sanders-apple2.csv" />
+    <entry file="file://$PROJECT_DIR$/test/irrelevantTest.csv" />
     <entry file="file://$USER_HOME$/Miniconda3/Lib/site-packages/sklearn/svm/classes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
@@ -590,13 +565,7 @@
     <entry file="file://$PROJECT_DIR$/results.txt" />
     <entry file="file://$PROJECT_DIR$/teste/binario/train/twitter-sanders-apple3.csv" />
     <entry file="file://$PROJECT_DIR$/teste/binario/test/twitter-sanders-apple2.csv" />
-    <entry file="file://$PROJECT_DIR$/test/twitter-sanders-apple3.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="988" column="130" lean-forward="false" selection-start-line="988" selection-start-column="130" selection-end-line="988" selection-end-column="130" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test/twitter-sanders-apple3.csv" />
     <entry file="file://$PROJECT_DIR$/teste/ternario/test/twitter-sanders-apple3.csv" />
     <entry file="file://$PROJECT_DIR$/teste/ternario/train/full_training_dataset.csv" />
     <entry file="file://$PROJECT_DIR$/orange/parsed.csv">
@@ -614,79 +583,19 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/binario/train/parsed.csv" />
-    <entry file="file://$PROJECT_DIR$/ternario/test/twitter-sanders-apple3.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/binario/train/twitter-sanders-apple3.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="479" column="23" lean-forward="false" selection-start-line="479" selection-start-column="23" selection-end-line="479" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/binario/test/twitter-sanders-apple2.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="479" column="23" lean-forward="false" selection-start-line="479" selection-start-column="23" selection-end-line="479" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ternario/test/twitter-sanders-apple3.csv" />
+    <entry file="file://$PROJECT_DIR$/binario/train/twitter-sanders-apple3.csv" />
+    <entry file="file://$PROJECT_DIR$/binario/test/twitter-sanders-apple2.csv" />
     <entry file="file://$PROJECT_DIR$/ternario/train/twitter-sanders-apple2.csv" />
     <entry file="file://$PROJECT_DIR$/ternario/test/twitter-sanders-apple2.csv" />
-    <entry file="file://$PROJECT_DIR$/train/full_training_dataset.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106626">
-          <caret line="11060" column="16" lean-forward="false" selection-start-line="11060" selection-start-column="16" selection-end-line="11060" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/train/full-corpus.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87363">
-          <caret line="5139" column="104" lean-forward="true" selection-start-line="5139" selection-start-column="104" selection-end-line="5139" selection-end-column="104" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ternario/train/full-corpus.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1708">
-          <caret line="3579" column="191" lean-forward="false" selection-start-line="3579" selection-start-column="191" selection-end-line="3579" selection-end-column="191" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/QUATERNARIO_RESULTADOS.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/train/full_training_dataset.csv" />
+    <entry file="file://$PROJECT_DIR$/train/full-corpus.csv" />
+    <entry file="file://$PROJECT_DIR$/ternario/train/full-corpus.csv" />
+    <entry file="file://$PROJECT_DIR$/QUATERNARIO_RESULTADOS.txt" />
     <entry file="file://$USER_HOME$/Miniconda3/Lib/site-packages/sklearn/naive_bayes.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
           <caret line="689" column="0" lean-forward="false" selection-start-line="689" selection-start-column="0" selection-end-line="689" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="90" column="52" lean-forward="false" selection-start-line="90" selection-start-column="52" selection-end-line="90" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#13#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testeSemTruncated.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -698,13 +607,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/testeSemTruncated.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execucao/BINARIO/DECISION TREE.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execucao/QUATERNARIO/DECISION TREE.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="21" lean-forward="true" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/predict.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="43" column="102" lean-forward="true" selection-start-line="43" selection-start-column="102" selection-end-line="43" selection-end-column="102" />
+        <state relative-caret-position="1057">
+          <caret line="90" column="17" lean-forward="true" selection-start-line="90" selection-start-column="17" selection-end-line="90" selection-end-column="17" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#0#42#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2139">
+          <caret line="90" column="43" lean-forward="true" selection-start-line="90" selection-start-column="43" selection-end-line="90" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>

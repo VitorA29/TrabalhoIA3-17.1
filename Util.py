@@ -31,9 +31,9 @@ Classificador binário.
 '''
 categories2 = ['pos', 'neg']
 
-QUATERNARIO_PATH = "./quaternario/"
-TERNARIO_PATH = "./ternario/"
-BINARIO_PATH = "./binario/"
+QUATERNARIO_PATH = "./bases/quaternario/"
+TERNARIO_PATH = "./bases/ternario/"
+BINARIO_PATH = "./bases/binario/"
 
 QUATERNARIO = 0
 TERNARIO = 1
@@ -43,6 +43,9 @@ DECISION_TREE = 0
 NAIVE_BAYES = 1
 RANDOM_FOREST = 2
 SVM = 3
+
+def getClassificadoresQTD():
+    return 4
 
 class Data(object):
     '''
@@ -167,6 +170,14 @@ def getModoStr(type):
     else:
         return "Quaternário"
 
+def getModoStrDir(type):
+    if(type == BINARIO):
+        return "BINARIO"
+    elif(type == TERNARIO):
+        return "TERNARIO"
+    else:
+        return "QUATERNARIO"
+
 def getClassifierName(classifier):
     if(classifier == DECISION_TREE):
         return 'Decision Tree'
@@ -209,8 +220,12 @@ def getWrongPredictions(predictions, target, text):
 
     return list
 
-def wirte2TxtFile(predicted, testData, trainData, type, classifier, fileName, showWrongPredict, showPredictions, gridSearch):
-    text_file = open(fileName + ".txt", "w")
+def write2TxtFile(predicted, testData, trainData, type, classifier, showWrongPredict, showPredictions, gridSearch):
+
+    if not os.path.exists("execucao/" + getModoStrDir(type)):
+        os.makedirs("execucao/" + getModoStrDir(type))
+
+    text_file = open("execucao/" + getModoStrDir(type) + "/" + getClassifierName(classifier).upper() + ".txt", "w")
 
     text_file.write("Classifier: %s\n" % getClassifierName(classifier))
     text_file.write("Mode: %s\n" % getModoStr(type))

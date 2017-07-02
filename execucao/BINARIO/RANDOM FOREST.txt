@@ -1,0 +1,508 @@
+Classifier: Random Forest
+Mode: Binário
+DataTrain length: 479
+DataTest length: 479
+
+-----PREDCTION INFO-----
+Accuracy: 0.985386221294
+
+Report:
+             precision    recall  f1-score   support
+
+        pos       0.98      0.98      0.98       163
+        neg       0.99      0.99      0.99       316
+
+avg / total       0.99      0.99      0.99       479
+
+Confusion Matrix:
+[[159   4]
+ [  3 313]]
+
+7 Wrong Predictions:
+save me from hp s unwanted os help me buy an iphone i have seen the light lol http t co gup acz backchannel apple | Correct: pos Predicted: neg
+apple safari reader owns the worldwide web | Correct: pos Predicted: neg
+apple s siri is witchcraft what s next googleresearch yr lead lost | Correct: pos Predicted: neg
+video card on kimaris workstation died after just six months so long hp hello apple | Correct: pos Predicted: neg
+yellowgate some iphone s users complain of yellow tint to screen http t co uaqrxtnk apple iphone s | Correct: neg Predicted: pos
+i am so done with att and apple s profitering and lack of customer service so fucking down with both | Correct: neg Predicted: pos
+interesting apple now requires you to have a reservation apple iphone s http t co zzk ftii | Correct: neg Predicted: pos
+
+Predictions:1 - new ios update is the best iloveyou apple -> pos
+2 - rt leiboaz wow worst apple customer service experience ever arrogant and inept bad combo biltmore apple store -> neg
+3 - is it too much to ask which app is incompatible apple http t co ykqip nk -> neg
+4 - rt radlerc yellowgate some iphone s users complain of yellow tint to screen http t co uaqrxtnk apple iphone s -> neg
+5 - well apple fixed my ios battery drain problem with a replacement iphone it s working like a champ now -> pos
+6 - i will never purchase another apple product for the rest of my life i am glad steve jobs is fucking dead may you fucking rot in hell -> neg
+7 - looks like apple did not appropriately project the resources needed for siri not very reliable -> neg
+8 - apple apple one thing i hater about this mouse the buttery finish so fast am not happy now macworld macworld http t co uh a vt -> neg
+9 - dear apple why did all my pdfs and epub files disappear from ibooks in my iphone post ios upgrade this hurts gs needsomethingtoread -> neg
+10 - ugh wtf is up with all the bottlenecks paypal apple -> neg
+11 - asked siri where s baby lisa and was told sorry i m having trouble connecting to the network right now apple server fail ios -> neg
+12 - boy could apple make it any harder to put my purchased music from the cloud on to my new macbook pro you must authorize this computer -> neg
+13 - would it kill apple to put a braille type bump on their earbuds so we know which bud is r and l in the dark -> neg
+14 - this good here iphone will do me very well today thanks to the gods that are apple -> pos
+15 - apple thanks for fixing this http t co wtj ogdo -> pos
+16 - i love this so much thank you apple http t co ui loezx -> pos
+17 - apple siri is not working due to network problem seriously can you fix this iphone s fail -> neg
+18 - why is siri always down apple -> neg
+19 - yo apple this update is a disaster -> neg
+20 - rt to ne apple thanks for fixing this http t co wtj ogdo -> pos
+21 - pondering the ios update from the sounds of mikeferri s difficulties i may just hold off apple fix it -> neg
+22 - nd apple genius apptment running late nd day in row for nd dodgy ipod you make mega hire some staff -> neg
+23 - fuck you apple die in a fucking blaze inferno -> neg
+24 - lmfao look at the argument i had with siri ijustine apple http t co d vjl si -> pos
+25 - removing all apple shit -> neg
+26 - apple why is my iphone battery so crappy fail -> neg
+27 - this does not bode well after charging all night my apple iphone s has battery after only hr off charger with no calls light use -> neg
+28 - rt jewelz mashable apple iphones r expensive most went w htc galaxy no customer loyalty w phone comp -> neg
+29 - wtf apple pages for the new terms conditions when u update ur apps from the itunes store do u really think we ll read em really -> neg
+30 - dear apple i had to turn off all those awesome featured you just enabled data plan can t handle it mb of data just because -> neg
+31 - pmphillips apple if my non apple equipment broke this often i guess i d need an asus genius bar but it doesn t so i don t -> neg
+32 - rt jdougyj hey apple do you wanna fix my fucking playlist order you piece of shit -> neg
+33 - i officially hate apple fix your damn itunes -> neg
+34 - apple i m still waiting for you to deliver my phone to sprint -> neg
+35 - disappointing visual merchandising apple simple but lacks elegance and sequence doesn t even tell us about siri http t co xv q gfi -> neg
+36 - good support fm kevin apple bellevue store biz customers ty -> pos
+37 - apple battery life suck on ios -> neg
+38 - dailydealchat apple thanks -> pos
+39 - great up close personal event apple tonight in regent st store -> pos
+40 - rt deb lavoy the nice guy at the apple store replaced my phone gratis when i showed him the hairline crack on the screen thanks apple -> pos
+41 - the line at the apple is just stupid -> neg
+42 - hey apple the sms full message is complete shit yes i m annoyed -> neg
+43 - apple siri is down -> neg
+44 - you can make photo albums in the photos app with ios but can t password protect them um apple fix that quickly -> neg
+45 - cbm lies apple the battery on this new iphone s is definitely not any better check settings times more app usage in ios -> neg
+46 - apple safari reader owns the worldwide web -> neg
+47 - oh my iphone is overcapacity huh apple won t let me be great -> neg
+48 - apple siri is amazing i m in love -> pos
+49 - i made a reservation and yet i still have to wait in line humpt oh apple apple store w others http t co jzmvbdnm -> neg
+50 - rt joelburns dear apple it s me again thank for beautiful new ios features but i miss some of the old ones lk making calls texts -> neg
+51 - apple jilive danielpink apple sells million iphone s units in first weekend steve jobs brilliance lives on for ever iphone rva -> pos
+52 - kind of excited on my way to my last class right now and then going to the apple store so buy macosc snow leopard and lion -> pos
+53 - if apple doesn t fix ios this week i m buying a droid emptythreats -> neg
+54 - sweet apple replaced my glass probono thank you apple -> pos
+55 - i am very upset about and inconvenienced by this iphone update failed backup iphone apple -> neg
+56 - if u need me just text me o wait u i wont get it cuz apple fucks me every time fuckingpissed -> neg
+57 - itunes is apple s worst product worse than the newton or the hockey puck mouse it s utterly painful to use -> neg
+58 - correction best buy kudos to chris alamo ranch s a tx fixed issues couldn t resolve after day w att apple hero of my day -> neg
+59 - rt mn nova love ios easter eggs pull down from middle top to bottom and see what pulls down awesome little feature ios apple -> pos
+60 - lmao i think apple is onto something magical i am dying haha siri suggested where to find whores and where to hide a body lolol -> pos
+61 - thank you apple for find my mac just located and wiped my stolen air smallvictory thievingbastards -> pos
+62 - only thing bad about the new canon camera is that it has two compact flash cards not one of sd sd goes in my apple computer damn you -> neg
+63 - is it me or does my iphone run slower since the ios update apple verizon -> neg
+64 - apparently fuzzball crashes on ios congratulations apple on another incompatible upgrade -> neg
+65 - i really hate dealing with the brain dead people at the apple store for such good products customer service sucks -> neg
+66 - the nice apple tech support guy fixed my itouch d -> pos
+67 - thanks to apple my new imac is a brick i cannot re install lion and i cannot purchase it because it was installed by the former owner -> neg
+68 - should be studying doing work but no i m hold with apple hurry the fuck up nopatience -> neg
+69 - rt herahussain rickysinghpt got a new backside for my eye phone v impressed with apple -> pos
+70 - mayati i think apple didn t do such a thorough job with the step x steps for upgrade and move to icloud now it s cost me mightily -> neg
+71 - an apple update has seemed to render my work machine incapable of opening hdv video thanks apple zero useful productivity today -> neg
+72 - had issues with siri reaching network today too many uses or my signal apple -> neg
+73 - seriously i have absolutely no offing clue what apple means by authorization nor how to do it -> neg
+74 - total chaos at apple store regent street like an ethiopian feeding station can t believe this is same co that makes all that cool shit -> neg
+75 - apple domain fail open hrs late for walk in ppl store was empty and i only need a skin my screen you represent customer service fail -> neg
+76 - asked siri is she dreams of electric sleep was disappointed that she didn t have a snippy answer missed opportunity apple -> neg
+77 - why book apple genius bar if after hours you still can t be served disappointing apple store sydney thanksfornothing -> neg
+78 - apple ios is sweet notifications phone search covers mail now wifi sync icloud backup and integrated twitter are all well done -> pos
+79 - has been on terminal hold with apple support she must not be the only person having trouble with the new iphone and synching -> neg
+80 - prjusto don t question the apple they will remember your dissent -> neg
+81 - damn it apple whatchu done to my phone -> neg
+82 - rt cbm lies apple the battery on this new iphone s is definitely not any better -> neg
+83 - i sure as hell better be able to restore my calendar events terrible bug apple apple icloud anothericloudfail -> neg
+84 - ios has one problem when i save someone in my contacts they don t show his nam becuz of the region apple apple -> neg
+85 - comparing office live with google apps and apple icloud i do not see icloud leading the crowd do you agree -> neg
+86 - what happened rt xcuntnuggetx never purchasing another item from apple -> neg
+87 - thank you apple for making my ipad feel like new again with your new ios -> pos
+88 - asimrang apple umber the desktop app is wack though -> neg
+89 - hey apple stop sending your automatically depreciate all iphones older than the s signal my iphone is dying rapidly processor wise -> neg
+90 - my iphone s battery lasted longer than a day that hasn t happened since my edge iphone nice job apple -> pos
+91 - mad props to the apple employee that didn t charge me to replace the back plate on my iphone made my day -> pos
+92 - at the bus with my iphone thxx apple -> pos
+93 - fuck u apple -> neg
+94 - hey apple i hate my computer i need a mack wanna send me a free one -> pos
+95 - rt reddeersteph joelplane apple i hear you i ve had trouble with my now i ve even turned down brightness andshuttingdownru -> neg
+96 - iphone s siri doesn t work for shit apple -> neg
+97 - apple took my siri and made it exclusive to iphone s sorude -> neg
+98 - albertmal remember apple is evil icloud entering the dropbox market -> neg
+99 - rt doug newton apple please fix siri she can t connect to your network -> neg
+100 - rt imightbewrong i m over people bitching about the iphone s i think it s the smartest phone i ve ever had and i m very happy -> pos
+101 - apple the reservation system not working shows no products avail let alone iphone s i had the site open in browsers at pm and nothing -> neg
+102 - so my imessage still isn t working apple -> neg
+103 - twitterpeopleiwouldliketomeet coollike thegadgetshow thelittleappkid jon lakers benrubery apple twitter fxhomehitfilm -> pos
+104 - apple why is it every time there is ios software update my ipad goes dead and i need to totally restore fail -> neg
+105 - so cutting the cord makes podcasts even harder to manage no subscriptions wth apple http t co ld i x ios via carrypad -> neg
+106 - mashable apple iphones r expensive most went w htc galaxy no customer loyalty w phone comp -> neg
+107 - apple just got the new ios upgrade with imessage good luck surviving now blackberry -> pos
+108 - currently learning mandarin for my upcoming trip to hong kong i gotta hand it to apple iphones their uber useful flashcard apps -> pos
+109 - apple will be adding more carrier support to the iphone s just announced -> pos
+110 - blackberry facebook u r really about to make me throw this blackberry in the trash an get an apple iphone facebook upload issues -> pos
+111 - when you want something done right you do it yourself or go to apple at t you re useless these days yourdaysarenumbered -> pos
+112 - i m loving this new ios update apple -> pos
+113 - twitter can you look at problem on ipad where it won t open messages it just crashes the app you too apple maybe your fault -> neg
+114 - using my awsome ipad i love it i love my macbook too and my ipod it s all amazing i love apple -> pos
+115 - so phoenixswinger s iphone is giving her a hella hard time w the ios update apple -> neg
+116 - see apple that what s happen when you release iphone s with same crappy design as the old phone -> neg
+117 - finally got my iphone s thanks apple stupid att learned my lesson -> pos
+118 - i love apple service my case has cracked x and i go in and they hand me a case and i walk out -> pos
+119 - apple ios nonstop dropped calls mute button randomly activating person cant hear me pull phone from ear to be on a mobile me screen -> neg
+120 - samsung apple you do realise you re just really pissing off the customer base as well as looking petty -> neg
+121 - brianmincey apple the chipsets tear through battery life coworker has a htc thunderbolt that he gets about hours of life -> neg
+122 - chascouponmom apple i get they are busy w the new phone but i just wanted to buy a stylus they made me wait forever outside never -> neg
+123 - is it me or does iphone s run a little warm sometimes apple -> neg
+124 - houston we have a problem my ipad has been restoring for hours after installing apple ios this can t be right -> neg
+125 - apple pls launch siri on iphone disappointed after spending hours for upgrading to ios -> neg
+126 - hilarious youtube video guy does a duet with apple s siri pretty much sums up the love affair http t co exbnqjy -> pos
+127 - impressive service apple genius bar metro centre power cable replaced free n booked in for screen replacement for free d -> pos
+128 - phxguy apple bgr that s why all the ppl who stand in line for hrs to get the newest model are suckers -> neg
+129 - gotta say the apple itouch iphone shuffle etc sound quality is awful painfully crap its been a downgrade from sony sound quality wise -> neg
+130 - dear apple please send me my mac book back surely the repair is done by now thanks -> neg
+131 - robert terpstra no worries bud ps they re saying that the s is having a lot of network issues right now i m apple for mac problems -> neg
+132 - i m wit chu shaydiddy officially boycotting ups calling apple to curse them out next for using them wasting my time -> neg
+133 - turns out my computer isn t as fixed as it is meant to be fuck you apple i m going back to your genius bar to complain annoyed -> neg
+134 - oh apple steve obviously had nothing to do with iphoto as it s the perfect opposite of insanely great get it fixed please -> neg
+135 - only thing ios has done is deleted my tiger woods game and made impossible to retrieve thanks apple -> neg
+136 - dear apple one day you re going to release a version of itunes that doesn t freeze more often than it works one day -> neg
+137 - dear apple why you gotta go change the way input type number is handled out of the blue -> neg
+138 - i wish siri could tweet for me apple fix that -> neg
+139 - this rt bonkoif looks like apple did not appropriately project the resources needed for siri not very reliable -> neg
+140 - apple thanks apple for ios and losing all my contacts -> neg
+141 - apple can t send me an iphone preordered hr after launching but they cans send or to all the jackasses who want to shoot or blend em -> neg
+142 - so apparently apple put mb cap on your sms with the new update mb storage before it tells you your inbox is full what is this -> neg
+143 - my schedule is busy spend unquality time with att apple recover iphone again the mo mobile i get the mo immobile i is sync not -> neg
+144 - apple just now seeing none of my microsoft office programs work anymore after lion upgrade why -> neg
+145 - laundering ari s iphone not my finest moment but after drying in bag of organic rice for days it booted up apple -> pos
+146 - thanks to a minute wait on hold half an hour actually talking to someone the apple tech decides to send me an email to fix my phone -> neg
+147 - rygurl you need an apple iphone s with siri -> pos
+148 - jane gazmaz hopefully it s a small bug apple must be fixing it right apple itjustworks -> neg
+149 - been on hold with apple customer service for minutes wow lt s like they re timewarnercable -> neg
+150 - azee v apple umber proper consolidation proper syncing stop losing my purchased items checkboxes that do what you think they will do -> neg
+151 - apple not happy with apple today i did the suggested software update and now nothing works -> neg
+152 - rogerweir no but i have the option of a replacement iphone s not sure if i want one after having duff iphones o iphone s apple -> neg
+153 - loving new technology from apple iphone s mac air and icloud are unreal technology -> pos
+154 - suddenly lost all address book on gs iphone and someone was using my apple id it all fucked up -> neg
+155 - omg apple why the fuck did you delete all my music you dicks -> neg
+156 - apple ios has been nothing but a pain in the ass no room for my music or photos or apps can i undo this garbage -> neg
+157 - video card on kimaris workstation died after just six months so long hp hello apple -> neg
+158 - apple give me my apps back -> neg
+159 - once again getting great customer service from the apple store at millenia mall -> pos
+160 - damn you apple -> neg
+161 - save me from hp s unwanted os help me buy an iphone i have seen the light lol http t co gup acz backchannel apple -> neg
+162 - apple sells million iphones in days apple keep doing what you are doing because you are doing it well http t co zzc be w -> pos
+163 - apple thanks for ios loving having my music breaking up like i m talking on a mobile cell phone bring back functional iosdonwgrade -> neg
+164 - bummer my yahoo ipad fantasy football app keeps crashing not sure if it s the app or the new apple ios only two apps running -> neg
+165 - it s been hrs since i reported ups theft of my iphone and apple has done nothing no return call as promised nothing -> neg
+166 - play on ma man loving the camera in the iphone s well done apple fb http t co tmdfqre -> pos
+167 - i am so done with att and apple s profitering and lack of customer service so fucking down with both -> pos
+168 - but seriously apple finance me a damn phone you greedy bastards or santa get your jolly ass in gear and get us a s white plz -> neg
+169 - life was much easier when apple and blackberry were just fruits -> neg
+170 - apple u guys are gay -> neg
+171 - apple you got me i m now invested macbook pro next year time to get on selling more of my android gear -> pos
+172 - alexlindsay my wife upgraded her iphone i think siri alone is worth the upgrade looking forward to apple continuing to enhance siri -> pos
+173 - apple cu -> neg
+174 - you know apple it s been almost a week since i paid for itunes match i would really like to use it any eta on a fix -> neg
+175 - another great james stewart story in today s ny times about importance of architecture in apple retail success http t co kniz s -> pos
+176 - ios is nice and as it had to be thanks apple -> pos
+177 - apple your service experience is really fucking slipping except for cute eyelash batting girlies apple store http t co dohdenmg -> neg
+178 - rickysinghpt got a new backside for my eye phone v impressed with apple -> pos
+179 - apple airdrop fail immediate declined your request every time -> neg
+180 - bravo apple http t co bgotzj k -> pos
+181 - damn you apple for breaking wififofum it continued to work in ios was one of my most used apps damn apple s overbearing policies -> neg
+182 - anyone else seeing missing signal bars on their iphone gs with an upgrade to ios cc applecanada apple forstall -> neg
+183 - ford should have teamed up with apple instead of microsoft to make this sync system in my new focus car is sweet sync is epicfail -> neg
+184 - azrael rt davidegori and again mobileme is down issues when syncing accessing mail is this a good premise for icloud apple -> neg
+185 - been off twitter for a few days as i smashed my iphone but apple were very nice and gave me a new one -> pos
+186 - all i can say about apple right now is goodriddance see cancer isn t all bad -> neg
+187 - and only the first images in my photo roll made it over seriously apple how did you fuck this up so much -> neg
+188 - have never had such poor customer service at apple before what happened apple store w others http t co gklxmui -> neg
+189 - on hold for another half hour phone is ringing but no one is picking up apple you stink -> neg
+190 - the new ios completely failed at upgrading the phone now i m stuck in this restore loop thanks apple for wasting my day can i undo -> neg
+191 - hey apple why can t i share a reminder list from my iphone also why can t i login to the icloud webpage to modify sharing from my phone -> neg
+192 - rt circustk i m wit chu shaydiddy officially boycotting ups calling apple to curse them out next for using them wasting my t -> neg
+193 - dear apple your staff at the little rock store answered my first questions with i don t know they weren t hard questions -> neg
+194 - after a week or so with apple s ios i m considering going back to jailbroken same features as plus more not as stable though -> neg
+195 - rim you made it too easy for me to switch to apple iphone see ya -> pos
+196 - siri is having a hard time remembering who my sister is contact card needs space for family info iphone s apple -> neg
+197 - rt tomcolontonio didn t it occur to apple apple that ppl share itunes accounts amongst family s wtf -> neg
+198 - the one iphone feature still missing since apple first showed it contacts pictures on the contacts list simple yet major updates miss -> neg
+199 - well at least the apple store has amazing call waiting music need s -> pos
+200 - rt philliprowntree just registered as an apple developer here s hoping i can actually do it any help greatly appreciated -> pos
+201 - dear apple my new air is now a notbook since your update killed wifi bug destroying productivity -> neg
+202 - i just realized that the reason i got into twitter was ios thanks apple -> pos
+203 - total time on the phone with apple hour minutes let s see how this goes -> neg
+204 - hey apple i know steve jobs died all but my twitter for ipad app keeps crashing fix it now please lol f light -> neg
+205 - oh and prolly ganna be late to work bc apple has screwed me and my phone has my only alarm on it -> neg
+206 - ios apple -> pos
+207 - rt shaydiddy circustk ups apple both of them are bs how do u tell me go between a certain time only and the muh fuh is closed -> neg
+208 - apple why does iphone plus ios equal half the battery life -> neg
+209 - making the switch from android to apple iphone iphone s smartphone stevejobs apple store http t co kj pjvkh -> pos
+210 - i don t really like siri s voice perhaps apple can get star wars voices just like garmin http t co psujg pn -> neg
+211 - wtf apple the new ios doesn t allow you not to get push notifications from newstand and siri just keeps yapping fuck -> neg
+212 - ipad in perpetual restore loop after trying to upgrade to ios apple sux without steve -> neg
+213 - i wish the apple updater would stop trying to ram itunes down my throat i don t own a pissing iphone apple -> neg
+214 - bkad than apologize to apple -> pos
+215 - tomcolontonio apple epicfail -> neg
+216 - never purchasing another item from apple -> neg
+217 - one would think the voice recognition on the apple tech support line would work a little better -> neg
+218 - for being the inventor of the computer mouse why is it that apple has never made one that is not a complete piece of fucking shit -> neg
+219 - hailfire irvysan they are then apple happened and snatched siri so they could be douchebags and say it s ours -> neg
+220 - apple please fix siri she can t connect to your network -> neg
+221 - thank you steve apple store th av http t co nsaisrip -> pos
+222 - interesting apple now requires you to have a reservation apple iphone s http t co zzk ftii -> pos
+223 - apple you re killing me excited about ios no longer tragic battery drain genius bar wants to replace the battery really -> neg
+224 - shit shit shit ios update ate all my apps data and media just like apple said it would this is going to take some time to rebuild -> neg
+225 - apple if you want to know what customers think dont send updates with the noreply return address who invented that anyway useless -> neg
+226 - any chance apple will release good headphones that dont blast music outside the ears iphone ipod its quite obnoxious -> neg
+227 - i hate you apple for not sending toledooh bestbuy any iphone for verizon even after i pre ordered -> neg
+228 - apple why my tunes no go on my iphone iphone lonely without them silly ios -> neg
+229 - apple you have invented a product that actually gets my brother to call my parents when he gets where he s going amazing siri ipod s -> pos
+230 - ibertaddigital tv ipad a briliant stevejobs produck http t co ohfly apple present http t co dbbwsdpx -> pos
+231 - betweensundays ah yeah should be an option hopefully apple figures that out thx -> neg
+232 - pissed with whoever designs keyboards with apple for not having a home and end key working on the cli i use those keys often -> neg
+233 - blackberry boo hiss apple wuhu when will my berry powered technology actually work -> pos
+234 - like apple da fuck is this shit http t co nb dhlsg -> neg
+235 - apple no i won t wait until thursday for an available appointment just so a genius can tell me i m shit out of luck now -> neg
+236 - just downloaded ios it s better than i expected thankyou apple -> pos
+237 - having major battery drain issue since updating iphone to ios anyone else appstore iphone apple -> neg
+238 - why doesn t apple icloud sync stickies they ve always been around just nothing every progressed w them why apple why gruber -> neg
+239 - samsung seeks iphone s ban in japan and australiapatent war intensifies with injunction sought against apple http t co qmwjtvnk -> neg
+240 - frustrated that i bought a new macbook pro from apple only to find it doesnt ship with media expensivepaperweight -> neg
+241 - rt mattyriesz kathrynyee you were right an iphone is a must have addicted welcome to the apple club -> pos
+242 - so thankful for the incredible people apple for going above and beyond and offering to and replacing my water damaged macbook pro wow -> pos
+243 - from which companies do you experience the best customer service aside from zappos and apple -> pos
+244 - hey apple do you wanna fix my fucking playlist order you piece of shit -> neg
+245 - iancollinsuk apple i like what you did there -> pos
+246 - rt nansen so this sms full message is known apple issue with new ios update trying restore when all else fail restore -> neg
+247 - apple ios on iphone causes camera apperature dilation problems freeze -> neg
+248 - where is my iphone apple -> neg
+249 - loving my new iphone s thanks apple for ios -> pos
+250 - ios update submitted to apple thanks for all the support -> pos
+251 - also ericgreenspan don t forget apple stop closing the app store after each bloody purchase -> neg
+252 - what s wrong with siri today apple -> neg
+253 - apple needs to hurry up and release itunesmatch -> neg
+254 - apple thank you for sucking so much i cannot believe you would sell something online that isn t made -> neg
+255 - iphone s in space http t co jinnhvwz this is amazing creative apple your products inspire people to do unbelievable things -> pos
+256 - now on my second full charge of the day pissed apple -> neg
+257 - the iphone s is amazing siri s voice recognition is absolutely a step above previous attempts bravo apple -> pos
+258 - currently ordering a brand new macbook pro bahhh my macbook is years old i ll miss it but it s time cc apple -> pos
+259 - oh just fuck you apple already iphone on schedule for summer launch http t co ofh ptag via bgr -> neg
+260 - loving the new ipod update apple -> pos
+261 - hey apple now i have ios my iphone doesn t include songs that are on compilation albums under the artist s name whaddupwitdat -> neg
+262 - wow i am loving this new apple update for my touch coolness well done -> pos
+263 - apple no location reminders on ipad that was the point of updating to ios -> neg
+264 - the nice guy at the apple store replaced my phone gratis when i showed him the hairline crack on the screen thanks apple -> pos
+265 - apple siri can t connect to the network it s less useful that voicecontrol now -> neg
+266 - i love our apple imac even though i haven t seen my hubby in days now geek -> pos
+267 - sigh apple store seems stumped what to do about my catastrophically bad battery life after upgrading to ios -> neg
+268 - wow worst apple customer service experience ever arrogant and inept bad combo biltmore apple store -> neg
+269 - apple your update server has been timing out for a week i had to force a restore w the new ios software lost all my stuff thanks -> neg
+270 - awesome service from the apple store in pc thanks chris -> pos
+271 - ok hindi keyboard in ios is something to cheer about but apple what about support for missing indian languages fail -> neg
+272 - rt scottdugas warning if iphone apps spontaneously loose data it might not be the app s fault http t co sesvwwm ios downgrade -> neg
+273 - hbogo apple why don t you play nice and let me use hdmi from ipad pretty lame -> neg
+274 - apple i committed to your cloud storage idisk and now it s raining so soon no more idisk any plans for a new service for storage -> neg
+275 - create new folders from within your photo album in ios finally thanks apple that s been a thorn in my side for a while newfeature -> pos
+276 - apple is there a problem with ios that is preventing audio apps and audio functions from operating properly i keep losing sound -> neg
+277 - if apple does not resolve the siri network issues they will need to rename a great product to sorri who else is having issues -> neg
+278 - yessss i m lovin the iphone update especially the slide down bar at top of screen good job apple -> pos
+279 - st impressions of ios disappointed w upgrade restore lot of apps folders missing apple do how much time went in orging it fail -> neg
+280 - i just sent my grandma a post card using my cardsapp thanks apple -> pos
+281 - semilshah yeah except that when you ask for a receipt it takes them minutes to figure out where it printed out fix that apple -> neg
+282 - rt jamaicanidler lmao i think apple is onto something magical i am dying haha siri suggested where to find whores and where to h -> pos
+283 - philipgrey dear apple why you gotta go change the way input type number is handled out of the blue -> neg
+284 - thank you apple ios for email pop up on the lock screen and opening it when unlocking -> pos
+285 - stevejobs being honored tonite apple a truly great loss to the world he will so be missed -> pos
+286 - rt gdcurry really apple what have you done to my itunes now i can t click on music movies tv shows or any playlists i get a l -> neg
+287 - i m over people bitching about the iphone s i think it s the smartest phone i ve ever had and i m very happy way to go apple -> pos
+288 - wow the genius bar reservation line apple is ridic right now i am not amused ugh -> neg
+289 - apple ios geolocation suburbs with words drops map pins in other states please fix -> neg
+290 - apple at t u cannot tell me there isn t at least gb iphone s in la or vegas give me a fucking break -> neg
+291 - rt sawyerhartman i fu king love you apple this phone is the best thing ever siri best thing ever made -> pos
+292 - warning if iphone apps spontaneously loose data it might not be the app s fault http t co sesvwwm ios downgrade apple marcoarment -> neg
+293 - come to the dark side gretcheneclark hey apple if you send me a free iphone i will publicly and ceremoniously burn my blackberry -> pos
+294 - it would have taken me mins to write this with my blackberry thank u apple s for converting me and showing me the grass is greener -> pos
+295 - by far the worst experience upgrading out of any version of ios apple ios -> neg
+296 - apple multiple times siri is having trouble connecting to the network siri needs servers and some exercise -> neg
+297 - apple thank you for ruining my gs with ios you ve just turned my phone into an utterly useless pile of shit -> neg
+298 - ipads replace bound playbooks on some n f l teams http t co uxawkwf apple nytimes -> pos
+299 - rt jimmcniel if apple does not resolve the siri network issues they will need to rename a great product to sorri who else is havin -> neg
+300 - love apple downloads hours and i pad now wonky ripstevejobs thenonsensepersists neednewipadguide fatfuckingchance -> neg
+301 - apple wish i could pick month day and year when setting a new calendar item on my iphone why hasn t the new ios fixed this yet -> neg
+302 - minutes after being at my iphone post ios upgrade has lost of its charge and the apple store folks are out of ideas -> neg
+303 - restored my iphone still no texts dear apple y no love y restrictions on my sms y no texts ios ios atemydingo -> neg
+304 - apple wtf why can we not add the newsstand to a folder we are already in your walled garden so please don t remind us of it -> neg
+305 - sorry blackberry i m moving to apple -> pos
+306 - hell yes got my contacts back thanks apple -> pos
+307 - i absolutely love my iphone s thank you steve and apple -> pos
+308 - is it just me or is ios faster for the ipad apple -> pos
+309 - gah apple ios opens text messages painfully slow on top of restore attempts succeed early adopterness gets better of me -> neg
+310 - joelplane apple i hear you i ve had trouble with my now i ve even turned down brightness andshuttingdownrunningprograms nohelp -> neg
+311 - just searching with my voice on my year old nexus one apple -> neg
+312 - trisha ps icloud is cloudy apple tech not very techy -> neg
+313 - just apply for a job at apple hope they call me lol -> pos
+314 - apple has changed life -> pos
+315 - just registered as an apple developer here s hoping i can actually do it any help greatly appreciated -> pos
+316 - day i m thankful for the great customer service received today from apple via phone cs new phone on the way daysofgratefulness -> pos
+317 - apple the iphone s is great genius -> pos
+318 - sprint bestbuy still no word on my iphone s preorder best buy blames sprint sprint blames apple i just want an honest answer help -> neg
+319 - jonsibley actually the apple mouse is pretty sweet man -> pos
+320 - sorry apple but imessage will never be what bbm is disappointed -> neg
+321 - screw you apple ios i can t download this crap and i m tired of trying get this problem figured out about my connection timing out -> neg
+322 - blackberry does take better quality photos than apple iphone though i give them that photograherseye -> neg
+323 - rt tomkeene thx instagram thx apple hypo d tri x http t co bppjwncp -> pos
+324 - dear applecongratulations i am suing my insurance company and you just managed to make it to the top of my shit list ineedthosepictures -> neg
+325 - ryanbaldwin apple so in itunes i go store authorise why doesn t it just auto authorise it when i sign into itunes grrrr -> neg
+326 - love love love ios apple -> pos
+327 - apple what s the point of icloud wireless updates when ios now forces me to use the computer to charge my ipod touch now worstupdateever -> neg
+328 - waited in line for nothing fucking genius apple called an app for john not jean stop fucking up my name im not a french boy pcam -> neg
+329 - nytimes coach wants to see you and bring your ipad http t co j ftieng ipad apple set red red hut hut nfl wish i had an ipad -> pos
+330 - i really hate that apple won t let you hide the newsstand app or move it into a folder it serves no purpose for me -> neg
+331 - s o to apple for replacing my phone for free -> pos
+332 - azee v apple umber appstore is well done so is itunes on the mobile devices i was talking about desktop app -> pos
+333 - dontbemadatmebecause android is by far better than apple -> neg
+334 - yellowgate some iphone s users complain of yellow tint to screen http t co uaqrxtnk apple iphone s -> pos
+335 - i update to ios and lose everything on my phone and it wont let me sign into my itunes account thanks apple -> neg
+336 - apple iphone please deliver my daughter s i s she is driving me nuts iphone -> neg
+337 - apple your new save a version function in pages is absolutely the most awful interrupting counter intuitive piece of crap in the world -> neg
+338 - it would be great if apple would send my new phone frustrated -> neg
+339 - icloud set up was flawless and works like a champ to the cloud apple -> pos
+340 - ok this apple software update for the iphone is taking waaaaay too long annoyed -> neg
+341 - it took apple about years just to figure out how to properly syncronize an iphone wow ios -> neg
+342 - dear apple you must let me turn off icloud to save bandwidth and not delete every document on my ipad that s bullshit -> neg
+343 - my apple macbook keyboard will not type -> neg
+344 - lisa marie shhhh the evil sith lords apple may hear you ha -> neg
+345 - welcome to the twitter world markstuver this is due to ios and apple thanks guys -> pos
+346 - smashed yet another iphone screen when are apple gonna make the phone more durable tired of fixing it myself -> neg
+347 - spoke to an apple rep on phone could hear her tv blaring in the bg she said i can t actually help u just direct u back to the web -> neg
+348 - kostatsetsekas apple putting it in the wash is kind of the equivalent to will it blend glad to hear it s still alive -> pos
+349 - thank you apple my new gf iphone s is great she does everything -> pos
+350 - apple by far the best ipod and first time iphone ever good job guys -> pos
+351 - apple why don t you guys test your upgrades before you put them out hrs u guys wasted of my time yesterday thanks -> neg
+352 - apple itunes is the worst program ever for such a great phone you make some awful software -> neg
+353 - could apple lion please integrate vertical spaces in mission control this horizontal business is making me nauseous -> neg
+354 - rt katebetts another great james stewart story in today s ny times about importance of architecture in apple retail success http t -> pos
+355 - time to go get my iphone s looking forward to sticking it to the man by no longer paying for most texts thanks apple -> pos
+356 - now all apple has to do is get swype on the iphone and it will be crack iphone that is -> pos
+357 - lies apple the battery on this new iphone s is definitely not any better -> neg
+358 - ios getting sloppy apple u need to check your qa team too many issues with apps data and syncing -> neg
+359 - apple you can suck it you and your fucking iphones better be glad it s all i like cause the service is fucking terrible -> neg
+360 - not happy with apple right now the upgrade to my itouch took out my itouch and laptop help -> neg
+361 - apple on the ipad with ios why has the messages icon been included when it can t be used -> neg
+362 - hmmmm a lot of siri features don t work in canada location and directions seriously apple come on -> neg
+363 - why is the new apple iphone os duplicating all my ical events there s of everything how do i fix it tried turning icloud off -> neg
+364 - imessage doesn t show the time a message was sent annoying apple -> neg
+365 - now apple won t let me use credit on itunes unless i have a credit card should have told me when i redeemed the cards sound fair to you -> neg
+366 - apple ios upgrade done much better feature few more feature required -> pos
+367 - this is the first time i ve been unhappy with any apple product disappointed and the internet seems as confused as i am right now -> neg
+368 - i m suspecting apple timed the health decline of my iphone perfectly with the iphone s release my battery is seriously ailing -> neg
+369 - as a huge podcast fan i really feel like apple dropped the ball on this one http t co wvzprbci via carrypad -> neg
+370 - i m a current blackberry user little bit disappointed with it should i move to android or apple iphone -> pos
+371 - overall i am a fan of the iphone s however my siri has issues connecting to the network apple -> neg
+372 - wow icloud s mail is down st the ios upgrade issues and now this i really hope this isn t apple without steve jobs -> neg
+373 - this is what will kill apple http t co jw z c rip apple -> neg
+374 - apple unhappy again with service product quality won t buy apple again -> neg
+375 - thank you apple for your innovations exhibit a guy playing with facetime instead of watching game at sports bar http t co ou k ge -> pos
+376 - so i am using my work pc never ever to get a feel for it it has the worst speakers ever apple you have spoiled me imamac -> pos
+377 - meet siri your new iphone butler click the link and be amazed by all it can do http t co lvffdcel apple -> pos
+378 - hey apple if you send me a free iphone any version will do i will publicly and ceremoniously burn my blackberry -> pos
+379 - apple my iphone is charging very slowly -> neg
+380 - clarence thomas must have designed the new osx lion tossing decades of workflow standards apple bring back save as autosavesucks -> neg
+381 - terrible customer service at los gatos apple why do i have to pay for a bad home button on my iphone -> neg
+382 - well apple seems b screwing iphone s resellars they still dont have s yet were promised similar ma bell s monopolistic prctices -> neg
+383 - another mention for apple store http t co fiioapkt rt floridamike once again getting great customer service from the apple store -> pos
+384 - i apple http t co a on iaa -> pos
+385 - apple s siri is witchcraft what s next googleresearch yr lead lost -> neg
+386 - finally got the apple iphone thanks to sprint getting with the times -> pos
+387 - steelo yea i pre order through apple and they sorry too just like at -> neg
+388 - dear apple how convenient handy thoughtful smart that after iphone ios update you re apps won t work anymore none gr mbl -> neg
+389 - bummer that apple icloud syncs on windows only w outlook not thunderbird ie not firefox chrome sadmac -> neg
+390 - millions in a weekend iphone s per second this is madness no this is apple -> pos
+391 - der icloud i hate u and i hope you die you are the worst fucking invention in the world fuck youuuuuuuuuuuu icloud apple stevejobs -> neg
+392 - electricsoup it has to connect to apple to process commands which it is failing to do right now -> neg
+393 - appleupdates success stories iphone ipad now been on phone to apple mins ipad will not wasting my time apple replaceit -> neg
+394 - carlton i really hate dealing with the brain dead people at the apple store for such good products customer service sucks in nz -> neg
+395 - gone for a run beautiful morning man do i love ios apple iphone -> pos
+396 - apple to repair my ipad apple you ve lost me and my a year android here i come -> neg
+397 - every time i try the voice control on my ipod touch to send an imessage it starts playing who knew by pink still not flawless apple -> neg
+398 - good article about why apple fucked it all up with lion and their future http t co zndp vr fb -> neg
+399 - love my new i s apple updates just when i think it can t get any better somehow it simplifies my life more that s right it s an apple -> pos
+400 - the strangest things siri has said so far i am sooo glad that apple gave siri a sense of humor http t co twaeudbp via happyplace -> pos
+401 - none of my apps work after the new ios from apple what do i do -> neg
+402 - god bless youtube apple for appletv our bad ass system loving princessofchina gb to coldplay rihanna too -> pos
+403 - i must admit apple has made me a very happy camper i have text tones now lol ring tone makemeproud drakes vers text tone nicki s -> pos
+404 - hey guys at apple wtf is happening to iphone with ios suddenly fade to black and begin to vibrate continuously i had to reboot it -> neg
+405 - siri went down for a little while last night come on apple get your shit together on this launch -> neg
+406 - seemingly endless loop of calls to apple ups verizonwireless to investigate my missing iphone s crankywithnophone -> neg
+407 - updated my ios and started using cloud services pretty bad ass apple my iphone gs still the champ -> pos
+408 - rt phxguy oh just fuck you apple already iphone on schedule for summer launch http t co ofh ptag via bgr -> neg
+409 - paulens it surprises me that apple throws up an error alert about authorizing and there s no authorize this computer button -> neg
+410 - apple why do i have to have apps i am updating in their original folder location that was painful -> neg
+411 - i know a few others having same issue rt joelplane now on my second full charge of the day pissed apple -> neg
+412 - so glad that i paid for this apple care protection plan been on hold for over minutes now great customer service not -> neg
+413 - i just need to exchange a cord at the apple store why do i have to wait for a genius apple -> neg
+414 - thanks to apple covent garden geniusbar for replacing my macbook keyboard cracked wristpad during my lunch break today out of warranty -> pos
+415 - apple good ipad -> pos
+416 - bisquiat apple the upgrade just slows down my phone so much it s stuck half the time uch thankfully no other damage sucks for you -> neg
+417 - we re one of a few featured education apps on the apple website today sweet http t co ywvbe z -> pos
+418 - what i that sucks hello apple rt phonedog aaron interesting note droid razr s battery isn t removable -> neg
+419 - wisconsin mommy apple i d totally email the company i always get great service at our apple store -> pos
+420 - loving ios awesome apple -> pos
+421 - rt cjwallace so apparently apple put mb cap on your sms with the new update mb storage before it tells you your inbox is full w -> neg
+422 - said to have laid out the next years apple jobs last iphone is not the iphone s iphone g is magical http t co dxxklubp -> pos
+423 - amandbrar apple siri has worked for me less than of the time if service doesn t improve by monday i m returning my iphone s -> neg
+424 - twalve apple you know the issues they have with dst and alarms p -> neg
+425 - novatyler apple most of mine are gone too not recovered after i saved them b i upgraded my iphone soooo pissed -> neg
+426 - you are so blessed apple -> pos
+427 - had ma ipas not hours an i jailbroke it now its shagged itunes won t letme restore it apple sym -> neg
+428 - twitter ceo points to apple as corporate mentor as ios signups triple http t co gcy iphn -> pos
+429 - ok itunesmusic idk wth is up but after syncing my phone my album art is out of order wtf apple -> neg
+430 - why the fuck dose my phone decide its just ganna freeze every time i try to update it so fucking sick of apple -> neg
+431 - waiting for items to copy in itunes after everything did copy goes on and on and on come on apple what the hell -> neg
+432 - apple siri is efffing amazing -> pos
+433 - apple cards app notifies me the card i sent has arrived at local post office and should be delivered today sunday truly is magic -> pos
+434 - need apple help installing new ios on iphone and am stuck on the find my iphone screen i keep clicking next but it doesn t work -> neg
+435 - we did an unexpected workshop for the iphone s at apple yesterday and we got an awesome amount of info notjustaboutthephone gamerchik -> pos
+436 - i hate my apple computer thats dollars down the drain -> neg
+437 - nansen man that sux apple io upgrade a total fail for you -> neg
+438 - apple ios gm on ipad is very slow wash better on beta solve this problem or give me the ipad -> neg
+439 - dammit listening to siri is making me want to upgrade well played apple -> pos
+440 - i apple http t co ondxwper -> pos
+441 - apple why isn t my itunes updating i just wanna update my iphone to ios then itunes says that it needs to update to do it then fails -> neg
+442 - ugh apple youre reservation page for the iphone is not working -> neg
+443 - what was apple thinking making siri totally dependent on a network connection siri att utter frustration -> neg
+444 - dear apple contacts you are terrible i just cleaned duplicates for hours and they magically reappeared fix it -> neg
+445 - not bad apple sells over million iphones in debut weekend bloomberg http t co avsl ygu smartphone sm rt vinodrad -> pos
+446 - apple would do better to inform customers properly about migrating to icloud many complaints lead to image damage http t co ql zmppo -> neg
+447 - amazing new apple ios feature http t co jatfvfpm -> pos
+448 - what is going on with all my apple products first my ipad freezes still is frozen and then my iphone won t turn on techietroubles -> neg
+449 - anyone else stuck in duped calendar mail battery sucking apple hell icloud and osx lion are a disappointment -> neg
+450 - apple siri is amazing -> pos
+451 - wow great deals on refurbed ipad first gen models rt apple offers great deals on refurbished st gen ipads http t co ukwokbgd apple -> pos
+452 - love ios easter eggs pull down from middle top to bottom and see what pulls down awesome little feature apple lovemyiphone -> pos
+453 - i am crazy about ios the photo cropping is the best apple -> pos
+454 - apple so i went to the th ave store and was told i could wait about hours to get a s needless to say i m back at the hotel relaxing -> neg
+455 - apple loving the new ios upgrade for the iphone -> pos
+456 - in less than an hour my post ios iphone has gone from to battery charge and the apple store folks have no solution for me -> neg
+457 - nickthefnicon he can send but not rcve txts so he has an apt apple at pm then he exclaims and i waited a whole year for this phone lmao -> neg
+458 - can someone plz explain to me whhyy apple is only distributing phones per day to the sprint stores i m really http t co uf tak f -> neg
+459 - fishmama if you made a purchase just wait for the apple survey hate going b c of the bad custserv -> neg
+460 - apple wow motorola just crushed your dreams -> neg
+461 - incredible million iphone ss in days better than the iphone http t co fmjxtmm apple iphone s -> pos
+462 - issues with updating itunes on my windows pc they really are not compatible sent more time talking to apple care than using it -> neg
+463 - one word wow rt jldavid iphone s first weekend sales top four million http t co zx pw gt via apple -> pos
+464 - siri now knows who my dad mom brother and girlfriend is thanks apple -> pos
+465 - rt mikeferri if apple doesn t fix ios this week i m buying a droid emptythreats -> neg
+466 - apple does ios rape your battery life or am i just using my phone a lot since getting it -> neg
+467 - i used to be with blackberry over yrs after all the disruptions and lost gigs thx to their service im moving to apple iphone -> pos
+468 - so yeah apple ios readinglists have changed my life nowicanspendevenmoretimeonmyphone -> pos
+469 - wisconsin mommy apple that s terrible i hope you get an apology -> neg
+470 - apparently apple genius training doesn t extend to clocks service they re half an hour late for my appointment and couldn t let me know -> neg
+471 - apple can suck my dick gotta restore my ipad annoyed -> neg
+472 - love ios easter eggs pull down from middle top to bottom and see what pulls down awesome little feature ios apple -> pos
+473 - zombiebomber have been on the phone with verizonwireless and apple pretty much ever since then really annoyed -> neg
+474 - rt triplingo we re one of a few featured education apps on the apple website today sweet http t co ywvbe z -> pos
+475 - dear apple i don t want the newsstand icon on my screen notcool -> neg
+476 - thx instagram thx apple hypo d tri x http t co d eejhbt -> pos
+477 - rt apple no question bro rt ainteeentrippin should i get dis iphone or a evo d -> pos
+478 - apple your simply the best -> pos
+479 - apple downloads of ios are proving popular with users http t co nshlfiux -> pos

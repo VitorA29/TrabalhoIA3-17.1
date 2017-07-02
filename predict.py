@@ -1,5 +1,3 @@
-import sys
-
 from sklearn import decomposition, metrics
 from sklearn.decomposition import PCA
 from sklearn.decomposition import TruncatedSVD
@@ -31,16 +29,6 @@ def predict(classifier, type, gridSearch, showWrongPredict, showPredictions):
     text_clf = getClassifier(classifier)
 
     if(gridSearch):
-        parameters = {
-            'vect__max_df': (0.5, 0.75, 1.0),
-            # 'vect__max_features': (None, 5000, 10000, 50000),
-            'vect__ngram_range': ((1, 1), (1, 2)),  # unigrams or bigrams
-            # 'tfidf__use_idf': (True, False),
-            # 'tfidf__norm': ('l1', 'l2'),
-            'clf__penalty': ('l2', 'elasticnet'),
-            # 'clf__n_iter': (10, 50, 80),
-        }
-
         parameters = {'clf__min_samples_split': range(10, 500, 20), 'clf__max_depth': range(1, 20, 2)}
 
         text_clf = GridSearchCV(text_clf, parameters, n_jobs=1, verbose=1)
@@ -55,7 +43,7 @@ def predict(classifier, type, gridSearch, showWrongPredict, showPredictions):
     predicted = text_clf.predict(docs_test)
 
     #Escreve no arquivo txt.
-    wirte2TxtFile(predicted, testData, data, type, classifier, 'teste', showWrongPredict, showPredictions, gridSearch)
+    write2TxtFile(predicted, testData, data, type, classifier, showWrongPredict, showPredictions, gridSearch)
 
 def getClassifier(classifier):
     if (classifier == DECISION_TREE):
