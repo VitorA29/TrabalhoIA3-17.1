@@ -1,36 +1,26 @@
 Classifier: Random Forest
-Mode: Tern·rio
+Mode: Tern√°rio
 GridSearch: False
+RFE: False
+PCA: False
+Used files for training: full-corpus.csv;
+Used files for testing: twitter-sanders-apple3.csv;
 DataTrain length: 3428
 DataTest length: 988
 
 -----PREDCTION INFO-----
-Accuracy: 0.987854251012
+Accuracy: 0.995951417004
 
 Report:
              precision    recall  f1-score   support
 
-        pos       1.00      0.99      0.99       163
-        neg       1.00      0.97      0.98       316
-        neu       0.98      1.00      0.99       509
+        pos       1.00      0.99      1.00       163
+        neg       1.00      0.99      1.00       316
+        neu       0.99      1.00      1.00       509
 
-avg / total       0.99      0.99      0.99       988
+avg / total       1.00      1.00      1.00       988
 
 Confusion Matrix:
-[[161   0   2]
- [  0 307   9]
- [  0   1 508]]
-
-12 Wrong Predictions:
-0 - [Correct: pos ; Predicted: neu] rt apple no question bro rt ainteeentrippin should i get dis iphone or a evo d
-1 - [Correct: pos ; Predicted: neu] another great james stewart story in today s ny times about importance of architecture in apple retail success http t co kniz s
-2 - [Correct: neg ; Predicted: neu] lisa marie shhhh the evil sith lords apple may hear you ha
-3 - [Correct: neg ; Predicted: neu] rogerweir no but i have the option of a replacement iphone s not sure if i want one after having duff iphones o iphone s apple
-4 - [Correct: neg ; Predicted: neu] dontbemadatmebecause android is by far better than apple
-5 - [Correct: neg ; Predicted: neu] samsung seeks iphone s ban in japan and australiapatent war intensifies with injunction sought against apple http t co qmwjtvnk
-6 - [Correct: neg ; Predicted: neu] apple thank you for sucking so much i cannot believe you would sell something online that isn t made
-7 - [Correct: neg ; Predicted: neu] dear apple your staff at the little rock store answered my first questions with i don t know they weren t hard questions
-8 - [Correct: neg ; Predicted: neu] i hate you apple for not sending toledooh bestbuy any iphone for verizon even after i pre ordered
-9 - [Correct: neg ; Predicted: neu] i really hate that apple won t let you hide the newsstand app or move it into a folder it serves no purpose for me
-10 - [Correct: neg ; Predicted: neu] only thing ios has done is deleted my tiger woods game and made impossible to retrieve thanks apple
-11 - [Correct: neu ; Predicted: neg] dear apple imessage client for desktop please
+[[162   0   1]
+ [  0 313   3]
+ [  0   0 509]]

@@ -1,4 +1,4 @@
-Classifier: Random Forest
+Classifier: ADA Boost
 Mode: Binário
 GridSearch: False
 RFE: False
@@ -9,16 +9,16 @@ DataTrain length: 479
 DataTest length: 479
 
 -----PREDCTION INFO-----
-Accuracy: 1.0
+Accuracy: 0.979123173278
 
 Report:
              precision    recall  f1-score   support
 
-        pos       1.00      1.00      1.00       163
-        neg       1.00      1.00      1.00       316
+        pos       0.99      0.94      0.97       163
+        neg       0.97      1.00      0.98       316
 
-avg / total       1.00      1.00      1.00       479
+avg / total       0.98      0.98      0.98       479
 
 Confusion Matrix:
-[[163   0]
- [  0 316]]
+[[154   9]
+ [  1 315]]

@@ -1,6 +1,6 @@
 Classifier: Naive Bayes
-Mode: Tern·rio
-GridSearch: True
+Mode: Tern√°rio
+GridSearch: False
 RFE: False
 PCA: False
 Used files for training: full-corpus.csv;
@@ -9,51 +9,18 @@ DataTrain length: 3428
 DataTest length: 988
 
 -----PREDCTION INFO-----
-Accuracy: 0.968623481781
+Accuracy: 0.636639676113
 
 Report:
              precision    recall  f1-score   support
 
-        pos       0.98      0.93      0.95       163
-        neg       0.97      0.98      0.97       316
-        neu       0.97      0.98      0.97       509
+        pos       1.00      0.11      0.20       163
+        neg       0.99      0.32      0.49       316
+        neu       0.59      1.00      0.74       509
 
-avg / total       0.97      0.97      0.97       988
+avg / total       0.78      0.64      0.57       988
 
 Confusion Matrix:
-[[151   2  10]
- [  0 309   7]
- [  3   9 497]]
-
-31 Wrong Predictions:
-0 - [Correct: pos ; Predicted: neu] rim you made it too easy for me to switch to apple iphone see ya
-1 - [Correct: pos ; Predicted: neu] apple good ipad
-2 - [Correct: pos ; Predicted: neg] ios apple
-3 - [Correct: pos ; Predicted: neu] rt apple no question bro rt ainteeentrippin should i get dis iphone or a evo d
-4 - [Correct: pos ; Predicted: neu] azee v apple umber appstore is well done so is itunes on the mobile devices i was talking about desktop app
-5 - [Correct: pos ; Predicted: neg] well apple fixed my ios battery drain problem with a replacement iphone it s working like a champ now
-6 - [Correct: pos ; Predicted: neu] i love our apple imac even though i haven t seen my hubby in days now geek
-7 - [Correct: pos ; Predicted: neu] iancollinsuk apple i like what you did there
-8 - [Correct: pos ; Predicted: neu] one word wow rt jldavid iphone s first weekend sales top four million http t co zx pw gt via apple
-9 - [Correct: pos ; Predicted: neu] apple your simply the best
-10 - [Correct: pos ; Predicted: neu] apple the iphone s is great genius
-11 - [Correct: pos ; Predicted: neu] apple has changed life
-12 - [Correct: neg ; Predicted: neu] why is siri always down apple
-13 - [Correct: neg ; Predicted: neu] where is my iphone apple
-14 - [Correct: neg ; Predicted: neu] what s wrong with siri today apple
-15 - [Correct: neg ; Predicted: neu] apple siri is down
-16 - [Correct: neg ; Predicted: neu] just searching with my voice on my year old nexus one apple
-17 - [Correct: neg ; Predicted: neu] dear apple your staff at the little rock store answered my first questions with i don t know they weren t hard questions
-18 - [Correct: neg ; Predicted: neu] apple give me my apps back
-19 - [Correct: neu ; Predicted: neg] asimrang apple umber when you upgrade to ios there is a section in app store which lets you download anything you have purchased before
-20 - [Correct: neu ; Predicted: neg] upgrading my ipad to ios when apple said it could take a couple of hours to install and restore it they weren t kidding
-21 - [Correct: neu ; Predicted: neg] iphone can you please make the battery last longer thanks apple
-22 - [Correct: neu ; Predicted: neg] anyone know why we can only read ibooks on the iphone and ipad any ideas how to read them on mac apple
-23 - [Correct: neu ; Predicted: neg] i love apple i love my phone but ever since this damn update my texts keep saying they re full when there are none that s a problem
-24 - [Correct: neu ; Predicted: pos] keke blackberry apple haha i know so sad
-25 - [Correct: neu ; Predicted: neg] why can t i check just notes without mail on lion for icloud like i do on the ios devices apple
-26 - [Correct: neu ; Predicted: neg] nansen apple i have not heard of that hubby had no problems i have not done it yet
-27 - [Correct: neu ; Predicted: pos] just made the switch from blackberry to apple and never looking back bbwho
-28 - [Correct: neu ; Predicted: neg] apple y u no let me pre order iphone s
-29 - [Correct: neu ; Predicted: neg] apple no siri support for canada sucks siri but loving the new iphone upgrade from my gs iphone s
-30 - [Correct: neu ; Predicted: pos] apple ios is all well and good and has nice new features but i m still waiting on an app that will go to work for me
+[[ 18   1 144]
+ [  0 102 214]
+ [  0   0 509]]

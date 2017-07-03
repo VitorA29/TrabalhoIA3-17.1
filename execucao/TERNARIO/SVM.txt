@@ -1,228 +1,26 @@
 Classifier: SVM
-Mode: Tern�rio
+Mode: Ternário
 GridSearch: False
 RFE: False
-PCA: True (n_components=1000)
+PCA: False
 Used files for training: full-corpus.csv;
 Used files for testing: twitter-sanders-apple3.csv;
 DataTrain length: 3428
 DataTest length: 988
 
 -----PREDCTION INFO-----
-Accuracy: 0.797570850202
+Accuracy: 0.933198380567
 
 Report:
              precision    recall  f1-score   support
 
-        pos       0.91      0.48      0.63       163
-        neg       0.92      0.68      0.78       316
-        neu       0.74      0.97      0.84       509
+        pos       0.97      0.80      0.88       163
+        neg       0.97      0.91      0.94       316
+        neu       0.90      0.99      0.94       509
 
-avg / total       0.83      0.80      0.79       988
+avg / total       0.94      0.93      0.93       988
 
 Confusion Matrix:
-[[ 78   8  77]
- [  5 215  96]
- [  3  11 495]]
-
-200 Wrong Predictions:
-0 - [Correct: pos ; Predicted: neu] now all apple has to do is get swype on the iphone and it will be crack iphone that is
-1 - [Correct: pos ; Predicted: neu] apple will be adding more carrier support to the iphone s just announced
-2 - [Correct: pos ; Predicted: neu] hilarious youtube video guy does a duet with apple s siri pretty much sums up the love affair http t co exbnqjy
-3 - [Correct: pos ; Predicted: neu] rim you made it too easy for me to switch to apple iphone see ya
-4 - [Correct: pos ; Predicted: neu] i m a current blackberry user little bit disappointed with it should i move to android or apple iphone
-5 - [Correct: pos ; Predicted: neu] the strangest things siri has said so far i am sooo glad that apple gave siri a sense of humor http t co twaeudbp via happyplace
-6 - [Correct: pos ; Predicted: neu] great up close personal event apple tonight in regent st store
-7 - [Correct: pos ; Predicted: neu] just apply for a job at apple hope they call me lol
-8 - [Correct: pos ; Predicted: neu] rt jamaicanidler lmao i think apple is onto something magical i am dying haha siri suggested where to find whores and where to h
-9 - [Correct: pos ; Predicted: neu] lmao i think apple is onto something magical i am dying haha siri suggested where to find whores and where to hide a body lolol
-10 - [Correct: pos ; Predicted: neu] wow great deals on refurbed ipad first gen models rt apple offers great deals on refurbished st gen ipads http t co ukwokbgd apple
-11 - [Correct: pos ; Predicted: neu] currently learning mandarin for my upcoming trip to hong kong i gotta hand it to apple iphones their uber useful flashcard apps
-12 - [Correct: pos ; Predicted: neu] come to the dark side gretcheneclark hey apple if you send me a free iphone i will publicly and ceremoniously burn my blackberry
-13 - [Correct: pos ; Predicted: neu] hey apple if you send me a free iphone any version will do i will publicly and ceremoniously burn my blackberry
-14 - [Correct: pos ; Predicted: neu] thank you apple for find my mac just located and wiped my stolen air smallvictory thievingbastards
-15 - [Correct: pos ; Predicted: neu] we did an unexpected workshop for the iphone s at apple yesterday and we got an awesome amount of info notjustaboutthephone gamerchik
-16 - [Correct: pos ; Predicted: neg] ios apple
-17 - [Correct: pos ; Predicted: neu] rt apple no question bro rt ainteeentrippin should i get dis iphone or a evo d
-18 - [Correct: pos ; Predicted: neu] rt imightbewrong i m over people bitching about the iphone s i think it s the smartest phone i ve ever had and i m very happy
-19 - [Correct: pos ; Predicted: neu] twitter ceo points to apple as corporate mentor as ios signups triple http t co gcy iphn
-20 - [Correct: pos ; Predicted: neu] at the bus with my iphone thxx apple
-21 - [Correct: pos ; Predicted: neu] azee v apple umber appstore is well done so is itunes on the mobile devices i was talking about desktop app
-22 - [Correct: pos ; Predicted: neu] nytimes coach wants to see you and bring your ipad http t co j ftieng ipad apple set red red hut hut nfl wish i had an ipad
-23 - [Correct: pos ; Predicted: neu] apple jilive danielpink apple sells million iphone s units in first weekend steve jobs brilliance lives on for ever iphone rva
-24 - [Correct: pos ; Predicted: neu] bkad than apologize to apple
-25 - [Correct: pos ; Predicted: neu] apple downloads of ios are proving popular with users http t co nshlfiux
-26 - [Correct: pos ; Predicted: neu] lmfao look at the argument i had with siri ijustine apple http t co d vjl si
-27 - [Correct: pos ; Predicted: neu] incredible million iphone ss in days better than the iphone http t co fmjxtmm apple iphone s
-28 - [Correct: pos ; Predicted: neu] save me from hp s unwanted os help me buy an iphone i have seen the light lol http t co gup acz backchannel apple
-29 - [Correct: pos ; Predicted: neg] well apple fixed my ios battery drain problem with a replacement iphone it s working like a champ now
-30 - [Correct: pos ; Predicted: neu] currently ordering a brand new macbook pro bahhh my macbook is years old i ll miss it but it s time cc apple
-31 - [Correct: pos ; Predicted: neu] you are so blessed apple
-32 - [Correct: pos ; Predicted: neu] siri now knows who my dad mom brother and girlfriend is thanks apple
-33 - [Correct: pos ; Predicted: neu] well at least the apple store has amazing call waiting music need s
-34 - [Correct: pos ; Predicted: neu] not bad apple sells over million iphones in debut weekend bloomberg http t co avsl ygu smartphone sm rt vinodrad
-35 - [Correct: pos ; Predicted: neu] loving new technology from apple iphone s mac air and icloud are unreal technology
-36 - [Correct: pos ; Predicted: neg] hey apple i hate my computer i need a mack wanna send me a free one
-37 - [Correct: pos ; Predicted: neu] icloud set up was flawless and works like a champ to the cloud apple
-38 - [Correct: pos ; Predicted: neu] the nice apple tech support guy fixed my itouch d
-39 - [Correct: pos ; Predicted: neg] is it just me or is ios faster for the ipad apple
-40 - [Correct: pos ; Predicted: neu] i love our apple imac even though i haven t seen my hubby in days now geek
-41 - [Correct: pos ; Predicted: neu] making the switch from android to apple iphone iphone s smartphone stevejobs apple store http t co kj pjvkh
-42 - [Correct: pos ; Predicted: neu] apple safari reader owns the worldwide web
-43 - [Correct: pos ; Predicted: neu] i love apple service my case has cracked x and i go in and they hand me a case and i walk out
-44 - [Correct: pos ; Predicted: neu] twitterpeopleiwouldliketomeet coollike thegadgetshow thelittleappkid jon lakers benrubery apple twitter fxhomehitfilm
-45 - [Correct: pos ; Predicted: neu] said to have laid out the next years apple jobs last iphone is not the iphone s iphone g is magical http t co dxxklubp
-46 - [Correct: pos ; Predicted: neu] kind of excited on my way to my last class right now and then going to the apple store so buy macosc snow leopard and lion
-47 - [Correct: pos ; Predicted: neu] apple sells million iphones in days apple keep doing what you are doing because you are doing it well http t co zzc be w
-48 - [Correct: pos ; Predicted: neu] millions in a weekend iphone s per second this is madness no this is apple
-49 - [Correct: pos ; Predicted: neu] apple you got me i m now invested macbook pro next year time to get on selling more of my android gear
-50 - [Correct: pos ; Predicted: neu] iancollinsuk apple i like what you did there
-51 - [Correct: pos ; Predicted: neu] i just sent my grandma a post card using my cardsapp thanks apple
-52 - [Correct: pos ; Predicted: neu] kostatsetsekas apple putting it in the wash is kind of the equivalent to will it blend glad to hear it s still alive
-53 - [Correct: pos ; Predicted: neu] laundering ari s iphone not my finest moment but after drying in bag of organic rice for days it booted up apple
-54 - [Correct: pos ; Predicted: neu] bravo apple http t co bgotzj k
-55 - [Correct: pos ; Predicted: neu] god bless youtube apple for appletv our bad ass system loving princessofchina gb to coldplay rihanna too
-56 - [Correct: pos ; Predicted: neu] one word wow rt jldavid iphone s first weekend sales top four million http t co zx pw gt via apple
-57 - [Correct: pos ; Predicted: neu] apple your simply the best
-58 - [Correct: pos ; Predicted: neg] i must admit apple has made me a very happy camper i have text tones now lol ring tone makemeproud drakes vers text tone nicki s
-59 - [Correct: pos ; Predicted: neu] rt tomkeene thx instagram thx apple hypo d tri x http t co bppjwncp
-60 - [Correct: pos ; Predicted: neu] stevejobs being honored tonite apple a truly great loss to the world he will so be missed
-61 - [Correct: pos ; Predicted: neu] thx instagram thx apple hypo d tri x http t co d eejhbt
-62 - [Correct: pos ; Predicted: neu] apple the iphone s is great genius
-63 - [Correct: pos ; Predicted: neu] apple cards app notifies me the card i sent has arrived at local post office and should be delivered today sunday truly is magic
-64 - [Correct: pos ; Predicted: neu] rygurl you need an apple iphone s with siri
-65 - [Correct: pos ; Predicted: neu] meet siri your new iphone butler click the link and be amazed by all it can do http t co lvffdcel apple
-66 - [Correct: pos ; Predicted: neg] so i am using my work pc never ever to get a feel for it it has the worst speakers ever apple you have spoiled me imamac
-67 - [Correct: pos ; Predicted: neu] i apple http t co a on iaa
-68 - [Correct: pos ; Predicted: neu] rt mattyriesz kathrynyee you were right an iphone is a must have addicted welcome to the apple club
-69 - [Correct: pos ; Predicted: neu] thank you apple for your innovations exhibit a guy playing with facetime instead of watching game at sports bar http t co ou k ge
-70 - [Correct: pos ; Predicted: neu] thank you steve apple store th av http t co nsaisrip
-71 - [Correct: pos ; Predicted: neu] apple s siri is witchcraft what s next googleresearch yr lead lost
-72 - [Correct: pos ; Predicted: neu] apple ios is sweet notifications phone search covers mail now wifi sync icloud backup and integrated twitter are all well done
-73 - [Correct: pos ; Predicted: neu] i apple http t co ondxwper
-74 - [Correct: pos ; Predicted: neg] my iphone s battery lasted longer than a day that hasn t happened since my edge iphone nice job apple
-75 - [Correct: pos ; Predicted: neu] it would have taken me mins to write this with my blackberry thank u apple s for converting me and showing me the grass is greener
-76 - [Correct: pos ; Predicted: neu] iphone s in space http t co jinnhvwz this is amazing creative apple your products inspire people to do unbelievable things
-77 - [Correct: pos ; Predicted: neu] ibertaddigital tv ipad a briliant stevejobs produck http t co ohfly apple present http t co dbbwsdpx
-78 - [Correct: pos ; Predicted: neu] apple ios upgrade done much better feature few more feature required
-79 - [Correct: pos ; Predicted: neu] new ios update is the best iloveyou apple
-80 - [Correct: pos ; Predicted: neu] dammit listening to siri is making me want to upgrade well played apple
-81 - [Correct: pos ; Predicted: neu] video card on kimaris workstation died after just six months so long hp hello apple
-82 - [Correct: pos ; Predicted: neu] apple has changed life
-83 - [Correct: pos ; Predicted: neu] good support fm kevin apple bellevue store biz customers ty
-84 - [Correct: pos ; Predicted: neg] just downloaded ios it s better than i expected thankyou apple
-85 - [Correct: neg ; Predicted: neu] this is what will kill apple http t co jw z c rip apple
-86 - [Correct: neg ; Predicted: neu] apple why my tunes no go on my iphone iphone lonely without them silly ios
-87 - [Correct: neg ; Predicted: neu] apple needs to hurry up and release itunesmatch
-88 - [Correct: neg ; Predicted: neu] why is siri always down apple
-89 - [Correct: neg ; Predicted: neu] i just need to exchange a cord at the apple store why do i have to wait for a genius apple
-90 - [Correct: neg ; Predicted: neu] good article about why apple fucked it all up with lion and their future http t co zndp vr fb
-91 - [Correct: neg ; Predicted: neu] asked siri is she dreams of electric sleep was disappointed that she didn t have a snippy answer missed opportunity apple
-92 - [Correct: neg ; Predicted: neu] paulens it surprises me that apple throws up an error alert about authorizing and there s no authorize this computer button
-93 - [Correct: neg ; Predicted: neu] lisa marie shhhh the evil sith lords apple may hear you ha
-94 - [Correct: neg ; Predicted: neu] apple at t u cannot tell me there isn t at least gb iphone s in la or vegas give me a fucking break
-95 - [Correct: neg ; Predicted: neu] love apple downloads hours and i pad now wonky ripstevejobs thenonsensepersists neednewipadguide fatfuckingchance
-96 - [Correct: neg ; Predicted: neu] it would be great if apple would send my new phone frustrated
-97 - [Correct: neg ; Predicted: neu] rogerweir no but i have the option of a replacement iphone s not sure if i want one after having duff iphones o iphone s apple
-98 - [Correct: neg ; Predicted: neu] apple can t send me an iphone preordered hr after launching but they cans send or to all the jackasses who want to shoot or blend em
-99 - [Correct: neg ; Predicted: neu] mayati i think apple didn t do such a thorough job with the step x steps for upgrade and move to icloud now it s cost me mightily
-100 - [Correct: neg ; Predicted: neu] hey apple now i have ios my iphone doesn t include songs that are on compilation albums under the artist s name whaddupwitdat
-101 - [Correct: neg ; Predicted: neu] nickthefnicon he can send but not rcve txts so he has an apt apple at pm then he exclaims and i waited a whole year for this phone lmao
-102 - [Correct: neg ; Predicted: neu] total chaos at apple store regent street like an ethiopian feeding station can t believe this is same co that makes all that cool shit
-103 - [Correct: neg ; Predicted: neu] apple wow motorola just crushed your dreams
-104 - [Correct: neg ; Predicted: neu] steelo yea i pre order through apple and they sorry too just like at
-105 - [Correct: neg ; Predicted: neu] apple your new save a version function in pages is absolutely the most awful interrupting counter intuitive piece of crap in the world
-106 - [Correct: neg ; Predicted: neu] apple my iphone is charging very slowly
-107 - [Correct: neg ; Predicted: neu] one would think the voice recognition on the apple tech support line would work a little better
-108 - [Correct: neg ; Predicted: neu] apple to repair my ipad apple you ve lost me and my a year android here i come
-109 - [Correct: neg ; Predicted: neu] azee v apple umber proper consolidation proper syncing stop losing my purchased items checkboxes that do what you think they will do
-110 - [Correct: neg ; Predicted: neu] asimrang apple umber the desktop app is wack though
-111 - [Correct: neg ; Predicted: neu] frustrated that i bought a new macbook pro from apple only to find it doesnt ship with media expensivepaperweight
-112 - [Correct: neg ; Predicted: neu] dontbemadatmebecause android is by far better than apple
-113 - [Correct: neg ; Predicted: neu] apple apple one thing i hater about this mouse the buttery finish so fast am not happy now macworld macworld http t co uh a vt
-114 - [Correct: neg ; Predicted: neu] if u need me just text me o wait u i wont get it cuz apple fucks me every time fuckingpissed
-115 - [Correct: neg ; Predicted: neu] imessage doesn t show the time a message was sent annoying apple
-116 - [Correct: neg ; Predicted: neu] samsung seeks iphone s ban in japan and australiapatent war intensifies with injunction sought against apple http t co qmwjtvnk
-117 - [Correct: neg ; Predicted: neu] albertmal remember apple is evil icloud entering the dropbox market
-118 - [Correct: neg ; Predicted: neu] now on my second full charge of the day pissed apple
-119 - [Correct: neg ; Predicted: neu] suddenly lost all address book on gs iphone and someone was using my apple id it all fucked up
-120 - [Correct: neg ; Predicted: neu] oh my iphone is overcapacity huh apple won t let me be great
-121 - [Correct: neg ; Predicted: neu] chascouponmom apple i get they are busy w the new phone but i just wanted to buy a stylus they made me wait forever outside never
-122 - [Correct: neg ; Predicted: neu] apple iphone please deliver my daughter s i s she is driving me nuts iphone
-123 - [Correct: neg ; Predicted: neu] sprint bestbuy still no word on my iphone s preorder best buy blames sprint sprint blames apple i just want an honest answer help
-124 - [Correct: neg ; Predicted: neu] hailfire irvysan they are then apple happened and snatched siri so they could be douchebags and say it s ours
-125 - [Correct: neg ; Predicted: neu] what was apple thinking making siri totally dependent on a network connection siri att utter frustration
-126 - [Correct: neg ; Predicted: pos] an apple update has seemed to render my work machine incapable of opening hdv video thanks apple zero useful productivity today
-127 - [Correct: neg ; Predicted: neu] hey apple why can t i share a reminder list from my iphone also why can t i login to the icloud webpage to modify sharing from my phone
-128 - [Correct: neg ; Predicted: neu] could apple lion please integrate vertical spaces in mission control this horizontal business is making me nauseous
-129 - [Correct: neg ; Predicted: neu] can someone plz explain to me whhyy apple is only distributing phones per day to the sprint stores i m really http t co uf tak f
-130 - [Correct: neg ; Predicted: neu] dear apple why did all my pdfs and epub files disappear from ibooks in my iphone post ios upgrade this hurts gs needsomethingtoread
-131 - [Correct: neg ; Predicted: neu] as a huge podcast fan i really feel like apple dropped the ball on this one http t co wvzprbci via carrypad
-132 - [Correct: neg ; Predicted: neu] i don t really like siri s voice perhaps apple can get star wars voices just like garmin http t co psujg pn
-133 - [Correct: neg ; Predicted: neu] apple if you want to know what customers think dont send updates with the noreply return address who invented that anyway useless
-134 - [Correct: neg ; Predicted: neu] every time i try the voice control on my ipod touch to send an imessage it starts playing who knew by pink still not flawless apple
-135 - [Correct: neg ; Predicted: neu] betweensundays ah yeah should be an option hopefully apple figures that out thx
-136 - [Correct: neg ; Predicted: neu] prjusto don t question the apple they will remember your dissent
-137 - [Correct: neg ; Predicted: neu] any chance apple will release good headphones that dont blast music outside the ears iphone ipod its quite obnoxious
-138 - [Correct: neg ; Predicted: neu] trisha ps icloud is cloudy apple tech not very techy
-139 - [Correct: neg ; Predicted: neu] see apple that what s happen when you release iphone s with same crappy design as the old phone
-140 - [Correct: neg ; Predicted: pos] this rt bonkoif looks like apple did not appropriately project the resources needed for siri not very reliable
-141 - [Correct: neg ; Predicted: pos] looks like apple did not appropriately project the resources needed for siri not very reliable
-142 - [Correct: neg ; Predicted: neu] spoke to an apple rep on phone could hear her tv blaring in the bg she said i can t actually help u just direct u back to the web
-143 - [Correct: neg ; Predicted: neu] what s wrong with siri today apple
-144 - [Correct: neg ; Predicted: neu] apple siri is down
-145 - [Correct: neg ; Predicted: neu] apple would do better to inform customers properly about migrating to icloud many complaints lead to image damage http t co ql zmppo
-146 - [Correct: neg ; Predicted: neu] just searching with my voice on my year old nexus one apple
-147 - [Correct: neg ; Predicted: neu] my schedule is busy spend unquality time with att apple recover iphone again the mo mobile i get the mo immobile i is sync not
-148 - [Correct: neg ; Predicted: neu] why book apple genius bar if after hours you still can t be served disappointing apple store sydney thanksfornothing
-149 - [Correct: neg ; Predicted: neu] screw you apple ios i can t download this crap and i m tired of trying get this problem figured out about my connection timing out
-150 - [Correct: neg ; Predicted: neu] what is going on with all my apple products first my ipad freezes still is frozen and then my iphone won t turn on techietroubles
-151 - [Correct: neg ; Predicted: neu] nd apple genius apptment running late nd day in row for nd dodgy ipod you make mega hire some staff
-152 - [Correct: neg ; Predicted: neu] apple so i went to the th ave store and was told i could wait about hours to get a s needless to say i m back at the hotel relaxing
-153 - [Correct: neg ; Predicted: neu] apple thank you for sucking so much i cannot believe you would sell something online that isn t made
-154 - [Correct: neg ; Predicted: neu] dear apple please send me my mac book back surely the repair is done by now thanks
-155 - [Correct: neg ; Predicted: pos] apple thanks for ios loving having my music breaking up like i m talking on a mobile cell phone bring back functional iosdonwgrade
-156 - [Correct: neg ; Predicted: neu] dear apple your staff at the little rock store answered my first questions with i don t know they weren t hard questions
-157 - [Correct: neg ; Predicted: neu] is it too much to ask which app is incompatible apple http t co ykqip nk
-158 - [Correct: neg ; Predicted: neu] pissed with whoever designs keyboards with apple for not having a home and end key working on the cli i use those keys often
-159 - [Correct: neg ; Predicted: neu] novatyler apple most of mine are gone too not recovered after i saved them b i upgraded my iphone soooo pissed
-160 - [Correct: neg ; Predicted: neu] siri is having a hard time remembering who my sister is contact card needs space for family info iphone s apple
-161 - [Correct: neg ; Predicted: neu] all i can say about apple right now is goodriddance see cancer isn t all bad
-162 - [Correct: neg ; Predicted: neu] pmphillips apple if my non apple equipment broke this often i guess i d need an asus genius bar but it doesn t so i don t
-163 - [Correct: neg ; Predicted: neu] life was much easier when apple and blackberry were just fruits
-164 - [Correct: neg ; Predicted: neu] comparing office live with google apps and apple icloud i do not see icloud leading the crowd do you agree
-165 - [Correct: neg ; Predicted: neu] after a week or so with apple s ios i m considering going back to jailbroken same features as plus more not as stable though
-166 - [Correct: neg ; Predicted: neu] is it me or does iphone s run a little warm sometimes apple
-167 - [Correct: neg ; Predicted: neu] apple wtf why can we not add the newsstand to a folder we are already in your walled garden so please don t remind us of it
-168 - [Correct: neg ; Predicted: neu] dear apple i don t want the newsstand icon on my screen notcool
-169 - [Correct: neg ; Predicted: neu] blackberry does take better quality photos than apple iphone though i give them that photograherseye
-170 - [Correct: neg ; Predicted: neu] ok itunesmusic idk wth is up but after syncing my phone my album art is out of order wtf apple
-171 - [Correct: neg ; Predicted: neu] apple i m still waiting for you to deliver my phone to sprint
-172 - [Correct: neg ; Predicted: neu] thanks to apple my new imac is a brick i cannot re install lion and i cannot purchase it because it was installed by the former owner
-173 - [Correct: neg ; Predicted: neu] only thing ios has done is deleted my tiger woods game and made impossible to retrieve thanks apple
-174 - [Correct: neg ; Predicted: neu] yo apple this update is a disaster
-175 - [Correct: neg ; Predicted: pos] hbogo apple why don t you play nice and let me use hdmi from ipad pretty lame
-176 - [Correct: neg ; Predicted: neu] bummer that apple icloud syncs on windows only w outlook not thunderbird ie not firefox chrome sadmac
-177 - [Correct: neg ; Predicted: neu] disappointing visual merchandising apple simple but lacks elegance and sequence doesn t even tell us about siri http t co xv q gfi
-178 - [Correct: neg ; Predicted: neu] apple give me my apps back
-179 - [Correct: neg ; Predicted: neu] minutes after being at my iphone post ios upgrade has lost of its charge and the apple store folks are out of ideas
-180 - [Correct: neg ; Predicted: neu] so cutting the cord makes podcasts even harder to manage no subscriptions wth apple http t co ld i x ios via carrypad
-181 - [Correct: neg ; Predicted: neu] well apple seems b screwing iphone s resellars they still dont have s yet were promised similar ma bell s monopolistic prctices
-182 - [Correct: neg ; Predicted: neu] also ericgreenspan don t forget apple stop closing the app store after each bloody purchase
-183 - [Correct: neg ; Predicted: neu] apple took my siri and made it exclusive to iphone s sorude
-184 - [Correct: neg ; Predicted: neu] siri went down for a little while last night come on apple get your shit together on this launch
-185 - [Correct: neg ; Predicted: neu] ford should have teamed up with apple instead of microsoft to make this sync system in my new focus car is sweet sync is epicfail
-186 - [Correct: neu ; Predicted: neg] late show i would have watched but the folks at apple have a jihad against adobe flash plse consider a youtube link in future on ur site
-187 - [Correct: neu ; Predicted: neg] ios for iphone and ipad is here apple s best release yet http t co ilygz ox ios ios apple ipad tablet
-188 - [Correct: neu ; Predicted: neg] upgrading my ipad to ios when apple said it could take a couple of hours to install and restore it they weren t kidding
-189 - [Correct: neu ; Predicted: neg] jarjartee apple that s really good makes you happy to pay the infamous apple tax
-190 - [Correct: neu ; Predicted: neg] too bad i m not an apple junkie icloud apple ios
-191 - [Correct: neu ; Predicted: neg] yesss apple fix it also slow internet rt sprintfeed iphone s owners are you having trouble with siri connecting to internet
-192 - [Correct: neu ; Predicted: neg] i love apple i love my phone but ever since this damn update my texts keep saying they re full when there are none that s a problem
-193 - [Correct: neu ; Predicted: neg] really apple and att removing the g edge switch on ios you do realize that you work on the g network in places often right
-194 - [Correct: neu ; Predicted: neg] does the iphone s no longer have that stupid network lost pop up possibly the most annoying thing ever that you cannot turn off apple
-195 - [Correct: neu ; Predicted: pos] the folks at apple are awesome so glad i a mactard
-196 - [Correct: neu ; Predicted: pos] dear apple yesterday you sucked today you re awesome thanks lp apple store crash and burn mich ave store
-197 - [Correct: neu ; Predicted: neg] ireton perhaps it s time for apple to come out with an app called isuck that lets you know which apps are killing your battery life
-198 - [Correct: neu ; Predicted: neg] keepnupwittboyd appstore itunesmusic they fixed a bug thursday after i had done my update thus my issue spent fri apple ios
-199 - [Correct: neu ; Predicted: pos] tvnewschick apple oh no why not i want it to be love love love it s a lot of dough to spend otherwise
+[[130   4  29]
+ [  2 289  25]
+ [  2   4 503]]

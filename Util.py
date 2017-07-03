@@ -35,18 +35,19 @@ QUATERNARIO_PATH = "./bases/quaternario/"
 TERNARIO_PATH = "./bases/ternario/"
 BINARIO_PATH = "./bases/binario/"
 
-QUATERNARIO = 0
+BINARIO = 0
 TERNARIO = 1
-BINARIO = 2
+QUATERNARIO = 2
 
-DECISION_TREE = 0
-NAIVE_BAYES = 1
+
+NAIVE_BAYES = 0
+DECISION_TREE = 1
 RANDOM_FOREST = 2
 SVM = 3
 ADA = 4
 
 def getClassificadoresQTD():
-    return 4
+    return 5
 
 class Data(object):
     '''
@@ -236,7 +237,16 @@ def write2TxtFile(predicted, testData, trainData, type, classifier, showWrongPre
     if not os.path.exists("execucao/" + getModoStrDir(type)):
         os.makedirs("execucao/" + getModoStrDir(type))
 
-    text_file = open("execucao/" + getModoStrDir(type) + "/" + getClassifierName(classifier).upper() + ".txt", "w")
+    fname = "execucao/" + getModoStrDir(type) + "/" + getClassifierName(classifier).upper()
+    if gridSearch==True:
+        fname += "_GRIDSEARCH"
+    if rfeEnabled==True:
+        fname += "_RFE"
+    if pcaEnabled==True:
+        fname += "_PCA"
+ 
+    text_file = open(fname + ".txt", "w")
+    print("Iteração atual: " + fname)
 
     text_file.write("Classifier: %s\n" % getClassifierName(classifier))
     text_file.write("Mode: %s\n" % getModoStr(type))
@@ -295,5 +305,93 @@ def write2TxtFile(predicted, testData, trainData, type, classifier, showWrongPre
         for i in array:
             text_file.write("%s - [%s]  %s\n" %((j + 1), i.classific, i.text))
             j += 1
+
+    text_file.close()
+
+def write2TexFile(predicted, testData, type, classifier, gridSearch, rfeEnabled, pcaEnabled):
+
+    text_file = open("execucao/av_" + getModoStrDir(type).lower() +".tex", "a")
+
+    comment = getClassifierName(classifier).lower() + "_" + getModoStrDir(type).lower()
+    print("Tex: " + comment)
+    text_file.write("%" + comment + "\n")
+    text_file.write("\\begin{table}[h!]\n")
+    text_file.write("\\centering\n")
+    text_file.write("\\begin{minipage}[b]{0.45\linewidth}\n")
+    text_file.write("\\caption{Matriz de Confusão " + getModoStr(type) + ": \\textit{" + getClassifierName(classifier))
+    if gridSearch:
+        text_file.write(" com Grid Search")
+    if rfeEnabled:
+        text_file.write(" com RFE")
+    if pcaEnabled:
+        text_file.write(" com PCA")
+    text_file.write("}}\n")
+    text_file.write("\\label{tab:mcb-nb}\n")
+    text_file.write("\\begin{tabular}{|l|l|l")
+    for i in range(type):
+        text_file.write("|l")
+    text_file.write("|}\n")
+    text_file.write("\\hline\n")
+    text_file.write("$\\textrm{Atual}\diagdown\\textrm{Previsto}$ & \\textbf{positivo} & \\textbf{negativo}")
+    if type>0:
+        text_file.write(" & \\textbf{neutro}")
+    if type>1:
+        text_file.write(" & \\textbf{irrelevante}")
+    text_file.write("\\\\ \\hline\n")
+    text_file.write("\\textbf{positivo}")
+    for i in range(2+type):
+        text_file.write(" & %d" % metrics.confusion_matrix(testData.target, predicted)[0][i])
+    text_file.write("\\\\ \\hline\n")
+    text_file.write("\\textbf{negativo}")
+    for i in range(2+type):
+        text_file.write(" & %d" % metrics.confusion_matrix(testData.target, predicted)[1][i])
+    text_file.write("\\\\ \\hline\n")
+    if type>0:
+        text_file.write("\\textbf{neutro}")
+        for i in range(2+type):
+            text_file.write(" & %d" % metrics.confusion_matrix(testData.target, predicted)[2][i])
+        text_file.write("\\\\ \\hline\n")
+    if type>1:
+        text_file.write("\\textbf{irrelevante}")
+        for i in range(2+type):
+            text_file.write(" & %d" % metrics.confusion_matrix(testData.target, predicted)[3][i])
+        text_file.write("\\\\ \\hline\n")
+    text_file.write("\\end{tabular}\n")
+    text_file.write("\\end{minipage}\n")
+    text_file.write("\\hspace{0.5cm}\n")
+    text_file.write("\\begin{minipage}[b]{0.45\linewidth}\n")
+    text_file.write("\n")
+    text_file.write("\\centering\n")
+    text_file.write("\\caption{Medidas da Matriz de Confusão}\n")
+    text_file.write("\\label{tab:mmcb-nb}\n")
+    text_file.write("\\begin{tabular}{|l|l|l|l|}\n")
+    text_file.write("\\hline\n")
+    text_file.write("         & \\textbf{precisão} & \\textbf{recall} & \\textbf{f1-score} \\\\ \\hline\n")
+
+    medidas = metrics.classification_report(testData.target, predicted, target_names=getCategory(type))
+    listm = medidas.split()
+    i=0
+    while not listm[i]=="pos":
+        i+=1
+    text_file.write("\\textbf{positivo} & " + listm[i+1] + "     & " + listm[i+2] + "   & " + listm[i+3] + "     \\\\ \\hline\n")
+    while not listm[i]=="neg":
+        i+=1
+    text_file.write("\\textbf{negativo} & " + listm[i+1] + "     & " + listm[i+2] + "   & " + listm[i+3] + "     \\\\ \\hline\n")
+    if type>0:
+        while not listm[i]=="neu":
+            i+=1
+        text_file.write("\\textbf{neutro} & " + listm[i+1] + "     & " + listm[i+2] + "   & " + listm[i+3] + "     \\\\ \\hline\n")
+    if type>1:
+        while not listm[i]=="irr":
+            i+=1
+        text_file.write("\\textbf{irrelevante} & " + listm[i+1] + "     & " + listm[i+2] + "   & " + listm[i+3] + "     \\\\ \\hline\n")
+    while not listm[i]=="total":
+        i+=1
+    text_file.write("\\textbf{média} & " + listm[i+1] + "     & " + listm[i+2] + "   & " + listm[i+3] + "     \\\\ \\hline\n")
+
+    text_file.write("\\textbf{acurácia} & \\multicolumn{3}{|c|}{%s}\\\\ \\hline\n" % metrics.accuracy_score(testData.target, predicted))
+    text_file.write("\\end{tabular}\n")
+    text_file.write("\\end{minipage}\n")
+    text_file.write("\\end{table}\n\n")
 
     text_file.close()

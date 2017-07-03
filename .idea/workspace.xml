@@ -2,11 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2007863b-a2ed-4166-a77b-8b0be7eb27a9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Comparação PCA vs RFE/Explicação.txt" afterPath="$PROJECT_DIR$/Comparação PCA vs RFE/Explicação.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/execucao/BINARIO/ADA BOOST.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/execucao/av_binario.tex" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/execucao/av_ternario.tex" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mainF.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/execucao/QUATERNARIO/ADA BOOST.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/execucao/QUATERNARIO/DECISION TREE.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Util.py" afterPath="$PROJECT_DIR$/Util.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/execucao/BINARIO/DECISION TREE.txt" afterPath="$PROJECT_DIR$/execucao/BINARIO/DECISION TREE.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/execucao/BINARIO/NAIVE BAYES.txt" afterPath="$PROJECT_DIR$/execucao/BINARIO/NAIVE BAYES.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/execucao/BINARIO/RANDOM FOREST.txt" afterPath="$PROJECT_DIR$/execucao/BINARIO/RANDOM FOREST.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/execucao/BINARIO/SVM.txt" afterPath="$PROJECT_DIR$/execucao/BINARIO/SVM.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/execucao/QUATERNARIO/NAIVE BAYES.txt" afterPath="$PROJECT_DIR$/execucao/QUATERNARIO/NAIVE BAYES.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/execucao/QUATERNARIO/RANDOM FOREST.txt" afterPath="$PROJECT_DIR$/execucao/QUATERNARIO/RANDOM FOREST.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/execucao/QUATERNARIO/SVM.txt" afterPath="$PROJECT_DIR$/execucao/QUATERNARIO/SVM.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/execucao/TERNARIO/ADA BOOST.txt" afterPath="$PROJECT_DIR$/execucao/TERNARIO/ADA BOOST.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/execucao/TERNARIO/DECISION TREE.txt" afterPath="$PROJECT_DIR$/execucao/TERNARIO/DECISION TREE.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/execucao/TERNARIO/NAIVE BAYES.txt" afterPath="$PROJECT_DIR$/execucao/TERNARIO/NAIVE BAYES.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/execucao/TERNARIO/RANDOM FOREST.txt" afterPath="$PROJECT_DIR$/execucao/TERNARIO/RANDOM FOREST.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/execucao/TERNARIO/SVM.txt" afterPath="$PROJECT_DIR$/execucao/TERNARIO/SVM.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/predict.py" afterPath="$PROJECT_DIR$/predict.py" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -26,8 +40,8 @@
       <file leaf-file-name="predict.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/predict.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="145" column="18" lean-forward="true" selection-start-line="145" selection-start-column="18" selection-end-line="145" selection-end-column="18" />
+            <state relative-caret-position="342">
+              <caret line="141" column="0" lean-forward="true" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
               </folding>
@@ -35,22 +49,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RANDOM FOREST.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/execucao/QUATERNARIO/RANDOM FOREST.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Util.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Util.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4182">
-              <caret line="264" column="33" lean-forward="false" selection-start-line="264" selection-start-column="33" selection-end-line="264" selection-end-column="33" />
-              <folding />
+            <state relative-caret-position="4352">
+              <caret line="274" column="33" lean-forward="false" selection-start-line="274" selection-start-column="33" selection-end-line="274" selection-end-column="33" />
+              <folding>
+                <marker date="1499120362767" expanded="true" signature="13001:13024" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -144,6 +150,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="TrabalhoIA3-17.1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TrabalhoIA3-17.1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TrabalhoIA3-17.1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="execucao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -674,13 +694,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/execucao/QUATERNARIO/NAIVE BAYES.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/execucao/TERNARIO/NAIVE BAYES.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -697,9 +710,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Util.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4182">
-          <caret line="264" column="33" lean-forward="false" selection-start-line="264" selection-start-column="33" selection-end-line="264" selection-end-column="33" />
-          <folding />
+        <state relative-caret-position="4352">
+          <caret line="274" column="33" lean-forward="false" selection-start-line="274" selection-start-column="33" selection-end-line="274" selection-end-column="33" />
+          <folding>
+            <marker date="1499120362767" expanded="true" signature="13001:13024" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -726,23 +741,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/execucao/QUATERNARIO/SVM.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34">
+        <state relative-caret-position="17">
           <caret line="7" column="23" lean-forward="false" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/execucao/QUATERNARIO/RANDOM FOREST.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="12" />
+        <state relative-caret-position="-1096">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execucao/QUATERNARIO/NAIVE BAYES.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/predict.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="145" column="18" lean-forward="true" selection-start-line="145" selection-start-column="18" selection-end-line="145" selection-end-column="18" />
+        <state relative-caret-position="342">
+          <caret line="141" column="0" lean-forward="true" selection-start-line="141" selection-start-column="0" selection-end-line="141" selection-end-column="0" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
           </folding>
