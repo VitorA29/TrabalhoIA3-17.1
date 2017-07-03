@@ -1,32 +1,26 @@
 Classifier: Decision Tree
-Mode: Tern·rio
+Mode: Tern√°rio
 GridSearch: False
+RFE: False
+PCA: False
+Used files for training: full-corpus.csv;
+Used files for testing: twitter-sanders-apple3.csv;
 DataTrain length: 3428
 DataTest length: 988
 
 -----PREDCTION INFO-----
-Accuracy: 0.991902834008
+Accuracy: 0.988866396761
 
 Report:
              precision    recall  f1-score   support
 
-        pos       0.97      0.99      0.98       163
-        neg       1.00      0.99      0.99       316
-        neu       1.00      0.99      0.99       509
+        pos       0.99      0.99      0.99       163
+        neg       0.99      0.98      0.99       316
+        neu       0.99      0.99      0.99       509
 
 avg / total       0.99      0.99      0.99       988
 
 Confusion Matrix:
 [[162   0   1]
- [  2 313   1]
- [  3   1 505]]
-
-8 Wrong Predictions:
-0 - [Correct: pos ; Predicted: neu] rt apple no question bro rt ainteeentrippin should i get dis iphone or a evo d
-1 - [Correct: neg ; Predicted: pos] apple thank you for sucking so much i cannot believe you would sell something online that isn t made
-2 - [Correct: neg ; Predicted: neu] dear apple your staff at the little rock store answered my first questions with i don t know they weren t hard questions
-3 - [Correct: neg ; Predicted: pos] ios has one problem when i save someone in my contacts they don t show his nam becuz of the region apple apple
-4 - [Correct: neu ; Predicted: pos] leg nd apple the new iphone
-5 - [Correct: neu ; Predicted: neg] the four american companies that have come to define st century on the verge of war amazon apple facebook and ghttp t co pxulr dw
-6 - [Correct: neu ; Predicted: pos] apple do not buy an iphone s that isn t in the store they are not made yet and defrauding you
-7 - [Correct: neu ; Predicted: pos] just made the switch from blackberry to apple and never looking back bbwho
+ [  0 310   6]
+ [  2   2 505]]

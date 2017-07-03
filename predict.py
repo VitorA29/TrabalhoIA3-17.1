@@ -49,8 +49,9 @@ def predict(classifier, type, gridSearch, showWrongPredict, showPredictions, rfe
         None
 
     #Escreve no arquivo txt.
-    write2TxtFile(predicted, testData, data, type, classifier, showWrongPredict, showPredictions, gridSearch, rfeEnabled,
-                  pcaEnabled, mostInformative)
+    write2TxtFile(predicted, testData, data, type, classifier, showWrongPredict, showPredictions, gridSearch, rfeEnabled, pcaEnabled, mostInformative)
+    #Escreve no arquivo .tex
+    write2TexFile(predicted, testData, type, classifier, gridSearch, rfeEnabled, pcaEnabled)
 
 def getClassifier(classifier, rfeEnabled, pcaEnabled):
     if (classifier == DECISION_TREE):
@@ -127,11 +128,3 @@ def ada():
                          ('clf', AdaBoostClassifier(n_estimators=100)),
                          ])
     return text_clf
-
-type = BINARIO
-gridSearch = False
-showWrongPredictions = True
-showPredictions = False
-rfeEnabled = False
-pcaEnabled = True
-predict(SVM, type, gridSearch, showWrongPredictions, showPredictions, rfeEnabled, pcaEnabled)
