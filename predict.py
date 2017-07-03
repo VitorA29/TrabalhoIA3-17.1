@@ -29,11 +29,19 @@ def predict(classifier, type, gridSearch, showWrongPredict, showPredictions, rfe
 
     text_clf = getClassifier(classifier, rfeEnabled, pcaEnabled)
 
-    if(gridSearch):
+    if(gridSearch and classifier == NAIVE_BAYES):
         parameters = {'clf__max_depth': range(1, 100)}
 
+        parameters = {'C': [1e3, 5e3, 1e4, 5e4, 1e5],
+                      'gamma': [0.0001, 0.0005, 0.001, 0.005, 0.01, 0.1],}
+
+        parameters = {'vect__ngram_range': [(1, 1), (1, 2)],
+                      'tfidf__use_idf': (True, False),
+                      'clf__alpha': (1e-2, 1e-3),
+                      }
+
         text_clf = GridSearchCV(text_clf, parameters, n_jobs=1, verbose=1)
-        text_clf.fit(data.data, data.target)
+        text_clf = text_clf.fit(data.data, data.target)
     else:
         text_clf = text_clf.fit(data.data, data.target)
 
@@ -42,6 +50,9 @@ def predict(classifier, type, gridSearch, showWrongPredict, showPredictions, rfe
     testData = getTestData(type)
     docs_test = testData.data
     predicted = text_clf.predict(docs_test)
+
+    #print(text_clf.get_params()['slct'].explained_variance_ratio_.sum())
+
     mostInformative = []
     try:
         mostInformative = getMostInformative(10, text_clf)
@@ -112,7 +123,7 @@ def svm(rfeEnabled, pcaEnabled):
         if(pcaEnabled):
             text_clf = Pipeline([('vect', CountVectorizer()),
                                  ('tfidf', TfidfTransformer()),
-                                 ('slct', TruncatedSVD(n_components=1000)),
+                                 ('slct', TruncatedSVD(n_components=100)),
                                  ('clf', SVC(kernel="linear", C=1)),
                                  ])
         else:
