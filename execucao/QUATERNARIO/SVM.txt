@@ -1,6 +1,6 @@
 Classifier: SVM
 Mode: Quaternário
-GridSearch: True
+GridSearch: False
 RFE: False
 PCA: False
 Used files for training: full-corpus.csv;full_training_dataset.csv;twitter-sanders-apple2.csv;
