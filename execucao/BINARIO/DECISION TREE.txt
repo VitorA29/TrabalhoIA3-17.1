@@ -1,5 +1,5 @@
 Classifier: Decision Tree
-Mode: Bin√°rio
+Mode: Bin·rio
 GridSearch: False
 RFE: False
 PCA: False
@@ -22,3 +22,5 @@ avg / total       1.00      1.00      1.00       479
 Confusion Matrix:
 [[163   0]
  [  0 316]]
+
+0 Wrong Predictions:

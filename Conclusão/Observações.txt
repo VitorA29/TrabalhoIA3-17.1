@@ -1,0 +1,28 @@
+Classificadores:
+### Observações independentes de binário quaternário e ternário.
+-	O NaiveBayes foi o pior de todos em todos os casos.
+- 	O RandomForest depende muito do atributo n_estimators.
+	No quarternário, quando n_estimators = 2, por exemplo, obtvemos uma precisão de 0.863000931966
+	com 10 de 0.935694315005 e com 100 0.933830382106. A diferença de 10 para 100 foi
+	insignificante(Arquivos mostrando os resultados na pasta 'Teste variando n_estimators').
+
+### Binário.
+-   Os dados utilizados na prediçõa binária foram os mesmos do enunciado do trabalho, apenas removendo os tweets neutros.
+-   twitter-sanders-apple3.csv foi utilizado para treinar e twitter-sanders-apple2.csv para testar.
+-   Os classificadores tiveram bons resultados no binário, inclusive o NaiveBayes, nenhum ficou abaixo de 0.90 de precião.
+
+### Ternário.
+-   Os dados utilizados na predição ternária foram o full-corpus.csv para treinamento e twitter-sanders-apple3.csv para teste
+-   Nessa etapa, as diferenças entre os classificadores começam a ficarem claras. O Naive Bayes teve uma precisão de 0.63,
+    equanto todos os outros tiveram precisão acima de 0.90. O NaiveBayes confundiu muito o neutro com todos os outros.
+    Como se pode observar nas predições erradas do Naive, todos os erros dele foram confundindo neutro com positivo/negativo.
+    O SVM também confundiu muito os tweets neutros, porém teve uma precisão de 0.93.
+-   Ranking(Melhor para pior): RandomForest, DecisionTree, SVM e NaiveBayes.
+
+### Quaternário.
+-   Os dados utilizados na predição quaternária foram, para treinamento, full-corpus.csv, full_training_dataset.csv e twitter-sanders-apple2.csv.
+    E para predição irrelevantTest.csv e twitter-sanders-apple3.csv.
+-   As observações mudaram pouco dos resultados da predição ternária. Porém agora a classe irrelevante é muito confundida com todas as outras classes.
+
+-   
+-   Ranking(Melhor para pior): RandomForest, DecisionTree, SVM e NaiveBayes.

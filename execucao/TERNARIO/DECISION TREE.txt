@@ -1,5 +1,5 @@
 Classifier: Decision Tree
-Mode: Tern√°rio
+Mode: Tern·rio
 GridSearch: False
 RFE: False
 PCA: False
@@ -9,12 +9,12 @@ DataTrain length: 3428
 DataTest length: 988
 
 -----PREDCTION INFO-----
-Accuracy: 0.988866396761
+Accuracy: 0.987854251012
 
 Report:
              precision    recall  f1-score   support
 
-        pos       0.99      0.99      0.99       163
+        pos       0.98      0.99      0.98       163
         neg       0.99      0.98      0.99       316
         neu       0.99      0.99      0.99       509
 
@@ -22,5 +22,19 @@ avg / total       0.99      0.99      0.99       988
 
 Confusion Matrix:
 [[162   0   1]
- [  0 310   6]
- [  1   3 505]]
+ [  0 311   5]
+ [  4   2 503]]
+
+12 Wrong Predictions:
+0 - [Correct: pos ; Predicted: neu] rt apple no question bro rt ainteeentrippin should i get dis iphone or a evo d
+1 - [Correct: neg ; Predicted: neu] samsung seeks iphone s ban in japan and australiapatent war intensifies with injunction sought against apple http t co qmwjtvnk
+2 - [Correct: neg ; Predicted: neu] i know a few others having same issue rt joelplane now on my second full charge of the day pissed apple
+3 - [Correct: neg ; Predicted: neu] apple thank you for sucking so much i cannot believe you would sell something online that isn t made
+4 - [Correct: neg ; Predicted: neu] dear apple your staff at the little rock store answered my first questions with i don t know they weren t hard questions
+5 - [Correct: neg ; Predicted: neu] dear applecongratulations i am suing my insurance company and you just managed to make it to the top of my shit list ineedthosepictures
+6 - [Correct: neu ; Predicted: pos] leg nd apple the new iphone
+7 - [Correct: neu ; Predicted: neg] iphone watch siri work on the old iphone gizmodo http t co dgpwl r apple allow commands from iphone stop playin
+8 - [Correct: neu ; Predicted: pos] just made the switch from blackberry to apple and never looking back bbwho
+9 - [Correct: neu ; Predicted: pos] how much do apples factories cost asymco http t co gh tvqmo
+10 - [Correct: neu ; Predicted: neg] macbook pros constrained new models appear in apples inventory system apple macbookpro http t co blgr ue
+11 - [Correct: neu ; Predicted: pos] rt apple yea our stores are open days a week rt wasalu flora me too rt dj bmoney ipad iphone s my christmas gifts to my self

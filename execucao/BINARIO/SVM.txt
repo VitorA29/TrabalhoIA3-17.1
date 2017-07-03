@@ -1,5 +1,5 @@
 Classifier: SVM
-Mode: Bin√°rio
+Mode: Bin·rio
 GridSearch: False
 RFE: False
 PCA: False
@@ -22,3 +22,8 @@ avg / total       0.99      0.99      0.99       479
 Confusion Matrix:
 [[160   3]
  [  0 316]]
+
+3 Wrong Predictions:
+0 - [Correct: pos ; Predicted: neg] ios apple
+1 - [Correct: pos ; Predicted: neg] azee v apple umber appstore is well done so is itunes on the mobile devices i was talking about desktop app
+2 - [Correct: pos ; Predicted: neg] hey apple i hate my computer i need a mack wanna send me a free one

@@ -62,7 +62,7 @@ def predict(classifier, type, gridSearch, showWrongPredict, showPredictions, rfe
     #Escreve no arquivo txt.
     write2TxtFile(predicted, testData, data, type, classifier, showWrongPredict, showPredictions, gridSearch, rfeEnabled, pcaEnabled, mostInformative)
     #Escreve no arquivo .tex
-    write2TexFile(predicted, testData, type, classifier, gridSearch, rfeEnabled, pcaEnabled)
+    #write2TexFile(predicted, testData, type, classifier, gridSearch, rfeEnabled, pcaEnabled)
 
 def getClassifier(classifier, rfeEnabled, pcaEnabled):
     if (classifier == DECISION_TREE):
@@ -94,7 +94,7 @@ def naiveBayes():
 def randomForest():
     text_clf = Pipeline([('vect', CountVectorizer()),
                          ('tfidf', TfidfTransformer()),
-                         ('clf', RandomForestClassifier(n_estimators=10)),
+                         ('clf', RandomForestClassifier(n_estimators=100)),
                          ])
 
     return text_clf
@@ -146,4 +146,4 @@ showWrongPredictions = True
 showPredictions = False
 rfeEnabled = False
 pcaEnabled = False
-predict(SVM, type, gridSearch, showWrongPredictions, showPredictions, rfeEnabled, pcaEnabled)
+predict(DECISION_TREE, type, gridSearch, showWrongPredictions, showPredictions, rfeEnabled, pcaEnabled)

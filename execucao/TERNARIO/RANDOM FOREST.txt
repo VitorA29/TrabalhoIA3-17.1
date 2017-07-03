@@ -1,5 +1,5 @@
 Classifier: Random Forest
-Mode: Tern√°rio
+Mode: Tern·rio
 GridSearch: False
 RFE: False
 PCA: False
@@ -24,3 +24,9 @@ Confusion Matrix:
 [[162   0   1]
  [  0 313   3]
  [  0   0 509]]
+
+4 Wrong Predictions:
+0 - [Correct: pos ; Predicted: neu] rt apple no question bro rt ainteeentrippin should i get dis iphone or a evo d
+1 - [Correct: neg ; Predicted: neu] apple the reservation system not working shows no products avail let alone iphone s i had the site open in browsers at pm and nothing
+2 - [Correct: neg ; Predicted: neu] apple thank you for sucking so much i cannot believe you would sell something online that isn t made
+3 - [Correct: neg ; Predicted: neu] dear apple your staff at the little rock store answered my first questions with i don t know they weren t hard questions
