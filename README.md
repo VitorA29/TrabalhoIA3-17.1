@@ -10,8 +10,9 @@
 
 ## Dataset
 São usados Tweets para treinar e para testar o aprendizado.
+Os dados estão separados em pastas de acordo com o número de Targets(Binário, Ternário e Quaternário).
+Caso o experimento seja binário(Positivo ou Negativo) os arquivos de teste e treino serão pegos na respectiva pasta.
 A pasta `train` contém todos os arquivos que serão usados para treinamento, e a pasta `test` contém todos que serão usados para teste.
-Juntando todos os arquivos em cada pasta, é um total de, aproximadamente, 27000 Tweets de treinamento e 900 de teste.
 
 ## QuickStart
 
@@ -22,20 +23,30 @@ Dentro do `predict.py`, executar a função `def predict(classifier, type, gridS
 por exemplo:
 
 ``` python
-type = QUATERNARIO
-gridSearch = False
+type = TERNARIO
+gridSearch = True
 showWrongPredictions = True
 showPredictions = False
-predict(RANDOM_FOREST, type, gridSearch, showWrongPredictions, showPredictions)
+rfeEnabled = False
+pcaEnabled = False
+predict(NAIVE_BAYES, type, gridSearch, showWrongPredictions, showPredictions, rfeEnabled, pcaEnabled)
 ```
+
+Nesse caso, por exemplo, será executado o NaiveBayes com o GridSearch e mostrando as predições erradas.
 
 Onde,
 `type` é a quantidade de tipos de tweets. O Quaternário tem, pro exemplo, Positivo, Negativo, Neutro e Irrelevante.
-`gridSearch` é se vai utilizar o gridSearch ou não.
+`gridSearch` se vai utilizar o gridSearch ou não(Somente NaiveBayes).
+`rfeEnabled` se vai utilizar o rfe ou não(Somente SVM).
+`pcaEnabled` se vai utilizar o pca ou não(Somente SVM).
 `showWrongPredictions` Mostrar ou não as previsões erradas do classificador.
 `showPredictions` Mostrar ou não todas as predições.
 
 `DECISION_TREE`, `NAIVE_BAYES`, `RANDOM_FOREST`, `SVM` são as constantes que representam os classificadores.
+
+Ao final da execução, será escrito num arquivo .txt o relatório da execução. Todos relatórios gerados ficarão na pasta `execução`.
+
+E nesse relatório haverá todas as informações sobre a execução, precisão, predições, tamanho do dado de teste e trainamento, arquivos usados e etc.
 
 ### Módulos usados
 `SciPy`
@@ -51,7 +62,7 @@ Onde,
 | Irr | 19  | 9   | 51  | 6   |
 
 Nessa exemplo, vemos que a maior confusão ocorre na categoria Irregular. Ela é muito confundida com Neutro e Positivo.
-Mas no geral, o resultado é muito bom.
+Mas, no geral, o resultado é bom.
 
 ### Util.py
 Contem funções e classes utilitárias.
