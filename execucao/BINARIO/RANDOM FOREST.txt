@@ -1,0 +1,24 @@
+Classifier: Random Forest
+Mode: Binário
+GridSearch: False
+RFE: False
+PCA: False
+Used files for training: twitter-sanders-apple3.csv;
+Used files for testing: twitter-sanders-apple2.csv;
+DataTrain length: 479
+DataTest length: 479
+
+-----PREDCTION INFO-----
+Accuracy: 1.0
+
+Report:
+             precision    recall  f1-score   support
+
+        pos       1.00      1.00      1.00       163
+        neg       1.00      1.00      1.00       316
+
+avg / total       1.00      1.00      1.00       479
+
+Confusion Matrix:
+[[163   0]
+ [  0 316]]

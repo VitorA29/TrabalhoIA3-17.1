@@ -1,0 +1,26 @@
+Classifier: Naive Bayes
+Mode: Ternário
+GridSearch: False
+RFE: False
+PCA: False
+Used files for training: full-corpus.csv;
+Used files for testing: twitter-sanders-apple3.csv;
+DataTrain length: 3428
+DataTest length: 988
+
+-----PREDCTION INFO-----
+Accuracy: 0.636639676113
+
+Report:
+             precision    recall  f1-score   support
+
+        pos       1.00      0.11      0.20       163
+        neg       0.99      0.32      0.49       316
+        neu       0.59      1.00      0.74       509
+
+avg / total       0.78      0.64      0.57       988
+
+Confusion Matrix:
+[[ 18   1 144]
+ [  0 102 214]
+ [  0   0 509]]

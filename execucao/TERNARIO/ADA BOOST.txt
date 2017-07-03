@@ -1,0 +1,26 @@
+Classifier: ADA Boost
+Mode: Ternário
+GridSearch: False
+RFE: False
+PCA: False
+Used files for training: full-corpus.csv;
+Used files for testing: twitter-sanders-apple3.csv;
+DataTrain length: 3428
+DataTest length: 988
+
+-----PREDCTION INFO-----
+Accuracy: 0.676113360324
+
+Report:
+             precision    recall  f1-score   support
+
+        pos       0.73      0.46      0.56       163
+        neg       0.72      0.49      0.58       316
+        neu       0.65      0.86      0.74       509
+
+avg / total       0.69      0.68      0.66       988
+
+Confusion Matrix:
+[[ 75  10  78]
+ [  8 155 153]
+ [ 20  51 438]]

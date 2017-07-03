@@ -1,0 +1,26 @@
+Classifier: SVM
+Mode: Ternário
+GridSearch: False
+RFE: False
+PCA: False
+Used files for training: full-corpus.csv;
+Used files for testing: twitter-sanders-apple3.csv;
+DataTrain length: 3428
+DataTest length: 988
+
+-----PREDCTION INFO-----
+Accuracy: 0.933198380567
+
+Report:
+             precision    recall  f1-score   support
+
+        pos       0.97      0.80      0.88       163
+        neg       0.97      0.91      0.94       316
+        neu       0.90      0.99      0.94       509
+
+avg / total       0.94      0.93      0.93       988
+
+Confusion Matrix:
+[[130   4  29]
+ [  2 289  25]
+ [  2   4 503]]

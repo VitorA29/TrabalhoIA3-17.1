@@ -1,5 +1,6 @@
 import sys
 import shutil
+import os
 from Util import getClassificadoresQTD, SVM
 from predict import predict
 
@@ -22,7 +23,8 @@ while (len(sys.argv)==3):
         print("showPredictions invalido\n")
         break
 
-    shutil.rmtree("execucao/")
+    if os.path.exists("execucao/"):
+        shutil.rmtree("execucao/")
 
     for j in range(3):
         for i in range(getClassificadoresQTD()):
