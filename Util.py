@@ -234,18 +234,18 @@ def getWrongPredictions(predictions, target, text):
 
 def write2TxtFile(predicted, testData, trainData, type, classifier, showWrongPredict, showPredictions, gridSearch, rfeEnabled, pcaEnabled, mostInformative):
 
-    if not os.path.exists("execucao/" + getModoStrDir(type)):
-        os.makedirs("execucao/" + getModoStrDir(type))
-
-    fname = "execucao/" + getModoStrDir(type) + "/" + getClassifierName(classifier).upper()
+    fname = getModoStrDir(type) + "/" + getClassifierName(classifier).upper()
     if gridSearch==True:
         fname += "_GRIDSEARCH"
     if rfeEnabled==True:
         fname += "_RFE"
     if pcaEnabled==True:
         fname += "_PCA"
+
+    if not os.path.exists("execucao/" + getModoStrDir(type)):
+        os.makedirs("execucao/" + getModoStrDir(type))
  
-    text_file = open(fname + ".txt", "w")
+    text_file = open("execucao/" +  fname + ".txt", "w")
     print("Iteração atual: " + fname)
 
     text_file.write("Classifier: %s\n" % getClassifierName(classifier))
@@ -310,10 +310,21 @@ def write2TxtFile(predicted, testData, trainData, type, classifier, showWrongPre
 
 def write2TexFile(predicted, testData, type, classifier, gridSearch, rfeEnabled, pcaEnabled):
 
-    text_file = open("execucao/av_" + getModoStrDir(type).lower() +".tex", "a")
+    fname =getModoStrDir(type) + "/" + getClassifierName(classifier).upper()
+    if gridSearch==True:
+        fname += "_GRIDSEARCH"
+    if rfeEnabled==True:
+        fname += "_RFE"
+    if pcaEnabled==True:
+        fname += "_PCA"
+
+    if not os.path.exists("execucao/tex/" + getModoStrDir(type)):
+        os.makedirs("execucao/tex/" + getModoStrDir(type))
+
+    print("Tex: " + fname)
+    text_file = open("execucao/tex/" + fname +".tex", "w")
 
     comment = getClassifierName(classifier).lower() + "_" + getModoStrDir(type).lower()
-    print("Tex: " + comment)
     text_file.write("%" + comment + "\n")
     text_file.write("\\begin{table}[h!]\n")
     text_file.write("\\centering\n")
@@ -392,6 +403,6 @@ def write2TexFile(predicted, testData, type, classifier, gridSearch, rfeEnabled,
     text_file.write("\\textbf{acurácia} & \\multicolumn{3}{|c|}{%s}\\\\ \\hline\n" % metrics.accuracy_score(testData.target, predicted))
     text_file.write("\\end{tabular}\n")
     text_file.write("\\end{minipage}\n")
-    text_file.write("\\end{table}\n\n")
+    text_file.write("\\end{table}")
 
     text_file.close()
