@@ -93,7 +93,7 @@ def naiveBayes():
 def randomForest():
     text_clf = Pipeline([('vect', CountVectorizer()),
                          ('tfidf', TfidfTransformer()),
-                         ('clf', RandomForestClassifier(n_estimators=100)),
+                         ('clf', RandomForestClassifier(n_estimators=10)),
                          ])
 
     return text_clf
@@ -145,4 +145,4 @@ showWrongPredictions = True
 showPredictions = False
 rfeEnabled = False
 pcaEnabled = False
-predict(DECISION_TREE, type, gridSearch, showWrongPredictions, showPredictions, rfeEnabled, pcaEnabled)
+predict(SVM, type, gridSearch, showWrongPredictions, showPredictions, rfeEnabled, pcaEnabled)
