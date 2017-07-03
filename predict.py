@@ -94,7 +94,7 @@ def naiveBayes():
 def randomForest():
     text_clf = Pipeline([('vect', CountVectorizer()),
                          ('tfidf', TfidfTransformer()),
-                         ('clf', RandomForestClassifier(n_estimators=100)),
+                         ('clf', RandomForestClassifier(n_estimators=10)),
                          ])
 
     return text_clf
@@ -139,3 +139,11 @@ def ada():
                          ('clf', AdaBoostClassifier(n_estimators=100)),
                          ])
     return text_clf
+
+type = QUATERNARIO
+gridSearch = False
+showWrongPredictions = True
+showPredictions = False
+rfeEnabled = False
+pcaEnabled = False
+predict(SVM, type, gridSearch, showWrongPredictions, showPredictions, rfeEnabled, pcaEnabled)

@@ -1,0 +1,6 @@
+O GridSearch vai realizar todas as combinações dos parâmetros, vai realizar a validão cruzada para cada e determinar qual dessas combinações tem a melhor performance.
+
+
+
+http://scikit-learn.org/stable/modules/grid_search.html
+https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning)
