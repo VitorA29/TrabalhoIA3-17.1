@@ -1,6 +1,8 @@
 Classifier: Naive Bayes
 Mode: Quaternário
 GridSearch: False
+RFE: False
+PCA: False
 Used files for training: full-corpus.csv;full_training_dataset.csv;twitter-sanders-apple2.csv;
 Used files for testing: irrelevantTest.csv;twitter-sanders-apple3.csv;
 DataTrain length: 27066

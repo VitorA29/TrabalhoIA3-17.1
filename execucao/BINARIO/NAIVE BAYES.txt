@@ -1,45 +1,27 @@
 Classifier: Naive Bayes
 Mode: Binário
-GridSearch: False
-Used files for training: twitter-sanders-apple3.csv
-Used files for testing: twitter-sanders-apple2.csv
+GridSearch: True
+RFE: False
+PCA: False
+Used files for training: twitter-sanders-apple3.csv;
+Used files for testing: twitter-sanders-apple2.csv;
 DataTrain length: 479
 DataTest length: 479
 
 -----PREDCTION INFO-----
-Accuracy: 0.956158663883
+Accuracy: 0.997912317328
 
 Report:
              precision    recall  f1-score   support
 
-        pos       1.00      0.87      0.93       163
-        neg       0.94      1.00      0.97       316
+        pos       0.99      1.00      1.00       163
+        neg       1.00      1.00      1.00       316
 
-avg / total       0.96      0.96      0.96       479
+avg / total       1.00      1.00      1.00       479
 
 Confusion Matrix:
-[[142  21]
- [  0 316]]
+[[163   0]
+ [  1 315]]
 
-21 Wrong Predictions:
-0 - [Correct: pos ; Predicted: neg] apple good ipad
-1 - [Correct: pos ; Predicted: neg] ios apple
-2 - [Correct: pos ; Predicted: neg] azee v apple umber appstore is well done so is itunes on the mobile devices i was talking about desktop app
-3 - [Correct: pos ; Predicted: neg] well apple fixed my ios battery drain problem with a replacement iphone it s working like a champ now
-4 - [Correct: pos ; Predicted: neg] another mention for apple store http t co fiioapkt rt floridamike once again getting great customer service from the apple store
-5 - [Correct: pos ; Predicted: neg] hey apple i hate my computer i need a mack wanna send me a free one
-6 - [Correct: pos ; Predicted: neg] icloud set up was flawless and works like a champ to the cloud apple
-7 - [Correct: pos ; Predicted: neg] wisconsin mommy apple i d totally email the company i always get great service at our apple store
-8 - [Correct: pos ; Predicted: neg] is it just me or is ios faster for the ipad apple
-9 - [Correct: pos ; Predicted: neg] iancollinsuk apple i like what you did there
-10 - [Correct: pos ; Predicted: neg] updated my ios and started using cloud services pretty bad ass apple my iphone gs still the champ
-11 - [Correct: pos ; Predicted: neg] day i m thankful for the great customer service received today from apple via phone cs new phone on the way daysofgratefulness
-12 - [Correct: pos ; Predicted: neg] apple the iphone s is great genius
-13 - [Correct: pos ; Predicted: neg] rygurl you need an apple iphone s with siri
-14 - [Correct: pos ; Predicted: neg] so i am using my work pc never ever to get a feel for it it has the worst speakers ever apple you have spoiled me imamac
-15 - [Correct: pos ; Predicted: neg] my iphone s battery lasted longer than a day that hasn t happened since my edge iphone nice job apple
-16 - [Correct: pos ; Predicted: neg] thank you apple for making my ipad feel like new again with your new ios
-17 - [Correct: pos ; Predicted: neg] blackberry facebook u r really about to make me throw this blackberry in the trash an get an apple iphone facebook upload issues
-18 - [Correct: pos ; Predicted: neg] hell yes got my contacts back thanks apple
-19 - [Correct: pos ; Predicted: neg] apple has changed life
-20 - [Correct: pos ; Predicted: neg] mad props to the apple employee that didn t charge me to replace the back plate on my iphone made my day
+1 Wrong Predictions:
+0 - [Correct: neg ; Predicted: pos] apple siri is down
