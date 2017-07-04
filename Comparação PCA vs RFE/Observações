@@ -1,0 +1,29 @@
+### RFE vs PCA
+
+Comparação feita com o classificador SVM binário.
+A Feature Selection considera um subconjunto de atributos que tem maior impacto na classificação. As outras são eliminaas.
+
+### Palavras mais importantes sem RFE e PCA
+pos: mood job improvements looks love excited sweet loving thanks amazing
+neg: battery crashing failed shit wtf hate fail retweets eclipsed fix
+
+-   O Classificador SVM(Binário) sem RFE e PCA tem uma precisçao de 0.993736951983.
+-   Executando o classificador SVM(Binário) com o RFE obtivemos uma precisão de 0.810020876827
+-   Executando o classificador SVM(Binário) com o PCA obtivemos uma precisão de 0.853862212944
+
+Palavras mais importantes na execução com RFE. Utilizando o atributo ranking_ para ranquear as features.
+COM RFE
+1 - actually
+2 - amazing
+3 - apologize
+4 - appreciated
+5 - awesome
+6 - backside
+7 - best
+8 - bgotzj
+9 - bitching
+10 - bkad
+
+COM PCA
+
+

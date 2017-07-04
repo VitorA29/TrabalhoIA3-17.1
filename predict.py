@@ -53,6 +53,9 @@ def predict(classifier, type, gridSearch, showWrongPredict, showPredictions, rfe
 
     #print(text_clf.get_params()['slct'].explained_variance_ratio_.sum())
 
+    #if(classifier == SVM):
+        #print_top10(text_clf.get_params()['vect'], text_clf.get_params()['clf'], getCategory(type))
+
     mostInformative = []
     try:
         mostInformative = getMostInformative(10, text_clf)
@@ -62,7 +65,15 @@ def predict(classifier, type, gridSearch, showWrongPredict, showPredictions, rfe
     #Escreve no arquivo txt.
     write2TxtFile(predicted, testData, data, type, classifier, showWrongPredict, showPredictions, gridSearch, rfeEnabled, pcaEnabled, mostInformative)
     #Escreve no arquivo .tex
-    #write2TexFile(predicted, testData, type, classifier, gridSearch, rfeEnabled, pcaEnabled)
+    write2TexFile(predicted, testData, type, classifier, gridSearch, rfeEnabled, pcaEnabled)
+
+def print_top10(vectorizer, clf, class_labels):
+    """Prints features with the highest coefficient values, per class"""
+    feature_names = vectorizer.get_feature_names()
+    for i, class_label in enumerate(class_labels):
+        top10 = np.argsort(clf.coef_[i])[-10:]
+        print("%s: %s" % (class_label,
+              " ".join(feature_names[j] for j in top10)))
 
 def getClassifier(classifier, rfeEnabled, pcaEnabled):
     if (classifier == DECISION_TREE):
@@ -129,7 +140,7 @@ def svm(rfeEnabled, pcaEnabled):
         else:
             text_clf = Pipeline([('vect', CountVectorizer()),
                                  ('tfidf', TfidfTransformer()),
-                                 ('clf', SVC(kernel="linear", C=1)),
+                                 ('clf', LinearSVC()),
                                  ])
     return text_clf
 
@@ -140,10 +151,10 @@ def ada():
                          ])
     return text_clf
 
-type = QUATERNARIO
+type = BINARIO
 gridSearch = False
 showWrongPredictions = True
 showPredictions = False
 rfeEnabled = False
-pcaEnabled = False
-predict(DECISION_TREE, type, gridSearch, showWrongPredictions, showPredictions, rfeEnabled, pcaEnabled)
+pcaEnabled = True
+predict(SVM, type, gridSearch, showWrongPredictions, showPredictions, rfeEnabled, pcaEnabled)

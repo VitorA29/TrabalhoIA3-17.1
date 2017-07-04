@@ -1,5 +1,5 @@
 Classifier: SVM
-Mode: Binï¿½rio
+Mode: Binário
 GridSearch: False
 RFE: False
 PCA: True

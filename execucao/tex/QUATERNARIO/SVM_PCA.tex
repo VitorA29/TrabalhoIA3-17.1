@@ -1,0 +1,33 @@
+%svm_quaternario
+\begin{table}[h!]
+\centering
+\begin{minipage}[b]{0.45\linewidth}
+\caption{Matriz de Confusão Quaternário: \textit{SVM com PCA}}
+\label{tab:mcb-nb}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+$\textrm{Atual}\diagdown\textrm{Previsto}$ & \textbf{positivo} & \textbf{negativo} & \textbf{neutro} & \textbf{irrelevante}\\ \hline
+\textbf{positivo} & 92 & 17 & 54 & 0\\ \hline
+\textbf{negativo} & 23 & 246 & 47 & 0\\ \hline
+\textbf{neutro} & 35 & 83 & 389 & 2\\ \hline
+\textbf{irrelevante} & 9 & 12 & 30 & 34\\ \hline
+\end{tabular}
+\end{minipage}
+\hspace{0.5cm}
+\begin{minipage}[b]{0.45\linewidth}
+
+\centering
+\caption{Medidas da Matriz de Confusão}
+\label{tab:mmcb-nb}
+\begin{tabular}{|l|l|l|l|}
+\hline
+         & \textbf{precisão} & \textbf{recall} & \textbf{f1-score} \\ \hline
+\textbf{positivo} & 0.58     & 0.56   & 0.57     \\ \hline
+\textbf{negativo} & 0.69     & 0.78   & 0.73     \\ \hline
+\textbf{neutro} & 0.75     & 0.76   & 0.76     \\ \hline
+\textbf{irrelevante} & 0.94     & 0.40   & 0.56     \\ \hline
+\textbf{média} & 0.72     & 0.71   & 0.70     \\ \hline
+\textbf{acurácia} & \multicolumn{3}{|c|}{0.709226467847}\\ \hline
+\end{tabular}
+\end{minipage}
+\end{table}

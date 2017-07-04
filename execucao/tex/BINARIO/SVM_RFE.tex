@@ -1,0 +1,29 @@
+%svm_binario
+\begin{table}[h!]
+\centering
+\begin{minipage}[b]{0.45\linewidth}
+\caption{Matriz de Confusão Binário: \textit{SVM com RFE}}
+\label{tab:mcb-nb}
+\begin{tabular}{|l|l|l|}
+\hline
+$\textrm{Atual}\diagdown\textrm{Previsto}$ & \textbf{positivo} & \textbf{negativo}\\ \hline
+\textbf{positivo} & 73 & 90\\ \hline
+\textbf{negativo} & 1 & 315\\ \hline
+\end{tabular}
+\end{minipage}
+\hspace{0.5cm}
+\begin{minipage}[b]{0.45\linewidth}
+
+\centering
+\caption{Medidas da Matriz de Confusão}
+\label{tab:mmcb-nb}
+\begin{tabular}{|l|l|l|l|}
+\hline
+         & \textbf{precisão} & \textbf{recall} & \textbf{f1-score} \\ \hline
+\textbf{positivo} & 0.99     & 0.45   & 0.62     \\ \hline
+\textbf{negativo} & 0.78     & 1.00   & 0.87     \\ \hline
+\textbf{média} & 0.85     & 0.81   & 0.79     \\ \hline
+\textbf{acurácia} & \multicolumn{3}{|c|}{0.810020876827}\\ \hline
+\end{tabular}
+\end{minipage}
+\end{table}

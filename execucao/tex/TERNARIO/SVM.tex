@@ -1,0 +1,31 @@
+%svm_ternario
+\begin{table}[h!]
+\centering
+\begin{minipage}[b]{0.45\linewidth}
+\caption{Matriz de Confusão Ternário: \textit{SVM}}
+\label{tab:mcb-nb}
+\begin{tabular}{|l|l|l|l|}
+\hline
+$\textrm{Atual}\diagdown\textrm{Previsto}$ & \textbf{positivo} & \textbf{negativo} & \textbf{neutro}\\ \hline
+\textbf{positivo} & 160 & 1 & 2\\ \hline
+\textbf{negativo} & 0 & 312 & 4\\ \hline
+\textbf{neutro} & 4 & 2 & 503\\ \hline
+\end{tabular}
+\end{minipage}
+\hspace{0.5cm}
+\begin{minipage}[b]{0.45\linewidth}
+
+\centering
+\caption{Medidas da Matriz de Confusão}
+\label{tab:mmcb-nb}
+\begin{tabular}{|l|l|l|l|}
+\hline
+         & \textbf{precisão} & \textbf{recall} & \textbf{f1-score} \\ \hline
+\textbf{positivo} & 0.98     & 0.98   & 0.98     \\ \hline
+\textbf{negativo} & 0.99     & 0.99   & 0.99     \\ \hline
+\textbf{neutro} & 0.99     & 0.99   & 0.99     \\ \hline
+\textbf{média} & 0.99     & 0.99   & 0.99     \\ \hline
+\textbf{acurácia} & \multicolumn{3}{|c|}{0.986842105263}\\ \hline
+\end{tabular}
+\end{minipage}
+\end{table}

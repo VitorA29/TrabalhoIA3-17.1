@@ -9,21 +9,18 @@ DataTrain length: 479
 DataTest length: 479
 
 -----PREDCTION INFO-----
-Accuracy: 0.993736951983
+Accuracy: 1.0
 
 Report:
              precision    recall  f1-score   support
 
-        pos       1.00      0.98      0.99       163
-        neg       0.99      1.00      1.00       316
+        pos       1.00      1.00      1.00       163
+        neg       1.00      1.00      1.00       316
 
-avg / total       0.99      0.99      0.99       479
+avg / total       1.00      1.00      1.00       479
 
 Confusion Matrix:
-[[160   3]
+[[163   0]
  [  0 316]]
 
-3 Wrong Predictions:
-0 - [Correct: pos ; Predicted: neg] ios apple
-1 - [Correct: pos ; Predicted: neg] azee v apple umber appstore is well done so is itunes on the mobile devices i was talking about desktop app
-2 - [Correct: pos ; Predicted: neg] hey apple i hate my computer i need a mack wanna send me a free one
+0 Wrong Predictions:

@@ -23,6 +23,4 @@ Classificadores:
 -   Os dados utilizados na predição quaternária foram, para treinamento, full-corpus.csv, full_training_dataset.csv e twitter-sanders-apple2.csv.
     E para predição irrelevantTest.csv e twitter-sanders-apple3.csv.
 -   As observações mudaram pouco dos resultados da predição ternária. Porém agora a classe irrelevante é muito confundida com todas as outras classes.
-
--   
 -   Ranking(Melhor para pior): RandomForest, DecisionTree, SVM e NaiveBayes.

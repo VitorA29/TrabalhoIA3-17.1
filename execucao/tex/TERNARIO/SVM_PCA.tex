@@ -1,0 +1,31 @@
+%svm_ternario
+\begin{table}[h!]
+\centering
+\begin{minipage}[b]{0.45\linewidth}
+\caption{Matriz de Confusão Ternário: \textit{SVM com PCA}}
+\label{tab:mcb-nb}
+\begin{tabular}{|l|l|l|l|}
+\hline
+$\textrm{Atual}\diagdown\textrm{Previsto}$ & \textbf{positivo} & \textbf{negativo} & \textbf{neutro}\\ \hline
+\textbf{positivo} & 116 & 9 & 38\\ \hline
+\textbf{negativo} & 8 & 267 & 41\\ \hline
+\textbf{neutro} & 14 & 19 & 476\\ \hline
+\end{tabular}
+\end{minipage}
+\hspace{0.5cm}
+\begin{minipage}[b]{0.45\linewidth}
+
+\centering
+\caption{Medidas da Matriz de Confusão}
+\label{tab:mmcb-nb}
+\begin{tabular}{|l|l|l|l|}
+\hline
+         & \textbf{precisão} & \textbf{recall} & \textbf{f1-score} \\ \hline
+\textbf{positivo} & 0.84     & 0.71   & 0.77     \\ \hline
+\textbf{negativo} & 0.91     & 0.84   & 0.87     \\ \hline
+\textbf{neutro} & 0.86     & 0.94   & 0.89     \\ \hline
+\textbf{média} & 0.87     & 0.87   & 0.87     \\ \hline
+\textbf{acurácia} & \multicolumn{3}{|c|}{0.869433198381}\\ \hline
+\end{tabular}
+\end{minipage}
+\end{table}
