@@ -1,0 +1,105 @@
+Classifier: Naive Bayes
+Mode: Quatern�rio
+GridSearch: True
+RFE: False
+PCA: False
+Used files for training: full-corpus.csv;full_training_dataset.csv;twitter-sanders-apple2.csv;
+Used files for testing: irrelevantTest.csv;twitter-sanders-apple3.csv;
+DataTrain length: 27066
+DataTest length: 1073
+
+-----PREDCTION INFO-----
+Accuracy: 0.939422180801
+
+Report:
+             precision    recall  f1-score   support
+
+        pos       0.91      0.96      0.93       163
+        neg       0.93      0.98      0.95       316
+        neu       0.95      0.99      0.97       509
+        irr       1.00      0.45      0.62        85
+
+avg / total       0.94      0.94      0.93      1073
+
+Best Estimator
+Pipeline(steps=[('vect', CountVectorizer(analyzer='word', binary=False, decode_error='strict',
+        dtype=<class 'numpy.int64'>, encoding='utf-8', input='content',
+        lowercase=True, max_df=1.0, max_features=None, min_df=1,
+        ngram_range=(1, 2), preprocessor=None, stop_words=None,
+        strip...lse,
+         use_idf=False)), ('clf', MultinomialNB(alpha=0.01, class_prior=None, fit_prior=True))])
+
+Best Score: 0.72005468115
+
+Confusion Matrix:
+[[156   0   7   0]
+ [  0 311   5   0]
+ [  0   6 503   0]
+ [ 15  19  13  38]]
+
+65 Wrong Predictions:
+0 - [Correct: irr ; Predicted: neu] cenaze nedeniyle kapal y z apple http t co j l kk
+1 - [Correct: irr ; Predicted: pos] dancing bear apple store lincoln center http t co xbmjupmq
+2 - [Correct: irr ; Predicted: pos] iphone apple ne jp
+3 - [Correct: irr ; Predicted: neg] sail phoenix next stop after quimera rock apple house
+4 - [Correct: irr ; Predicted: neu] chill lol rt apple rt styl standin what is imessage
+5 - [Correct: irr ; Predicted: neu] lennydubz you do know that apple is not the company and why u blasting me on twitter
+6 - [Correct: irr ; Predicted: neu] wat een belachelijke prijzen kpn prijzen iphone s duiken op http t co ep kzupb via iphoneclub kpn iphone apple
+7 - [Correct: irr ; Predicted: neu] fullscreen berall nur der appstore hat keine option daf r warum apple
+8 - [Correct: irr ; Predicted: neg] love how rogersbiz tell u they re not allowed to sell the s for more than apple but yet want more for the g
+9 - [Correct: irr ; Predicted: pos] apple bees w deejay tinyt
+10 - [Correct: irr ; Predicted: neu] complimenti sinceri ad apple per ios va benissimo su iphone e ipad
+11 - [Correct: irr ; Predicted: neg] rt supaluga rt modalnho new mov apple store starring ichiro repeat pattern moda http t co u a ivk
+12 - [Correct: irr ; Predicted: pos] imightbewrong apple inthequeencity teamapple
+13 - [Correct: irr ; Predicted: neg] rt modalnho new mov apple store starring ichiro repeat pattern moda http t co u a ivk
+14 - [Correct: irr ; Predicted: neu] cc apple http t co tnodvs
+15 - [Correct: irr ; Predicted: neg] moda modalnho apple store starring ichiro repeat pattern coffee shops moda http t co zbi rz s
+16 - [Correct: irr ; Predicted: neg] so ya my itunes is in japanese
+17 - [Correct: irr ; Predicted: neg] rt leahjanell this moment w shyah dianigroves is brought to you by nba apple riesling oh and http t co dp xids
+18 - [Correct: irr ; Predicted: neg] this moment w shyah dianigroves is brought to you by nba apple riesling oh and http t co tmq jru
+19 - [Correct: irr ; Predicted: neg] partner with apple i d pay for anibulb washingtonpost would you pay for this lightbulb http t co zgfsehao
+20 - [Correct: irr ; Predicted: neg] chefreggie rolandsmartin apple get ready tampa bay the martin s are coming to town bring it on buccaneers
+21 - [Correct: irr ; Predicted: pos] heidiknyc apple badog cute dinner when ur back from shanghai xx
+22 - [Correct: irr ; Predicted: neu] apple dette blir for dumt http t co zqkmkq
+23 - [Correct: irr ; Predicted: pos] teach different iteach therefore iam http t co yozd hcx apple teachforus teachforamerica ipad stevejobs
+24 - [Correct: irr ; Predicted: neg] deal schn ppchen update ipad ipad generation general berholt ab apple http t co xdtdzurd
+25 - [Correct: irr ; Predicted: pos] charence ramos apple jane heimacho tintin julielmo new followers na follow back ko na po kayo
+26 - [Correct: irr ; Predicted: neu] ipad ipad generation general berholt ab apple der tablet von apple bleibt weiterhin recht preisstab http t co h anhavu
+27 - [Correct: irr ; Predicted: neg] ipad ipad generation general berholt ab apple http t co tov xkq
+28 - [Correct: irr ; Predicted: neu] hazi apple com
+29 - [Correct: irr ; Predicted: pos] n apple vai trabalhar no iphone
+30 - [Correct: irr ; Predicted: pos] i guess i should go hublot apple and zegnaofficial shopping next week birthdays only come once a year lol
+31 - [Correct: irr ; Predicted: neu] iphone apple store g
+32 - [Correct: irr ; Predicted: neg] new arrivals and percent off clearance of matching g http t co qqcwyl b lds scriptures apple e book
+33 - [Correct: irr ; Predicted: neg] today very cheap for patio furniture san anton http t co sd i bjm plastic apple bags
+34 - [Correct: irr ; Predicted: neg] causando na loja da apple
+35 - [Correct: irr ; Predicted: pos] find more the best angel christmas tree o http t co d g ry d starfrit apple peeler
+36 - [Correct: irr ; Predicted: pos] find more the best maytag washer control board deal check pric http t co sndkag e best apple peeler
+37 - [Correct: irr ; Predicted: pos] find more the best cyst on knee deal check price of best cyst on knee and offers now http t co qzynnuvi automatic apple
+38 - [Correct: irr ; Predicted: neg] do not check other site for uhmw conveyor now you go best site of uhmw conveyor http t co rmv d q pin cable apple
+39 - [Correct: irr ; Predicted: neu] do not check other site for ed hardy black long sl http t co hengqgqp unlocked apple touch phones
+40 - [Correct: irr ; Predicted: pos] hello you are find mesh jacket motorcycle our site have more mesh http t co tyg ualc ace hardware apple pee
+41 - [Correct: irr ; Predicted: neu] to reiniciando meu computador as id ia apple
+42 - [Correct: irr ; Predicted: neg] chriswglowe apple gadgetlab you can tell me tonight cracking open the vodka tonight if you fancy
+43 - [Correct: irr ; Predicted: neg] buy more products of hemp jewelry instructions now free ship http t co bps t lehmans apple peeler
+44 - [Correct: irr ; Predicted: pos] today very cheap for hemp for fuel and free shipping for hemp for fuel too http t co gyjlbmw farberware apple peeler
+45 - [Correct: irr ; Predicted: neg] discount hemp knots today cheap price too save money for best hemp knots http t co h joplq avanti apple peeler
+46 - [Correct: irr ; Predicted: pos] today very cheap for icemaker and free shipping for icemaker too http t co clkwaio french apple peeler
+47 - [Correct: pos ; Predicted: neu] ios apple
+48 - [Correct: pos ; Predicted: neu] azee v apple umber appstore is well done so is itunes on the mobile devices i was talking about desktop app
+49 - [Correct: pos ; Predicted: neu] making the switch from android to apple iphone iphone s smartphone stevejobs apple store http t co kj pjvkh
+50 - [Correct: pos ; Predicted: neu] one word wow rt jldavid iphone s first weekend sales top four million http t co zx pw gt via apple
+51 - [Correct: pos ; Predicted: neu] loving my new iphone s thanks apple for ios
+52 - [Correct: pos ; Predicted: neu] apple siri is amazing
+53 - [Correct: pos ; Predicted: neu] rygurl you need an apple iphone s with siri
+54 - [Correct: neg ; Predicted: neu] apple to repair my ipad apple you ve lost me and my a year android here i come
+55 - [Correct: neg ; Predicted: neu] asimrang apple umber the desktop app is wack though
+56 - [Correct: neg ; Predicted: neu] where is my iphone apple
+57 - [Correct: neg ; Predicted: neu] apple siri is down
+58 - [Correct: neg ; Predicted: neu] also ericgreenspan don t forget apple stop closing the app store after each bloody purchase
+59 - [Correct: neu ; Predicted: neg] leg nd apple the new iphone
+60 - [Correct: neu ; Predicted: neg] 
+61 - [Correct: neu ; Predicted: neg] keke blackberry apple haha i know so sad
+62 - [Correct: neu ; Predicted: neg] nansen apple i have not heard of that hubby had no problems i have not done it yet
+63 - [Correct: neu ; Predicted: neg] just made the switch from blackberry to apple and never looking back bbwho
+64 - [Correct: neu ; Predicted: neg] 

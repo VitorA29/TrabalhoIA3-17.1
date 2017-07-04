@@ -1,0 +1,17 @@
+O GridSearch vai realizar todas as combinações dos parâmetros, vai realizar a validão cruzada para cada e determinar qual dessas combinações tem a melhor performance.
+
+Experimentados o GridSearch usando o classificador NaiveBayes.
+
+Após realizar todas as combinações, a que obteve o melhor, no quaternário, resultado foi:
+Pipeline(steps=[('vect', CountVectorizer(analyzer='word', binary=False, decode_error='strict',
+        dtype=<class 'numpy.int64'>, encoding='utf-8', input='content',
+        lowercase=True, max_df=1.0, max_features=None, min_df=1,
+        ngram_range=(1, 2), preprocessor=None, stop_words=None,
+        strip...lse,
+         use_idf=False)), ('clf', MultinomialNB(alpha=0.01, class_prior=None, fit_prior=True))])
+
+BestScore: 0.72005468115
+
+Links
+http://scikit-learn.org/stable/modules/grid_search.html
+https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning)

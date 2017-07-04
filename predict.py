@@ -30,11 +30,6 @@ def predict(classifier, type, gridSearch, showWrongPredict, showPredictions, rfe
     text_clf = getClassifier(classifier, rfeEnabled, pcaEnabled)
 
     if(gridSearch and classifier == NAIVE_BAYES):
-        parameters = {'clf__max_depth': range(1, 100)}
-
-        parameters = {'C': [1e3, 5e3, 1e4, 5e4, 1e5],
-                      'gamma': [0.0001, 0.0005, 0.001, 0.005, 0.01, 0.1],}
-
         parameters = {'vect__ngram_range': [(1, 1), (1, 2)],
                       'tfidf__use_idf': (True, False),
                       'clf__alpha': (1e-2, 1e-3),
@@ -50,6 +45,12 @@ def predict(classifier, type, gridSearch, showWrongPredict, showPredictions, rfe
     testData = getTestData(type)
     docs_test = testData.data
     predicted = text_clf.predict(docs_test)
+
+    '''
+    print(sorted(text_clf.cv_results_.keys()))
+    print(text_clf.best_estimator_)
+    print(text_clf.best_score_)
+    '''
 
     #print(text_clf.get_params()['slct'].explained_variance_ratio_.sum())
 
@@ -123,7 +124,7 @@ def svm(rfeEnabled, pcaEnabled):
             text_clf = Pipeline([('vect', CountVectorizer()),
                                  ('tfidf', TfidfTransformer()),
                                  ('slct', TruncatedSVD(n_components=10)),
-                                 ('clf', RFE(estimator=SVC(kernel="linear", C=1), n_features_to_select=3)),
+                                 ('clf', RFE(estimator=SVC(kernel="linear", C=1), n_features_to_select=100)),
                                  ])
         else:
             text_clf = Pipeline([('vect', CountVectorizer()),
@@ -151,10 +152,10 @@ def ada():
                          ])
     return text_clf
 
-type = BINARIO
-gridSearch = False
+type = QUATERNARIO
+gridSearch = True
 showWrongPredictions = True
 showPredictions = False
 rfeEnabled = False
-pcaEnabled = True
-predict(SVM, type, gridSearch, showWrongPredictions, showPredictions, rfeEnabled, pcaEnabled)
+pcaEnabled = False
+predict(NAIVE_BAYES, type, gridSearch, showWrongPredictions, showPredictions, rfeEnabled, pcaEnabled)
