@@ -129,7 +129,7 @@ def svm(rfeEnabled, pcaEnabled):
         else:
             text_clf = Pipeline([('vect', CountVectorizer()),
                                  ('tfidf', TfidfTransformer()),
-                                 ('clf', RFE(estimator=SVC(kernel="linear", C=1), n_features_to_select=100)),
+                                 ('clf', RFE(estimator=SVC(kernel="linear", C=1), n_features_to_select=500)),
                                  ])
     else:
         if(pcaEnabled):
@@ -152,10 +152,10 @@ def ada():
                          ])
     return text_clf
 
-type = QUATERNARIO
-gridSearch = True
+type = BINARIO
+gridSearch = False
 showWrongPredictions = True
 showPredictions = False
-rfeEnabled = False
+rfeEnabled = True
 pcaEnabled = False
-predict(NAIVE_BAYES, type, gridSearch, showWrongPredictions, showPredictions, rfeEnabled, pcaEnabled)
+predict(SVM, type, gridSearch, showWrongPredictions, showPredictions, rfeEnabled, pcaEnabled)

@@ -1,0 +1,11 @@
+PCA é uma técnica que converte um conjunto de possíveis variáveis correlatas em um conjunjto de variáveis não correlatas chamada de 'componentes principais', usando transformação ortogonal.
+PCA é uma técnica que visa encontrar as features mais importantes para a variação dos dados. É usado justamente para reduzir a dimensionalidade de um conjunto de dados muito grande.
+Em poucas palavras, o PCA faz a seguinte pergunta: Existe algum subconjunto menor de parâmetros, 30% por exemplo, que consegue explicar 70% ou mais da variação do dado? 
+
+Feature Selection, também conhecido como Variable Selection ou Attribute Selection, é o processo de seleção, do conjunto de treinamento, de um subconjunto de features mais relevantes. Serve, basicamente para duas coisas: Facilita o trabalho do classificador, tornando-o mais eficiente, pois vai diminuir o numero de features. E isso é muito importante para classificadores no qual o numero de features afeta no tempo de treinamento. E, em segundo, Feature Selection, normalmente, aumenta a precisão, pois features que fogem muito do padrão e que podem causar uma piora na precisao são eliminadas.
+
+Feature Selection é diferente da Redução de Dimensionalidade. Ambos em métodos tem como objetivo diminuir o número de features da base de dados, mas a redução de dimensionalidade realiza esse trabalho combinando os atributos, enquanto a feature selection inclue e excluem atributos presentes na base.
+
+Por exemplo, o PCA pode combinar 'bom' e 'bacana' numa base de dados, já que ambas tem quase o mesmo significado em vários contextos.
+
+http://machinelearningmastery.com/an-introduction-to-feature-selection/
