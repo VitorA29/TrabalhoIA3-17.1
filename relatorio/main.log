@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.22)  4 JUL 2017 22:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.22)  4 JUL 2017 22:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1792,9 +1792,6 @@ Overfull \hbox (11.24762pt too wide) in paragraph at lines 173--173
  []
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
 Overfull \hbox (48.95001pt too wide) in paragraph at lines 208--208
 [][] 
  []
@@ -1885,17 +1882,20 @@ Overfull \hbox (22.71951pt too wide) in paragraph at lines 434--434
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) (./txt/conc.tex) (./main.bbl [4] [5]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 43.
+) (./txt/conc.tex) (./main.bbl [4]
+Overfull \vbox (2.43628pt too high) has occurred while \output is active []
 
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
+
+[5]
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 43.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/it' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 43.
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 43.
- [6]) [7] (./main.aux)
+) [6] (./main.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1918,10 +1918,10 @@ vbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (7 pages, 127623 bytes).
+Output written on main.pdf (6 pages, 127396 bytes).
 PDF statistics:
- 69 PDF objects out of 1000 (max. 8388607)
- 49 compressed objects within 1 object stream
+ 64 PDF objects out of 1000 (max. 8388607)
+ 45 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
