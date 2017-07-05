@@ -6,6 +6,18 @@ Para a execução dos classificadores ternários: Decision tree puro, Naive Baye
 
 Para a execução dos classificadores quaternários: Decision tree puro, Naive Bayes com GridSearch, Random Forest puro, SVM puro e SVM com PCA foram usados os arquivos full-corpus.csv, full\_training\_dataset.csv e twitter-sanders-apple2.csv para treino, com um total de 27066 \emph{tweets} e para testes, foram usados os arquivos irrelevantTest.csv e twitter-sanders-apple3.csv com um total de 1073 \emph{tweets}.
 
+O GridSearch foi experimentado usando o classificador Naive Bayes. Usando  os parâmetros 'vect\_\_ngram\_range': [(1, 1), (1, 2)],
+'tfidf\_\_use\_idf': (True, False) e 'clf\_\_alpha': (1e-2, 1e-3) (pode ser visto em predict.py). Ao executá-lo, a seguinte combinação de parâmetros encontrada pelo GridSearch que maximizou a precisão: Pipeline(steps=[('vect', CountVectorizer(analyzer='word', binary=False, decode\_error='strict',dtype=<class 'numpy.int64'>, encoding='utf-8', input='content',
+        lowercase=True, max\_df=1.0, max\_features=None, min\_df=1,
+        ngram\_range=(1, 2), preprocessor=None, stop\_words=None,
+        strip...lse,
+         use\_idf=False)), ('clf', MultinomialNB(alpha=0.01, class\_prior=None, fit\_prior=True))]), onde a precisão foi de 93,9\%. Tal resultado pode ser encontrado na pasta Comparação GridSearch.
+
+Teoricamente, a \emph{feature selecion} deveria aumentar a precisão do classificador. Porém, ao executarmos o classificador binário (SVM binário), o resultado encontrado não foi esperado, que era o aumento da precisão: a precisão encontrada foi de 0.810020876827, com o RFE. Agora, sem o RFE, obtivemos um resultado melhor: uma precisão de 0.993736951983. Uma explicação para isso pode estar no tamanho do \emph{dataset} usado como treino, que é muito pequeno no caso do teste binário, uma vez que o RFE atua melhor em um ambiente com muitos \emph{features},onde quanto mais \emph{features}, maior a quantidade de coisas inúteis que ele pode remover. Tais \emph{logs} de teste podem ser encontrados no diretório Comparação PCA vs RFE/BINÁRIO.
+
+Na execução do PCA com o SVM binário, obtivemos um resultado que também diminuiu a precisão, comparado com o SVM puro binário. Uma possível explicação se encontra na suposição de reta que o PCA faz pode ter agrupado \emph{features} que não são muito correlatas no resultado final, prejudicando a precisão.
+             
+
 %binario -----------
 %binaria naïve bayes
 
@@ -319,6 +331,44 @@ $\textrm{Atual}\diagdown\textrm{Previsto}$ & \textbf{positivo} & \textbf{negativ
 }
 \end{table}
 %--
+
+%quaternaria Naïve Bayes
+\begin{table}[h!]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{minipage}[b]{0.45\linewidth}
+\caption{Matriz de Confusão Quartenário: \textit{Naïve Bayes c/ GridSearch}}
+\label{tab:mcq-nb}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+$\textrm{Atual}\diagdown\textrm{Previsto}$ & \textbf{positivo} & \textbf{negativo} & \textbf{neutro} & \textbf{irrelevante}\\ \hline
+\textbf{positivo} & 156 & 0 & 7 & 0\\ \hline
+\textbf{negativo} & 0 & 311 & 5 & 0\\ \hline
+\textbf{neutro} & 0 & 6 & 503 & 0 \\ \hline
+\textbf{irrelevante} & 15 & 19 & 13 & 38 \\ \hline
+\end{tabular}
+\end{minipage}
+\hspace{4.0 cm}
+\begin{minipage}[b]{0.45\linewidth}
+
+\centering
+\caption{Medidas da Matriz de Confusão}
+\label{tab:mmcq-nb}
+\begin{tabular}{|l|l|l|l|}
+\hline
+         & \textbf{precisão} & \textbf{recall} & \textbf{f1-score} \\ \hline
+\textbf{positivo} & 0.91    & 0.96   & 0.93     \\ \hline
+\textbf{negativo} & 0.93   & 0.98   & 0.95     \\ \hline
+\textbf{neutro} & 0.95  & 0.99   & 0.97     \\ \hline
+\textbf{irrelevante} & 1.00    &  0.45   & 0.62    \\ \hline
+\textbf{média}    & 0.94    & 0.94  & 0.93 \\ \hline
+\textbf{acurácia} & \multicolumn{3}{|c|}{0.939422180801} \\ \hline
+\end{tabular}
+\end{minipage}
+}
+\end{table}
+
+
 
 %quaternaria SVM
 \begin{table}[h!]
