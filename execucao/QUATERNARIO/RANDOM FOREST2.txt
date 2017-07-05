@@ -1,0 +1,28 @@
+Classifier: Random Forest
+Mode: Quaternário
+GridSearch: False
+RFE: False
+PCA: False
+Used files for training: twitter-sanders-apple2.csv;full-corpus.csv;full_training_dataset.csv;
+Used files for testing: irrelevantTest.csv;twitter-sanders-apple3.csv;
+DataTrain length: 27066
+DataTest length: 1073
+
+-----PREDCTION INFO-----
+Accuracy: 0.871388630009
+
+Report:
+             precision    recall  f1-score   support
+
+        pos       0.76      0.99      0.86       163
+        neg       0.88      0.98      0.93       316
+        neu       0.91      0.90      0.90       509
+        irr       1.00      0.08      0.15        85
+
+avg / total       0.89      0.87      0.84      1073
+
+Confusion Matrix:
+[[162   0   1   0]
+ [  7 309   0   0]
+ [ 25  27 457   0]
+ [ 19  16  43   7]]
