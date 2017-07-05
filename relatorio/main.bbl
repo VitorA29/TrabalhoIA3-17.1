@@ -54,6 +54,10 @@ Snoek, J., Larochelle, H., and Adams, R.~P. (2012).
 \newblock Practical bayesian optimization of machine learning algorithms.
 \newblock pages 2960--2968.
 
+\bibitem[wei Hsu et~al. 2010]{Hsu10}
+wei Hsu, C., chung Chang, C., and jen Lin, C. (2010).
+\newblock A practical guide to support vector classification.
+
 \bibitem[Zhu and Zhang 2010]{zhu2010impact}
 Zhu, F. and Zhang, X. (2010).
 \newblock Impact of online consumer reviews on sales: The moderating role of

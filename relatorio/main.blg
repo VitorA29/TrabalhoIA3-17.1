@@ -4,45 +4,46 @@ The top-level auxiliary file: main.aux
 The style file: sbc.bst
 Database file #1: bib-ref.bib
 Warning--empty journal in SnoekLA12
-You've used 11 entries,
+Warning--empty journal in Hsu10
+You've used 12 entries,
             1935 wiz_defined-function locations,
-            550 strings with 5825 characters,
-and the built_in function-call counts, 4640 in all, are:
-= -- 458
-> -- 184
+            554 strings with 5935 characters,
+and the built_in function-call counts, 4974 in all, are:
+= -- 487
+> -- 202
 < -- 9
-+ -- 62
-- -- 62
-* -- 379
-:= -- 792
-add.period$ -- 34
-call.type$ -- 11
-change.case$ -- 81
-chr.to.int$ -- 11
-cite$ -- 12
-duplicate$ -- 181
-empty$ -- 327
-format.name$ -- 77
-if$ -- 924
++ -- 70
+- -- 68
+* -- 407
+:= -- 854
+add.period$ -- 36
+call.type$ -- 12
+change.case$ -- 89
+chr.to.int$ -- 12
+cite$ -- 14
+duplicate$ -- 194
+empty$ -- 347
+format.name$ -- 84
+if$ -- 984
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 14
-newline$ -- 58
-num.names$ -- 33
-pop$ -- 81
+missing$ -- 15
+newline$ -- 62
+num.names$ -- 36
+pop$ -- 91
 preamble$ -- 1
-purify$ -- 84
+purify$ -- 92
 quote$ -- 0
-skip$ -- 145
+skip$ -- 155
 stack$ -- 0
-substring$ -- 339
+substring$ -- 353
 swap$ -- 33
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 60
-warning$ -- 1
-while$ -- 40
+type$ -- 66
+warning$ -- 2
+while$ -- 42
 width$ -- 0
-write$ -- 143
-(There was 1 warning)
+write$ -- 153
+(There were 2 warnings)
