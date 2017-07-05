@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.22)  5 JUL 2017 18:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.22)  5 JUL 2017 19:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1565,6 +1565,13 @@ subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
 \c@algocf=\count136
 \algocf@algoframe=\box50
 \algocf@algobox=\box51
+) (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count137
+\float@exts=\toks25
+\float@box=\box52
+\@float@everytoks=\toks26
+\@floatcapt=\box53
 ) (./main.aux
 
 LaTeX Warning: Label `tab:mcb-nb' multiply defined.
@@ -1593,19 +1600,19 @@ LaTeX Warning: Label `tab:mmcb-nb' multiply defined.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 26.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 27.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
@@ -1645,17 +1652,17 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count137
+\scratchcounter=\count138
 \scratchdimen=\dimen169
-\scratchbox=\box52
-\nofMPsegments=\count138
-\nofMParguments=\count139
-\everyMPshowfont=\toks25
-\MPscratchCnt=\count140
+\scratchbox=\box54
+\nofMPsegments=\count139
+\nofMParguments=\count140
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count141
 \MPscratchDim=\dimen170
-\MPnumerator=\count141
-\makeMPintoPDFobject=\count142
-\everyMPtoPDFconversion=\toks26
+\MPnumerator=\count142
+\makeMPintoPDFobject=\count143
+\everyMPtoPDFconversion=\toks28
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -1701,37 +1708,37 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <16> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 28.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 29.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <16> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 28.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 29.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 28.
-LaTeX Font Info:    Try loading font information for U+msa on input line 28.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 29.
+LaTeX Font Info:    Try loading font information for U+msa on input line 29.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 28.
+LaTeX Font Info:    Try loading font information for U+msb on input line 29.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 28.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 29.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-LaTeX Font Info:    Try loading font information for OMS+pcr on input line 28.
+LaTeX Font Info:    Try loading font information for OMS+pcr on input line 29.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omspcr.fd
 File: omspcr.fd 
 )
 LaTeX Font Info:    Font shape `OMS/pcr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 28.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 29.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 29.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 30.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <13> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 33.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 34.
  (./txt/intro.tex)
 [1
 
@@ -1823,12 +1830,12 @@ Overfull \hbox (11.24762pt too wide) in paragraph at lines 135--143
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (48.95001pt too wide) in paragraph at lines 185--185
+Overfull \hbox (48.95001pt too wide) in paragraph at lines 180--180
 [][] 
  []
 
 
-Overfull \hbox (11.24762pt too wide) in paragraph at lines 185--185
+Overfull \hbox (11.24762pt too wide) in paragraph at lines 180--180
  [][] 
  []
 
@@ -1836,12 +1843,12 @@ Overfull \hbox (11.24762pt too wide) in paragraph at lines 185--185
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (48.95001pt too wide) in paragraph at lines 220--220
+Overfull \hbox (48.95001pt too wide) in paragraph at lines 215--215
 [][] 
  []
 
 
-Overfull \hbox (11.24762pt too wide) in paragraph at lines 220--220
+Overfull \hbox (11.24762pt too wide) in paragraph at lines 215--215
  [][] 
  []
 
@@ -1849,12 +1856,12 @@ Overfull \hbox (11.24762pt too wide) in paragraph at lines 220--220
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (48.95001pt too wide) in paragraph at lines 257--257
+Overfull \hbox (48.95001pt too wide) in paragraph at lines 252--252
 [][] 
  []
 
 
-Overfull \hbox (11.24762pt too wide) in paragraph at lines 257--257
+Overfull \hbox (11.24762pt too wide) in paragraph at lines 252--252
  [][] 
  []
 
@@ -1862,12 +1869,12 @@ Overfull \hbox (11.24762pt too wide) in paragraph at lines 257--257
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (48.95001pt too wide) in paragraph at lines 292--292
+Overfull \hbox (48.95001pt too wide) in paragraph at lines 287--287
 [][] 
  []
 
 
-Overfull \hbox (11.24762pt too wide) in paragraph at lines 292--292
+Overfull \hbox (11.24762pt too wide) in paragraph at lines 287--287
  [][] 
  []
 
@@ -1875,12 +1882,12 @@ Overfull \hbox (11.24762pt too wide) in paragraph at lines 292--292
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (116.4135pt too wide) in paragraph at lines 331--331
+Overfull \hbox (116.4135pt too wide) in paragraph at lines 326--326
 [][] 
  []
 
 
-Overfull \hbox (22.71951pt too wide) in paragraph at lines 331--331
+Overfull \hbox (22.71951pt too wide) in paragraph at lines 326--326
  [][] 
  []
 
@@ -1888,12 +1895,12 @@ Overfull \hbox (22.71951pt too wide) in paragraph at lines 331--331
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (116.4135pt too wide) in paragraph at lines 368--368
+Overfull \hbox (116.4135pt too wide) in paragraph at lines 363--363
 [][] 
  []
 
 
-Overfull \hbox (22.71951pt too wide) in paragraph at lines 368--368
+Overfull \hbox (22.71951pt too wide) in paragraph at lines 363--363
  [][] 
  []
 
@@ -1901,12 +1908,12 @@ Overfull \hbox (22.71951pt too wide) in paragraph at lines 368--368
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (116.4135pt too wide) in paragraph at lines 406--406
+Overfull \hbox (116.4135pt too wide) in paragraph at lines 399--399
 [][] 
  []
 
 
-Overfull \hbox (22.71951pt too wide) in paragraph at lines 406--406
+Overfull \hbox (22.71951pt too wide) in paragraph at lines 399--399
  [][] 
  []
 
@@ -1914,12 +1921,12 @@ Overfull \hbox (22.71951pt too wide) in paragraph at lines 406--406
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (116.4135pt too wide) in paragraph at lines 447--447
+Overfull \hbox (116.4135pt too wide) in paragraph at lines 438--438
 [][] 
  []
 
 
-Overfull \hbox (22.71951pt too wide) in paragraph at lines 447--447
+Overfull \hbox (22.71951pt too wide) in paragraph at lines 438--438
  [][] 
  []
 
@@ -1927,42 +1934,42 @@ Overfull \hbox (22.71951pt too wide) in paragraph at lines 447--447
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (116.4135pt too wide) in paragraph at lines 484--484
+Overfull \hbox (116.4135pt too wide) in paragraph at lines 475--475
 [][] 
  []
 
 
-Overfull \hbox (22.71951pt too wide) in paragraph at lines 484--484
+Overfull \hbox (22.71951pt too wide) in paragraph at lines 475--475
  [][] 
  []
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-) (./txt/conc.tex) (./main.bbl
+)
 Underfull \vbox (badness 1852) has occurred while \output is active []
 
  [4]
-[5] [6]
+Overfull \vbox (37.17073pt too high) has occurred while \output is active []
+
+
+[5] (./txt/conc.tex [6]) (./main.bbl
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 43.
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/it' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 43.
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 43.
-) [7]
-(./main.aux)
+) [7] (./main.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 12573 strings out of 493029
- 215900 string characters out of 6136234
- 325025 words of memory out of 5000000
- 15943 multiletter control sequences out of 15000+600000
+ 12627 strings out of 493029
+ 216611 string characters out of 6136234
+ 326426 words of memory out of 5000000
+ 15993 multiletter control sequences out of 15000+600000
  32784 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,14n,42p,10404b,319s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1976,7 +1983,7 @@ vbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (7 pages, 131779 bytes).
+Output written on main.pdf (7 pages, 132432 bytes).
 PDF statistics:
  69 PDF objects out of 1000 (max. 8388607)
  49 compressed objects within 1 object stream
