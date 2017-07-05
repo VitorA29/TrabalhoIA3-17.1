@@ -3,3 +3,12 @@ A metodologia abordada foi dividida em três partes. A primeira parte consiste n
 A base de dados utilizada é formada por tweets sobre os produtos e serviços fornecidos pela Apple e fornecida pela Carnegie Mellon University\footnote{http://boston.lti.cs.cmu.edu/classes/95-865-K/HW/HW3/twitter-sanders-apple2.zip} \footnote{http://boston.lti.cs.cmu.edu/classes/95-865-K/HW/HW3/twitter-sanders-apple3.zip}. A base foi tratada segundo a abordagem de \textit{Bag of Words} utilizando a ferramenta NLTK\footnote{http://www.nltk.org/}. A seleção da base baseou-se na proximidade das informações nela presente com o conhecimento de mundo dos integrantes do grupo.
 
 Os algoritmos supracitados e técnicas foram implementadas conforme a ferramenta de aprendizado de máquina SciKit-Learn\footnote{http://scikit-learn.org/stable/} e a linguagem utilizada foi Python\footnote{https://www.python.org/} \textit{release} 3.5.2.
+
+\subsection{Métodos de Aprendizado de Máquina Usados}
+\begin{enumerate}
+	\item \textit{Naive Bayes}: O classficador Naïve Bayes é um classificador probabilistico baseado no teorema de Bayes com forte independência entre as \textit{features} \cite{Han2005}.
+	\item \textit{SVM}: O classificador \textit{Support Vector Machines} são modelos de aprendizado de máquina supervisionado que criam modelos de associação através dos exemplos, onde esses são mapeados e é definido uma "linha" entre os conjuntos de dados. A partir desde modelo os novos dados são categorizados nos grupos existentes.
+	\item \textit{Decision Tree}: O classificador Árvore de Decisão a partir de tuplas treinadas é uma das categorias de árvores de decisão. Essa árvore é uma árvore de estrutura similar a um fluxograma, onde cada nó não folha denota um teste em um atributo, cada ramo representa um resultado do teste e cada nó folha representa a classe rótulo \cite{Han2005}.
+	\item \textit{Random Forest}: O classificador \textit{Random Forest} é um método \textit{ensemble}. Cada classificador existente no \textit{ensemble} é um classificador do tipo árvore de decisão e sua coleção é chamada de floresta. Por fim, as árvores de decisão individuais são geradas selecionado atributos aleatórios de cada nó \cite{Han2005}.
+	
+\end{enumerate}

@@ -1,5 +1,11 @@
 \begin{thebibliography}{}
 
+\bibitem[Bird 2006]{bird2006nltk}
+Bird, S. (2006).
+\newblock Nltk: the natural language toolkit.
+\newblock In {\em Proceedings of the COLING/ACL on Interactive presentation
+  sessions}, pages 69--72. Association for Computational Linguistics.
+
 \bibitem[Gil~de Z{\'u}{\~n}iga et~al. 2009]{gil2009weblogs}
 Gil~de Z{\'u}{\~n}iga, H., Puig-i Abril, E., and Rojas, H. (2009).
 \newblock Weblogs, traditional sources online and political participation: An
@@ -10,6 +16,11 @@ Gil~de Z{\'u}{\~n}iga, H., Puig-i Abril, E., and Rojas, H. (2009).
 Guyon, I. and Elisseeff, A. (2003).
 \newblock {An introduction to variable and feature selection}.
 \newblock {\em The Journal of Machine Learning Research}, 3:1157--1182.
+
+\bibitem[Han 2005]{Han2005}
+Han, J. (2005).
+\newblock {\em Data Mining: Concepts and Techniques}.
+\newblock Morgan Kaufmann Publishers Inc., San Francisco, CA, USA.
 
 \bibitem[Hoffman 2008]{hoffman2008online}
 Hoffman, T. (2008).
@@ -31,6 +42,12 @@ Pang, B., Lee, L., et~al. (2008).
 \newblock Opinion mining and sentiment analysis.
 \newblock {\em Foundations and Trends{\textregistered} in Information
   Retrieval}, 2(1--2):1--135.
+
+\bibitem[Pedregosa et~al. 2011]{pedregosa2011scikit}
+Pedregosa, F., Varoquaux, G., Gramfort, A., Michel, V., Thirion, B., Grisel,
+  O., Blondel, M., Prettenhofer, P., Weiss, R., Dubourg, V., et~al. (2011).
+\newblock Scikit-learn: Machine learning in python.
+\newblock {\em Journal of Machine Learning Research}, 12(Oct):2825--2830.
 
 \bibitem[Snoek et~al. 2012]{SnoekLA12}
 Snoek, J., Larochelle, H., and Adams, R.~P. (2012).
