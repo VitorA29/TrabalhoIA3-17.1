@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.22)  4 JUL 2017 22:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.22)  5 JUL 2017 18:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1579,6 +1579,12 @@ LaTeX Warning: Label `tab:mcb-nb' multiply defined.
 LaTeX Warning: Label `tab:mmcb-nb' multiply defined.
 
 
+LaTeX Warning: Label `tab:mcq-nb' multiply defined.
+
+
+LaTeX Warning: Label `tab:mmcq-nb' multiply defined.
+
+
 LaTeX Warning: Label `tab:mcb-nb' multiply defined.
 
 
@@ -1730,74 +1736,73 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <13> not available
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./txt/met.tex [2])
-(./txt/av.tex
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 15.
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
+(./txt/av.tex [3]
+Underfull \hbox (badness 1735) in paragraph at lines 9--15
+\OT1/ptm/m/n/12 e 'clf[][]alpha': (1e-2, 1e-3) (pode ser visto em pre-dict.py).
+ Ao exe-cut[]a-lo, a
+ []
+
+
+Underfull \hbox (badness 2318) in paragraph at lines 9--15
+\OT1/ptm/m/n/12 se-guinte combina[][]ao de par[]ametros en-con-trada pelo Grid-
+Se-arch que ma-xi-mi-zou
+ []
+
+
+Underfull \hbox (badness 1087) in paragraph at lines 9--15
+\OT1/ptm/m/n/12 a pre-cis[]ao: Pi-pe-line(steps=[('vect', Count-Vec-to-ri-zer(a
+nalyzer='word', bi-nary=False,
+ []
+
+
+Underfull \hbox (badness 1360) in paragraph at lines 9--15
+\OT1/ptm/m/n/12 de-code[]error='strict',dtype=<class 'numpy.int64'>, encoding='
+utf-8', in-put='content',
+ []
+
+
+Underfull \hbox (badness 1990) in paragraph at lines 9--15
+\OT1/ptm/m/n/12 lower-case=True, max[]df=1.0, max[]features=None, min[]df=1, ng
+ram[]range=(1, 2),
+ []
+
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 27.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 15.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 27.
 LaTeX Font Info:    Font shape `OT1/phv/bx/it' in size <10> not available
-(Font)              Font shape `OT1/phv/b/it' tried instead on input line 15.
+(Font)              Font shape `OT1/phv/b/it' tried instead on input line 27.
 LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <10> not available
-(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 15.
+(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 27.
 
-Overfull \hbox (3.17027pt too wide) in paragraph at lines 17--23
+Overfull \hbox (3.17027pt too wide) in paragraph at lines 29--35
 [][] 
  []
 
 
-Overfull \hbox (11.24762pt too wide) in paragraph at lines 30--38
- [][] 
- []
-
-[3]
-Overfull \hbox (3.17027pt too wide) in paragraph at lines 48--54
-[][] 
- []
-
-
-Overfull \hbox (11.24762pt too wide) in paragraph at lines 61--69
+Overfull \hbox (11.24762pt too wide) in paragraph at lines 42--50
  [][] 
  []
 
 
-Overfull \hbox (3.17027pt too wide) in paragraph at lines 79--85
+Overfull \hbox (3.17027pt too wide) in paragraph at lines 60--66
 [][] 
  []
 
 
-Overfull \hbox (11.24762pt too wide) in paragraph at lines 92--100
+Overfull \hbox (11.24762pt too wide) in paragraph at lines 73--81
  [][] 
  []
 
 
-Overfull \hbox (3.17027pt too wide) in paragraph at lines 110--116
+Overfull \hbox (3.17027pt too wide) in paragraph at lines 91--97
 [][] 
  []
 
 
-Overfull \hbox (11.24762pt too wide) in paragraph at lines 123--131
- [][] 
- []
-
-
-Overfull \hbox (48.95001pt too wide) in paragraph at lines 173--173
-[][] 
- []
-
-
-Overfull \hbox (11.24762pt too wide) in paragraph at lines 173--173
- [][] 
- []
-
-
-Overfull \hbox (48.95001pt too wide) in paragraph at lines 208--208
-[][] 
- []
-
-
-Overfull \hbox (11.24762pt too wide) in paragraph at lines 208--208
+Overfull \hbox (11.24762pt too wide) in paragraph at lines 104--112
  [][] 
  []
 
@@ -1805,12 +1810,12 @@ Overfull \hbox (11.24762pt too wide) in paragraph at lines 208--208
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (48.95001pt too wide) in paragraph at lines 245--245
+Overfull \hbox (3.17027pt too wide) in paragraph at lines 122--128
 [][] 
  []
 
 
-Overfull \hbox (11.24762pt too wide) in paragraph at lines 245--245
+Overfull \hbox (11.24762pt too wide) in paragraph at lines 135--143
  [][] 
  []
 
@@ -1818,12 +1823,12 @@ Overfull \hbox (11.24762pt too wide) in paragraph at lines 245--245
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (48.95001pt too wide) in paragraph at lines 280--280
+Overfull \hbox (48.95001pt too wide) in paragraph at lines 185--185
 [][] 
  []
 
 
-Overfull \hbox (11.24762pt too wide) in paragraph at lines 280--280
+Overfull \hbox (11.24762pt too wide) in paragraph at lines 185--185
  [][] 
  []
 
@@ -1831,12 +1836,12 @@ Overfull \hbox (11.24762pt too wide) in paragraph at lines 280--280
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (116.4135pt too wide) in paragraph at lines 319--319
+Overfull \hbox (48.95001pt too wide) in paragraph at lines 220--220
 [][] 
  []
 
 
-Overfull \hbox (22.71951pt too wide) in paragraph at lines 319--319
+Overfull \hbox (11.24762pt too wide) in paragraph at lines 220--220
  [][] 
  []
 
@@ -1844,12 +1849,12 @@ Overfull \hbox (22.71951pt too wide) in paragraph at lines 319--319
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (116.4135pt too wide) in paragraph at lines 356--356
+Overfull \hbox (48.95001pt too wide) in paragraph at lines 257--257
 [][] 
  []
 
 
-Overfull \hbox (22.71951pt too wide) in paragraph at lines 356--356
+Overfull \hbox (11.24762pt too wide) in paragraph at lines 257--257
  [][] 
  []
 
@@ -1857,12 +1862,12 @@ Overfull \hbox (22.71951pt too wide) in paragraph at lines 356--356
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (116.4135pt too wide) in paragraph at lines 397--397
+Overfull \hbox (48.95001pt too wide) in paragraph at lines 292--292
 [][] 
  []
 
 
-Overfull \hbox (22.71951pt too wide) in paragraph at lines 397--397
+Overfull \hbox (11.24762pt too wide) in paragraph at lines 292--292
  [][] 
  []
 
@@ -1870,23 +1875,75 @@ Overfull \hbox (22.71951pt too wide) in paragraph at lines 397--397
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (116.4135pt too wide) in paragraph at lines 434--434
+Overfull \hbox (116.4135pt too wide) in paragraph at lines 331--331
 [][] 
  []
 
 
-Overfull \hbox (22.71951pt too wide) in paragraph at lines 434--434
+Overfull \hbox (22.71951pt too wide) in paragraph at lines 331--331
  [][] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) (./txt/conc.tex) (./main.bbl [4]
-Overfull \vbox (2.43628pt too high) has occurred while \output is active []
+
+Overfull \hbox (116.4135pt too wide) in paragraph at lines 368--368
+[][] 
+ []
 
 
-[5]
+Overfull \hbox (22.71951pt too wide) in paragraph at lines 368--368
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (116.4135pt too wide) in paragraph at lines 406--406
+[][] 
+ []
+
+
+Overfull \hbox (22.71951pt too wide) in paragraph at lines 406--406
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (116.4135pt too wide) in paragraph at lines 447--447
+[][] 
+ []
+
+
+Overfull \hbox (22.71951pt too wide) in paragraph at lines 447--447
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (116.4135pt too wide) in paragraph at lines 484--484
+[][] 
+ []
+
+
+Overfull \hbox (22.71951pt too wide) in paragraph at lines 484--484
+ [][] 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) (./txt/conc.tex) (./main.bbl
+Underfull \vbox (badness 1852) has occurred while \output is active []
+
+ [4]
+[5] [6]
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 43.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
@@ -1895,7 +1952,8 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/it' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 43.
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 43.
-) [6] (./main.aux)
+) [7]
+(./main.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1903,7 +1961,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  12573 strings out of 493029
  215900 string characters out of 6136234
- 317025 words of memory out of 5000000
+ 325025 words of memory out of 5000000
  15943 multiletter control sequences out of 15000+600000
  32784 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1918,10 +1976,10 @@ vbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (6 pages, 127396 bytes).
+Output written on main.pdf (7 pages, 131779 bytes).
 PDF statistics:
- 64 PDF objects out of 1000 (max. 8388607)
- 45 compressed objects within 1 object stream
+ 69 PDF objects out of 1000 (max. 8388607)
+ 49 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
